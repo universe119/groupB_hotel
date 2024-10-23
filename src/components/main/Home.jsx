@@ -10,12 +10,16 @@ export default function Home() {
 		<Layout>
 			{/* HomeVisual */}
 			<HomeVisual />
+
 			{/* Offers */}
 			<Offers />
+
 			{/* Lounge */}
 			<Lounge />
+
 			{/* Hotels */}
 			<Hotels />
+
 			{/* RetailBusiness */}
 			<RetailBusiness />
 		</Layout>

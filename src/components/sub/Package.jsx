@@ -1,3 +1,5 @@
+import Layout from "../common/Layout";
+
 export default function Package() {
-	return <div className="package">Package</div>;
+	return <Layout title={"PACKAGE"}></Layout>;
 }

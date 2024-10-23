@@ -1,10 +1,13 @@
 import Pic from "../common/Pic";
 
-export default function Visual() {
+export default function HomeVisual() {
 	return (
-		<figure className="visual">
-			{/* 이미지 추가해야함 */}
-			<Pic className={"homeBg"} src={"./morning.jpg"} style={{ width: "100%", height: "100%", opacity: 0.7 }} />
+		<figure className="homeVisual">
+			<Pic
+				className={"homeBg"}
+				src={"./night.jpg"}
+				style={{ width: "100%", height: "100%", position: "absolute", opacity: 0.8 }}
+			/>
 
 			<div className="slogan">
 				<article>

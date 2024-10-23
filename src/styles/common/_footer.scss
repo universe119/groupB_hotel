@@ -1,3 +1,5 @@
+@use "variables" as v;
+
 .footer {
 	width: 100%;
 	padding: 140px 15vw;
@@ -10,7 +12,7 @@
 	h1 {
 		display: flex;
 		align-items: flex-end;
-		font-family: "alegreya";
+		font-family: v.$alegreya;
 		letter-spacing: 5px;
 	}
 	section {
@@ -29,4 +31,10 @@
 			width: 100%;
 		}
 	}
+}
+
+@media screen and (max-width: v.$tablet) {
+}
+
+@media screen and (max-width: v.$mobile) {
 }

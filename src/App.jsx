@@ -1,7 +1,12 @@
-import { Route, Routes, useLocation } from "react-router-dom";
-import Footer from "./components/common/Footer";
 import Header from "./components/common/Header";
 import Home from "./components/main/Home";
+import Membership from "./components/sub/Membership";
+import Gallery from "./components/sub/Gallery";
+import Youtube from "./components/sub/Youtube";
+import Contact from "./components/sub/Contact";
+import Footer from "./components/common/Footer";
+import { Route, Routes, useLocation } from "react-router-dom";
+import Package from "./components/sub/Package";
 
 export default function App() {
 	const location = useLocation();
@@ -9,8 +14,13 @@ export default function App() {
 	return (
 		<>
 			<Header />
-			<Routes location={location}>
+			<Routes location={location} key={location.pathname}>
 				<Route path="/" element={<Home />} />
+				<Route path="/membership" element={<Membership />} />
+				<Route path="/package" element={<Package />} />
+				<Route path="/gallery" element={<Gallery />} />
+				<Route path="/youtube" element={<Youtube />} />
+				<Route path="/contact" element={<Contact />} />
 			</Routes>
 			<Footer />
 		</>

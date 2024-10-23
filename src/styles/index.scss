@@ -1,30 +1,36 @@
 //common
-@use "./common/reset";
-@use "./common/header";
-@use "./common/footer";
-@use "./common/layout";
-@use "./common/modal";
-@use "./common/mailForm";
-@use "./common/map";
-@use "./common/mobileMenu";
+@use "common/footer";
+@use "common/header";
+@use "common/layout";
+@use "common/mailForm";
+@use "common/map";
+@use "common/mobileMenu";
+@use "common/modal";
+@use "common/reset";
+@use "common/variables";
 
 //main
-@use "./main/home";
-@use "./main/visual";
+@use "main/home";
+@use "main/homeScroll";
+@use "main/homeVisual";
+@use "main/hotels";
+@use "main/lounge";
+@use "main/offers";
+@use "main/retailBusiness";
 
 //sub
-
-// 구글 폰트
-@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&display=swap");
-
-$tablet: 999px;
-$mobile: 599px;
+@use "sub/contact";
+@use "sub/gallery";
+@use "sub/membership";
+@use "sub/package";
+@use "sub/youtube";
 
 :root {
 	--keyRGB: 40, 40, 40;
+	--keyNight: 255, 255, 255;
+	--keyMorning: 40, 40, 40;
 }
-//rgba(var(--keyRGB), 0.5);
+//rgba(var(--keyMorning), 0.5);
 //rgba(40,40,40,0.5); 위에 입력시 이런식으로 표현됨
 
 // .mask {
@@ -35,4 +41,5 @@ $mobile: 599px;
 // }
 // .test {
 // 	color: rgb(0, 120, 250);
+// 	color: rgb(255, 255, 255);
 // }

@@ -1,0 +1,19 @@
+@use "variables" as v;
+
+main {
+	width: 100%;
+	padding: 10vh 15vw;
+	min-height: 120vh; // 데이터 팻칭시 하단 footer가 보임으로 70->120으로 늘림
+}
+
+//main페이지 전용 스타일
+main.main {
+	width: 100%;
+	padding: 0px;
+}
+
+@media screen and (max-width: v.$tablet) {
+}
+
+@media screen and (max-width: v.$mobile) {
+}

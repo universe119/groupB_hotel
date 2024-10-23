@@ -1,3 +1,19 @@
+//common
+@use "./common/reset";
+@use "./common/header";
+@use "./common/footer";
+@use "./common/layout";
+@use "./common/modal";
+@use "./common/mailForm";
+@use "./common/map";
+@use "./common/mobileMenu";
+
+//main
+@use "./main/home";
+@use "./main/visual";
+
+//sub
+
 // 구글 폰트
 @import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
 
@@ -19,19 +35,3 @@ $mobile: 599px;
 // .test {
 // 	color: rgb(0, 120, 250);
 // }
-
-//common
-@import "./common/reset";
-@import "./common/header";
-@import "./common/footer";
-@import "./common/layout";
-@import "./common/modal";
-@import "./common/mailForm";
-@import "./common/map";
-@import "./common/mobileMenu";
-
-//main
-@import "./main/home";
-@import "./main/visual";
-
-//sub

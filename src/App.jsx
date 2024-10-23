@@ -9,7 +9,7 @@ export default function App() {
 	return (
 		<>
 			<Header />
-			<Routes location={location} key={location.pathname}>
+			<Routes location={location}>
 				<Route path="/" element={<Home />} />
 			</Routes>
 			<Footer />

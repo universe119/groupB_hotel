@@ -1,0 +1,37 @@
+// 구글 폰트
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+
+$tablet: 999px;
+$mobile: 599px;
+
+:root {
+	--keyRGB: 40, 40, 40;
+}
+//rgba(var(--keyRGB), 0.5);
+//rgba(40,40,40,0.5); 위에 입력시 이런식으로 표현됨
+
+// .mask {
+// 	background-color: rgba(var(--keyRGB), 1) !important;
+// }
+// .maskText {
+// 	color: rgba(var(--keyRGB), 0.8) !important;
+// }
+// .test {
+// 	color: rgb(0, 120, 250);
+// }
+
+//common
+@import "./common/reset";
+@import "./common/header";
+@import "./common/footer";
+@import "./common/layout";
+@import "./common/modal";
+@import "./common/mailForm";
+@import "./common/map";
+@import "./common/mobileMenu";
+
+//main
+@import "./main/home";
+@import "./main/visual";
+
+//sub

@@ -1,11 +1,18 @@
-function App() {
+import { Route, Routes, useLocation } from "react-router-dom";
+import Footer from "./components/common/Footer";
+import Header from "./components/common/Header";
+import Home from "./components/main/Home";
+
+export default function App() {
+	const location = useLocation();
+
 	return (
-		<div>
-			<h1 className='abc' style={{ color: 'red' }}>
-				Hello
-			</h1>
-		</div>
+		<>
+			<Header />
+			<Routes location={location} key={location.pathname}>
+				<Route path="/" element={<Home />} />
+			</Routes>
+			<Footer />
+		</>
 	);
 }
-
-export default App;

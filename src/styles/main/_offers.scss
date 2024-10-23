@@ -1,5 +1,16 @@
 @use "../common/variables" as v;
-
+.offers {
+	width: 100%;
+	height: 100vh;
+	position: relative;
+	overflow: hidden;
+	background-color: lightblue;
+	padding: 100px 15vw 100px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-content: center;
+}
 @media screen and (max-width: v.$tablet) {
 }
 

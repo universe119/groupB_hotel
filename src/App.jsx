@@ -1,12 +1,12 @@
 import Header from "./components/common/Header";
 import Home from "./components/main/Home";
 import Membership from "./components/sub/Membership";
+import Package from "./components/sub/Package";
 import Gallery from "./components/sub/Gallery";
 import Youtube from "./components/sub/Youtube";
 import Contact from "./components/sub/Contact";
 import Footer from "./components/common/Footer";
 import { Route, Routes, useLocation } from "react-router-dom";
-import Package from "./components/sub/Package";
 
 export default function App() {
 	const location = useLocation();

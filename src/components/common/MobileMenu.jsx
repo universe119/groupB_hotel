@@ -20,7 +20,7 @@ export default function MobileMenu() {
 		},
 		{
 			title: "HOTELS",
-			subItems: ["Luxury", "Budget"]
+			subItems: ["Sweet Room", "Deluxe Room", "Standard Room"]
 		},
 		{
 			title: "OFFERS",
@@ -28,17 +28,20 @@ export default function MobileMenu() {
 		},
 		{
 			title: "MEMBERSHIP",
-			subItems: []
+			subItems: ["PSYH Family", ""]
 		},
-		{
-			title: "MY PAGE",
-			subItems: ["Profile", "Settings"]
-		},
+		// {
+		// 	title: "MY PAGE",
+		// 	subItems: ["Profile", "Settings"]
+		// },
 		{
 			title: "FACILITIES",
-			subItems: ["Pool", "Spa", "Gym"]
+			subItems: ["Pool", "Gym", "Restaurant"]
+		},
+		{
+			title: "CUSTOMER SERVICE",
+			subItems: ["Q&A", "FAQ"]
 		}
-		// },
 		// {
 		// 	title: "LOUNGE",
 		// 	subItems: ["VIP Lounge", "Regular Lounge"]

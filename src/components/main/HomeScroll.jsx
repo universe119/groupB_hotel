@@ -1,10 +1,17 @@
 export default function HomeScroll() {
+	const sideMenuArr = ["Home", "Offers", "Lounge", "Hotels", "Retail Business"];
+
 	return (
-		<ul className="homeScroll">
-			<li className="on"></li>
-			<li></li>
-			<li></li>
-			<li></li>
-		</ul>
+		<div className="mainScroll">
+			<ul className="homeScroll">
+				{sideMenuArr.map((data, idx) => {
+					return (
+						<li key={idx} style={{ top: 40 * idx }}>
+							{data}
+						</li>
+					);
+				})}
+			</ul>
+		</div>
 	);
 }

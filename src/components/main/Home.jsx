@@ -4,6 +4,7 @@ import Lounge from "./Lounge";
 import Offers from "./Offers";
 import RetailBusiness from "./RetailBusiness";
 import HomeVisual from "./HomeVisual";
+import HomeScroll from "./HomeScroll";
 
 export default function Home() {
 	return (
@@ -22,6 +23,7 @@ export default function Home() {
 
 			{/* RetailBusiness */}
 			<RetailBusiness />
+			<HomeScroll />
 		</Layout>
 	);
 }

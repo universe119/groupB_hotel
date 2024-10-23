@@ -1,36 +1,69 @@
 @use "../common/variables" as v;
-
-.homeScroll {
-	width: 10px;
+.mainScroll {
+	display: block;
+	height: 280px;
 	position: fixed;
-	right: 40px;
+	left: 5%;
 	top: 50%;
-	transform: translateY(-50%);
-	z-index: 3;
+	z-index: 9;
+	margin-top: -120px;
 
-	display: flex;
-	flex-wrap: wrap;
-	gap: 30px;
+	.homeScroll {
+		width: 150px;
+		height: 280px;
+		position: relative;
 
-	li {
-		width: 10px;
-		height: 10px;
-		border-radius: 5px;
-		background: #888;
-		cursor: pointer;
-		transition: 0.5s;
+		display: flex;
+		flex-wrap: wrap;
+		gap: 30px;
 
-		&.on {
-			height: 100px;
-			background: #000;
+		&::before {
+			content: "";
+			display: block;
+			background-color: #fff;
+			opacity: 0.7;
+			width: 2px;
+			height: 200px;
+			opacity: 1;
+
+			&:hover {
+				opacity: 1;
+			}
+		}
+
+		&::after {
+			content: "";
+			display: block;
+			clear: both;
+
+			&:hover {
+				opacity: 1;
+			}
+		}
+
+		li {
+			height: 40px;
+			line-height: 40px;
+			position: absolute;
+			left: 5px;
+			color: rgba(var(--keyNight));
+			cursor: pointer;
+			transition: 0.5s;
+			opacity: 1;
+
+			&.on {
+				height: 100px;
+				background: #000;
+			}
+
+			&:hover {
+				opacity: 1;
+			}
 		}
 	}
 }
 
 @media screen and (max-width: v.$tablet) {
-	.homeScroll {
-		right: 20px;
-	}
 }
 
 @media screen and (max-width: v.$mobile) {

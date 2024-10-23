@@ -1,5 +1,18 @@
 @use "../common/variables" as v;
 
+.lounge {
+	width: 100%;
+	height: 100vh;
+	position: relative;
+	overflow: hidden;
+	background-color: lightgreen;
+	padding: 100px 15vw 100px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-content: center;
+}
+
 @media screen and (max-width: v.$tablet) {
 }
 

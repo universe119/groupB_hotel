@@ -1,0 +1,32 @@
+.footer {
+	width: 100%;
+	padding: 140px 15vw;
+	background: #1b1b1b;
+	color: #999;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-content: flex-end;
+	h1 {
+		display: flex;
+		align-items: flex-end;
+		font-family: "alegreya";
+		letter-spacing: 5px;
+	}
+	section {
+		display: flex;
+		flex-wrap: wrap;
+		ul {
+			width: 100%;
+			display: flex;
+			justify-content: flex-end;
+			gap: 30px;
+			margin-bottom: 20px;
+		}
+		p {
+			display: flex;
+			justify-content: flex-end;
+			width: 100%;
+		}
+	}
+}

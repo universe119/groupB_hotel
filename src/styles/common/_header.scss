@@ -1,0 +1,26 @@
+.header {
+	width: 100%;
+	padding: 30px 15vw;
+	backdrop-filter: blur(10px);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	position: absolute;
+	z-index: 3;
+
+	h1 {
+		font: 500 2.5rem/1 "alegreya";
+		color: #fff;
+		letter-spacing: 5px;
+	}
+	nav {
+		ul {
+			display: flex;
+			gap: 60px;
+			font: 600 1.2rem/1 "raleway";
+			color: #fff;
+		}
+	}
+}
+
+//이미지 삽입 후 글자색 다 fff로 하기

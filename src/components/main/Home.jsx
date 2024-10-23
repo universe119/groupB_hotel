@@ -1,10 +1,23 @@
 import Layout from "../common/Layout";
-import Visual from "./Visual";
+import Hotels from "./Hotels";
+import Lounge from "./Lounge";
+import Offers from "./Offers";
+import RetailBusiness from "./RetailBusiness";
+import HomeVisual from "./HomeVisual";
 
 export default function Home() {
 	return (
-		<Layout title={"HOME"}>
-			<Visual></Visual>
+		<Layout>
+			{/* HomeVisual */}
+			<HomeVisual />
+			{/* Offers */}
+			<Offers />
+			{/* Lounge */}
+			<Lounge />
+			{/* Hotels */}
+			<Hotels />
+			{/* RetailBusiness */}
+			<RetailBusiness />
 		</Layout>
 	);
 }

@@ -11,29 +11,43 @@ export default function HomeScroll() {
 	const [currentPage, setCurrentPage] = useState(0);
 	const totalPages = sideMenuArr.length; // 페이지 수는 메뉴 항목 수와 같음
 	const scrollTimeoutRef = useRef(null); // 스크롤 딜레이 타이머
+	const pageHeight = window.innerHeight;
 
+	// 스크롤 위치에 따라 currentPage 업데이트
+	useEffect(() => {
+		const handleScroll = () => {
+			const newPage = Math.round(window.scrollY / pageHeight);
+			setCurrentPage(newPage);
+		};
+
+		window.addEventListener("scroll", handleScroll);
+
+		return () => {
+			window.removeEventListener("scroll", handleScroll);
+		};
+	}, [pageHeight]);
 	// 페이지에 따른 스크롤 이동
 	useEffect(() => {
-		const handleScroll = e => {
-			if (scrollTimeoutRef.current) return; // 이미 타이머가 설정되어 있으면 무시
+		const handleWheelScroll = e => {
+			if (scrollTimeoutRef.current) return;
 
 			scrollTimeoutRef.current = setTimeout(() => {
 				const newPage = currentPage + (e.deltaY > 0 ? 1 : -1);
 				if (newPage >= 0 && newPage < totalPages) {
 					setCurrentPage(newPage);
-					window.scrollTo({ top: newPage * window.innerHeight, behavior: "smooth" });
+					window.scrollTo({ top: newPage * pageHeight, behavior: "smooth" });
 				}
-				scrollTimeoutRef.current = null; // 타이머 초기화
-			}, 100); // 100ms 간격
+				scrollTimeoutRef.current = null;
+			}, 100);
 		};
 
-		window.addEventListener("wheel", handleScroll);
+		window.addEventListener("wheel", handleWheelScroll);
 
 		return () => {
-			window.removeEventListener("wheel", handleScroll);
-			clearTimeout(scrollTimeoutRef.current); // 타이머 해제
+			window.removeEventListener("wheel", handleWheelScroll);
+			clearTimeout(scrollTimeoutRef.current);
 		};
-	}, [currentPage]);
+	}, [currentPage, totalPages, pageHeight]);
 
 	return (
 		<>
@@ -60,7 +74,7 @@ export default function HomeScroll() {
 							className={currentPage === index ? "spanEl active" : "spanEl"}
 							onClick={() => {
 								setCurrentPage(index);
-								window.scrollTo({ top: index * window.innerHeight, behavior: "smooth" });
+								window.scrollTo({ top: index * pageHeight, behavior: "smooth" });
 							}}
 							style={{ cursor: "pointer", top: 40 * index }}>
 							<span>{page}</span>

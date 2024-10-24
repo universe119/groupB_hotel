@@ -1,17 +1,5 @@
 @use "../common/variables" as v;
 
-.home {
-	width: 100%;
-	padding: 10vh 15vw;
-	min-height: 70vh;
-
-	h1 {
-		font: 200 6vmax/1 v.$alegreya;
-		color: #444;
-		margin-bottom: 50px;
-	}
-}
-
 @media screen and (max-width: v.$tablet) {
 }
 

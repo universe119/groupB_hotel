@@ -1,9 +1,4 @@
 import Layout from "../common/Layout";
-import Hotels from "./Hotels";
-import Lounge from "./Lounge";
-import Offers from "./Offers";
-import RetailBusiness from "./RetailBusiness";
-import HomeVisual from "./HomeVisual";
 import HomeScroll from "./HomeScroll";
 
 export default function Home() {

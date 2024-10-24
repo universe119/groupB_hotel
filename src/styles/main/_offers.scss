@@ -4,15 +4,142 @@
 	height: 100vh;
 	position: relative;
 	overflow: hidden;
-	background-color: lightblue;
+	background-color: #efefef;
 	padding: 100px 15vw 100px;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
 	align-content: center;
+
+	.inner {
+		width: 100%;
+		max-width: 1400px; // 최대 너비 제한
+		margin: 0 auto; // 내부 콘텐츠 중앙 정렬
+
+		a {
+			font: 400 16px v.$orbitron;
+			text-decoration: none;
+			color: #333;
+			&:hover {
+				color: #ff6600;
+			}
+		}
+	}
+
+	.swipeArea {
+		width: 100%; // 스와이프 영역 전체 너비 사용
+		position: relative;
+		margin-top: 30px;
+		display: flex;
+		justify-content: center;
+
+		.swipeGroup {
+			width: 100%; // 전체 너비 사용
+			margin: 0 auto;
+
+			.swipeCont {
+				position: relative;
+				width: 100%; // 스와이프 컨테이너 전체 너비
+				overflow: visible;
+				transition: transform 400ms ease-in-out;
+				display: flex; // 수평 레이아웃을 위해 flex 사용
+				height: 500px;
+				padding-top: 35px;
+				background: rgba(238, 228, 206, 0.43);
+				border-radius: 20px;
+				box-shadow: inset 0 0 0px rgb(238, 228, 206), 0 0 50px rgb(238, 228, 206, 0.4);
+
+				.swiper-wrapper {
+					left: 5.5%;
+				}
+
+				.swipeSlide {
+					width: 300px; // 각 슬라이드 너비 조정
+					margin: 0 15px; // 슬라이드 간 간격
+					opacity: 1;
+					transition: opacity 400ms, transform 400ms;
+					text-align: center;
+
+					.thum {
+						width: 100%;
+						height: 300px; // 썸네일 높이 조정
+						position: relative;
+						overflow: hidden;
+						border-radius: 8px; // 둥근 모서리
+						display: block;
+
+						.pic {
+							width: 100%;
+							height: 100%;
+							position: relative;
+						}
+						img {
+							width: 100%;
+							height: 100%;
+							object-fit: cover;
+							transition: transform 300ms;
+							&:hover {
+								transform: scale(1.05);
+							}
+						}
+					}
+
+					.tit {
+						margin-top: 10px;
+						font-size: 20px; // 글자 크기 증가
+						font-weight: bold;
+						text-align: center; // 제목 중앙 정렬
+					}
+
+					.txt,
+					.date,
+					.hotelName {
+						margin-top: 5px;
+						font-size: 14px;
+						color: #666;
+						text-align: center; // 텍스트 중앙 정렬
+					}
+				}
+			}
+		}
+
+		button {
+			background: none;
+			border: none;
+			font-size: 24px;
+			cursor: pointer;
+			&:hover {
+				color: #ff6600;
+			}
+		}
+	}
 }
 @media screen and (max-width: v.$tablet) {
+	.offers {
+		padding: 80px 10vw;
+		.inner {
+			width: 1000px;
+			margin: -220px 0 0 -500px;
+		}
+		.swipeArea {
+			.swipeGroup {
+				width: 900px;
+			}
+		}
+	}
 }
 
 @media screen and (max-width: v.$mobile) {
+	.offers {
+		padding: 60px 5vw;
+		.inner {
+			width: 700px;
+			margin: -180px 0 0 -350px;
+		}
+		.swipeArea {
+			.swipeGroup {
+				width: 700px;
+			}
+		}
+	}
 }

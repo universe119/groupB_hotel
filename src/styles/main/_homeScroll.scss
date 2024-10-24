@@ -49,6 +49,10 @@
 				font-weight: bold !important;
 			}
 			&.active {
+				span {
+					opacity: 1 !important;
+					font-weight: bold !important;
+				}
 				&::before {
 					opacity: 1;
 				}

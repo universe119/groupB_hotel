@@ -11,9 +11,10 @@ export default function Layout({ title, children }) {
 	else if (pathname === "/") currentClass = "main";
 	else currentClass = title.toLowerCase();
 
+	// 페이지 전환 시마다 스크롤을 상단으로 이동
 	useEffect(() => {
-		window.scrollTo({ top: 0 });
-	}, []);
+		window.scrollTo({ top: 0, behavior: "smooth" }); // 'smooth'로 부드러운 스크롤 적용
+	}, [pathname]); // pathname이 변경될 때마다 호출
 
 	return (
 		<main className={currentClass}>

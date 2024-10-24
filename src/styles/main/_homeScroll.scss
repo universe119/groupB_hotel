@@ -1,67 +1,103 @@
 @use "../common/variables" as v;
-.mainScroll {
-	display: block;
-	height: 280px;
+
+.navigator {
 	position: fixed;
-	left: 5%;
 	top: 50%;
-	z-index: 9;
-	margin-top: -120px;
-
-	.homeScroll {
-		width: 150px;
-		height: 280px;
-		position: relative;
-
-		display: flex;
-		flex-wrap: wrap;
-		gap: 30px;
-
-		&::before {
-			content: "";
-			display: block;
-			background-color: #fff;
-			opacity: 0.7;
-			width: 2px;
-			height: 200px;
-			opacity: 1;
-
-			&:hover {
-				opacity: 1;
-			}
-		}
-
-		&::after {
-			content: "";
-			display: block;
-			clear: both;
-
-			&:hover {
-				opacity: 1;
-			}
-		}
-
-		li {
-			height: 40px;
-			line-height: 40px;
-			position: absolute;
-			left: 5px;
-			color: rgba(var(--keyNight));
-			cursor: pointer;
-			transition: 0.5s;
-			opacity: 1;
-
-			&.on {
-				height: 100px;
-				background: #000;
-			}
-
-			&:hover {
-				opacity: 1;
+	left: 20px;
+	transform: translateY(-50%);
+	display: flex;
+	flex-direction: column;
+	div {
+		margin-bottom: 20px;
+		font-size: 1.5rem;
+		opacity: 0.5;
+		color: white;
+		transition: opacity 0.3s ease;
+		.active {
+			span {
+				color: white;
+				font-weight: bold;
 			}
 		}
 	}
 }
+.container {
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+}
+.page {
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 2rem;
+	background-color: #ccc;
+}
+
+// .mainScroll {
+// 	display: block;
+// 	height: 280px;
+// 	position: fixed;
+// 	left: 5%;
+// 	top: 50%;
+// 	z-index: 9;
+// 	margin-top: -120px;
+
+// 	.homeScroll {
+// 		width: 150px;
+// 		height: 280px;
+// 		position: relative;
+
+// 		display: flex;
+// 		flex-wrap: wrap;
+// 		gap: 30px;
+
+// 		&::before {
+// 			content: "";
+// 			display: block;
+// 			background-color: #fff;
+// 			opacity: 0.7;
+// 			width: 2px;
+// 			height: 200px;
+// 			opacity: 1;
+
+// 			&:hover {
+// 				opacity: 1;
+// 			}
+// 		}
+
+// 		&::after {
+// 			content: "";
+// 			display: block;
+// 			clear: both;
+
+// 			&:hover {
+// 				opacity: 1;
+// 			}
+// 		}
+
+// 		li {
+// 			height: 40px;
+// 			line-height: 40px;
+// 			position: absolute;
+// 			left: 5px;
+// 			color: rgba(var(--keyNight));
+// 			cursor: pointer;
+// 			transition: 0.5s;
+// 			opacity: 1;
+
+// 			&.on {
+// 				height: 100px;
+// 				background: #000;
+// 			}
+
+// 			&:hover {
+// 				opacity: 1;
+// 			}
+// 		}
+// 	}
+// }
 
 @media screen and (max-width: v.$tablet) {
 }

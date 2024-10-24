@@ -9,20 +9,6 @@ import HomeScroll from "./HomeScroll";
 export default function Home() {
 	return (
 		<Layout>
-			{/* HomeVisual */}
-			<HomeVisual />
-
-			{/* Offers */}
-			<Offers />
-
-			{/* Lounge */}
-			<Lounge />
-
-			{/* Hotels */}
-			<Hotels />
-
-			{/* RetailBusiness */}
-			<RetailBusiness />
 			<HomeScroll />
 		</Layout>
 	);

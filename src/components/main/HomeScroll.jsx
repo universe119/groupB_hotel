@@ -38,11 +38,6 @@ export default function HomeScroll() {
 	return (
 		<>
 			{/* 페이지 콘텐츠 */}
-			{/* 모션 넣을시 스크롤 밖으로 나가버리는현상 <motion.div 
-				className="container"
-				animate={{ y: `-${currentPage * window.innerHeight}px` }} // Y축 이동
-				transition={{ duration: 0.5, ease: "easeInOut" }} // 부드러운 페이지 전환
-			> */}
 			<div className="container">
 				<HomeVisual />
 				<Offers />
@@ -50,7 +45,6 @@ export default function HomeScroll() {
 				<Hotels />
 				<RetailBusiness />
 			</div>
-			{/* </motion.div> */}
 
 			{/* 왼쪽 내비게이션 바 */}
 			<div className="mainNavigator">

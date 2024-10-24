@@ -5,7 +5,7 @@ export default function HomeVisual() {
 		<figure className="homeVisual">
 			<Pic
 				className={"homeBg"}
-				src={"./night.jpg"}
+				src={"./evening.jpg"}
 				style={{ width: "100%", height: "100%", position: "absolute", opacity: 0.8 }}
 			/>
 

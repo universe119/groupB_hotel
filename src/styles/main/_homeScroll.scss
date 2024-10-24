@@ -23,7 +23,7 @@
 			opacity: 0.5;
 			width: 2px;
 			height: 200px;
-			transition: opacity 0.3s;
+			transition: 0.3s;
 		}
 
 		.spanEl {
@@ -32,21 +32,23 @@
 			line-height: 40px;
 			position: absolute;
 			left: 5px;
-			transition: all 0.5s;
+			transition: 0.5s ease-in-out;
 
 			span {
 				color: rgba(var(--keyNight));
 				font: 300 1rem v.$raleway;
-			}
+				transition: 0.3s ease-in-out;
 
+				&:hover {
+					opacity: 1 !important;
+					font-weight: bold !important;
+				}
+			}
 			&:hover {
 				opacity: 1 !important;
+				font-weight: bold !important;
 			}
-
 			&.active {
-				span {
-					font-weight: bold;
-				}
 				&::before {
 					opacity: 1;
 				}
@@ -61,7 +63,7 @@
 				position: absolute; // 절대 위치로 설정
 				left: -5px; // 왼쪽 여백 추가
 				opacity: 0.5; // 기본 불투명도
-				transition: opacity 0.3s; // 부드러운 전환 효과
+				transition: 0.5s ease-in-out; // 부드러운 전환 효과
 			}
 		}
 	}

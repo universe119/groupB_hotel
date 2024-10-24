@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import HomeVisual from "./HomeVisual";
 import Offers from "./Offers";
@@ -67,9 +67,9 @@ export default function HomeScroll() {
 					{sideMenuArr.map((page, index) => (
 						<motion.div
 							key={index}
-							initial={{ opacity: 0.4 }}
+							initial={{ opacity: 0.5 }}
 							animate={{
-								opacity: currentPage === index ? 1 : 0.4
+								opacity: currentPage === index ? 1 : 0.5
 							}}
 							transition={{ duration: 0.3 }}
 							className={currentPage === index ? "spanEl active" : "spanEl"}

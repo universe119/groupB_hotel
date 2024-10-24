@@ -12,6 +12,17 @@ export default function HomeScroll() {
 	const totalPages = sideMenuArr.length; // 페이지 수는 메뉴 항목 수와 같음
 	const pageHeight = window.innerHeight;
 
+	// 페이지별 색상 맵
+	const colorMap = {
+		1: "#282828",
+		2: "#282828",
+		3: "#282828",
+		4: "#282828"
+	};
+
+	// currentPage에 따른 색상 지정 (기본값 white)
+	const chColor = colorMap[currentPage] || "#ffffff";
+
 	// 스크롤 위치에 따라 currentPage 업데이트
 	useEffect(() => {
 		const handleScroll = () => {
@@ -38,6 +49,7 @@ export default function HomeScroll() {
 					setCurrentPage(newPage);
 					window.scrollTo({ top: newPage * pageHeight, behavior: "smooth" });
 				}
+
 				scrollTimeoutRef = null; // 타이머 초기화
 			});
 		};
@@ -64,23 +76,26 @@ export default function HomeScroll() {
 			{/* 왼쪽 내비게이션 바 */}
 			<div className="mainNavigator">
 				<div className="navigator">
-					{sideMenuArr.map((page, index) => (
-						<motion.div
-							key={index}
-							initial={{ opacity: 0.5 }}
-							animate={{
-								opacity: currentPage === index ? 1 : 0.5
-							}}
-							transition={{ duration: 0.3 }}
-							className={currentPage === index ? "spanEl active" : "spanEl"}
-							onClick={() => {
-								setCurrentPage(index);
-								window.scrollTo({ top: index * pageHeight, behavior: "smooth" });
-							}}
-							style={{ cursor: "pointer", top: 40 * index }}>
-							<span>{page}</span>
-						</motion.div>
-					))}
+					{sideMenuArr.map((page, index) => {
+						return (
+							<motion.div
+								key={index}
+								initial={{ opacity: 0.5 }}
+								animate={{
+									opacity: currentPage === index ? 1 : 0.5
+								}}
+								transition={{ duration: 0.3 }}
+								className={currentPage === index ? "divEl active" : "divEl"}
+								onClick={() => {
+									setCurrentPage(index);
+									window.scrollTo({ top: index * pageHeight, behavior: "smooth" });
+								}}
+								style={{ cursor: "pointer", top: 40 * index }}>
+								<div className="bar" style={{ background: chColor }}></div>
+								<span style={{ color: chColor }}>{page}</span>
+							</motion.div>
+						);
+					})}
 				</div>
 			</div>
 		</>

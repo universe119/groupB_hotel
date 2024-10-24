@@ -57,7 +57,7 @@
 	}
 
 	h1 {
-		width: 20%;
+		width: 22%;
 		font: 300 3rem/1 v.$alegreya;
 		color: rgba(var(--keyNight));
 		letter-spacing: 7px;
@@ -68,7 +68,7 @@
 		ul {
 			display: flex;
 			font: 600 1.2rem/1 v.$raleway;
-			color: gray;
+			color: rgba(var(--keyNight));
 		}
 
 		.gnbL {

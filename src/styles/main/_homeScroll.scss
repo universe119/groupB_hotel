@@ -16,23 +16,30 @@
 		flex-direction: column;
 		position: relative;
 
-		&::before {
-			content: "";
-			display: block;
-			background-color: rgba(var(--keyNight));
-			opacity: 0.5;
-			width: 2px;
-			height: 200px;
-			transition: 0.3s;
-		}
-
-		.spanEl {
+		.divEl {
 			width: 100%;
 			height: 40px;
 			line-height: 40px;
 			position: absolute;
 			left: 5px;
 			transition: 0.5s ease-in-out;
+
+			.bar {
+				position: absolute;
+				left: -5%;
+				top: 0;
+				width: 2px;
+				height: 100%;
+				background-color: rgba(var(--keyNight)); /* 기본 바 색상 */
+				transition: background-color 0.3s ease;
+			}
+			&.active .bar {
+				width: 2px;
+				background-color: rgba(var(--keyNight)); /* 선택된 페이지의 바 색상 */
+			}
+			&:hover .bar {
+				width: 3px;
+			}
 
 			span {
 				color: rgba(var(--keyNight));
@@ -53,21 +60,6 @@
 					opacity: 1 !important;
 					font-weight: bold !important;
 				}
-				&::before {
-					opacity: 1;
-				}
-			}
-
-			&::before {
-				content: "";
-				display: block;
-				background-color: rgba(var(--keyNight));
-				width: 3px;
-				height: 100%;
-				position: absolute; // 절대 위치로 설정
-				left: -5px; // 왼쪽 여백 추가
-				opacity: 0.5; // 기본 불투명도
-				transition: 0.5s ease-in-out; // 부드러운 전환 효과
 			}
 		}
 	}

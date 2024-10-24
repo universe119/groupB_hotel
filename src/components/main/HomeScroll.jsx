@@ -10,7 +10,6 @@ export default function HomeScroll() {
 	const sideMenuArr = ["Home", "Offers", "Lounge", "Hotels", "Retail Business"];
 	const [currentPage, setCurrentPage] = useState(0);
 	const totalPages = sideMenuArr.length; // 페이지 수는 메뉴 항목 수와 같음
-	const scrollTimeoutRef = useRef(null); // 스크롤 딜레이 타이머
 	const pageHeight = window.innerHeight;
 
 	// 스크롤 위치에 따라 currentPage 업데이트
@@ -26,26 +25,28 @@ export default function HomeScroll() {
 			window.removeEventListener("scroll", handleScroll);
 		};
 	}, [pageHeight]);
-	// 페이지에 따른 스크롤 이동
-	useEffect(() => {
-		const handleWheelScroll = e => {
-			if (scrollTimeoutRef.current) return;
 
-			scrollTimeoutRef.current = setTimeout(() => {
-				const newPage = currentPage + (e.deltaY > 0 ? 1 : -1);
+	// 스크롤 이동 최적화
+	useEffect(() => {
+		let scrollTimeoutRef = null; // 스크롤 중복 방지
+		const handleWheelScroll = e => {
+			if (scrollTimeoutRef) return; // 이미 스크롤 중이면 무시
+
+			scrollTimeoutRef = requestAnimationFrame(() => {
+				const newPage = currentPage + (e.deltaY > 0 ? 1 : -1); // 휠 방향에 따라 페이지 이동
 				if (newPage >= 0 && newPage < totalPages) {
 					setCurrentPage(newPage);
 					window.scrollTo({ top: newPage * pageHeight, behavior: "smooth" });
 				}
-				scrollTimeoutRef.current = null;
-			}, 100);
+				scrollTimeoutRef = null; // 타이머 초기화
+			});
 		};
 
 		window.addEventListener("wheel", handleWheelScroll);
 
 		return () => {
 			window.removeEventListener("wheel", handleWheelScroll);
-			clearTimeout(scrollTimeoutRef.current);
+			if (scrollTimeoutRef) cancelAnimationFrame(scrollTimeoutRef); // 타이머 해제
 		};
 	}, [currentPage, totalPages, pageHeight]);
 

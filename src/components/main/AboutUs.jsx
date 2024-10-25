@@ -7,7 +7,6 @@ import { useZustandStore } from "../../hooks/useZustand";
 export default function AboutUs() {
 	const IsModal = useZustandStore(state => state.IsModal);
 	const setModalOpen = useZustandStore(state => state.setModalOpen);
-	console.log(setModalOpen);
 
 	useEffect(() => {
 		document.body.style.overflow = IsModal ? "hidden" : "auto";

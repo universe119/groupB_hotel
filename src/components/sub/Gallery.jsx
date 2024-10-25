@@ -8,7 +8,6 @@ import "swiper/css/pagination"; // Swiper 페이지네이션 스타일 가져오
 
 export default function Gallery() {
 	const [Flickr, setFlickr] = useState([]);
-	console.log(Flickr);
 
 	useEffect(() => {
 		const method = "flickr.people.getPhotos";
@@ -21,7 +20,6 @@ export default function Gallery() {
 			.then(data => data.json())
 			.then(json => {
 				setFlickr(json.photos.photo);
-				console.log(json);
 			});
 	}, []);
 

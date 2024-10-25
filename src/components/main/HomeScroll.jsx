@@ -1,13 +1,13 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import HomeVisual from "./HomeVisual";
-import Offers from "./Offers";
-import Hotels from "./Hotels";
-import RetailBusiness from "./RetailBusiness";
 import AboutUs from "./AboutUs";
+import Offers from "./Offers";
+import LocationScroll from "./LocationScroll";
+import RetailBusiness from "./RetailBusiness";
 
 export default function HomeScroll() {
-	const sideMenuArr = ["Home", "About us", "Offers", "Hotels", "Retail Business"];
+	const sideMenuArr = ["Home", "About us", "Offers", "Location", "Retail Business"];
 	const [currentPage, setCurrentPage] = useState(0);
 	const totalPages = sideMenuArr.length; // 페이지 수는 메뉴 항목 수와 같음
 	const pageHeight = window.innerHeight;
@@ -69,7 +69,7 @@ export default function HomeScroll() {
 				<HomeVisual />
 				<AboutUs />
 				<Offers />
-				<Hotels />
+				<LocationScroll />
 				<RetailBusiness />
 			</div>
 

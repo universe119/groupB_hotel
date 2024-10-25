@@ -1,6 +1,6 @@
 import Header from "./components/common/Header";
 import Home from "./components/main/Home";
-import Membership from "./components/sub/Membership";
+import Location from "./components/sub/Location";
 import Package from "./components/sub/Package";
 import Gallery from "./components/sub/Gallery";
 import Youtube from "./components/sub/Youtube";
@@ -16,7 +16,7 @@ export default function App() {
 			<Header />
 			<Routes location={location} key={location.pathname}>
 				<Route path="/" element={<Home />} />
-				<Route path="/membership" element={<Membership />} />
+				<Route path="/location" element={<Location />} />
 				<Route path="/package" element={<Package />} />
 				<Route path="/gallery" element={<Gallery />} />
 				<Route path="/youtube" element={<Youtube />} />

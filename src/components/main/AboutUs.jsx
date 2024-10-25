@@ -1,10 +1,56 @@
+import { AnimatePresence } from "framer-motion";
 import Pic from "../common/Pic";
+import Modal from "../common/Modal";
+import { useEffect } from "react";
+import { useZustandStore } from "../../hooks/useZustand";
 
 export default function AboutUs() {
+	const IsModal = useZustandStore(state => state.IsModal);
+	const setModalOpen = useZustandStore(state => state.setModalOpen);
+
+	useEffect(() => {
+		document.body.style.overflow = IsModal ? "hidden" : "auto";
+	}, [IsModal]);
+
 	// 호텔소개 어떤 느낌으로?
 	return (
 		<section className="aboutUs">
-			<h2 className="tit">ABOUT US</h2>
+			<div className="titImg">
+				<Pic
+					className="pic"
+					src={"/호텔빌딩2작음수정.jpg"}
+					alt={"호텔빌딩"}
+					style={{ width: "100%", height: "100%" }}
+				/>
+			</div>
+			<div
+				className="subImg"
+				onClick={() => {
+					setModalOpen();
+				}}>
+				<div className="modal1">
+					<AnimatePresence>
+						{IsModal && (
+							<Modal>
+								<Pic
+									className="pic"
+									src={"/호텔빌딩2작음수정.jpg"}
+									alt={"호텔빌딩"}
+									style={{ width: "100%", height: "100%" }}
+								/>
+							</Modal>
+						)}
+					</AnimatePresence>
+				</div>
+				<div className="modal2">모달2: 호텔 룸 소개</div>
+				<div className="modal3">사진 대체?</div>
+				<div className="modal4">사진 대체?</div>
+			</div>
+			<div className="footerImg">
+				<p>하단 내용은 호텔를 소개하는 설명글</p>
+			</div>
+
+			{/* <h2 className="tit">ABOUT US</h2>
 			<div className="content">
 				<Pic src={"/"} alt="Hotel" className="pic" />
 				<div className="txt">
@@ -32,7 +78,7 @@ export default function AboutUs() {
 						PM 서비스까지 고품격 라이프 스타일을 제안하는 종합 호스피탈리티 리딩 기업입니다.
 					</p>
 				</div>
-			</div>
+			</div> */}
 		</section>
 	);
 }

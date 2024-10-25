@@ -14,6 +14,7 @@ export default function Offers() {
 			<div className="inner">
 				<Link to="/">GO TO OFFERS 화살표임티추가 </Link>
 			</div>
+
 			<div className="swipeArea">
 				{/* <button>&lt;</button> */}
 				<div className="swipeGroup">

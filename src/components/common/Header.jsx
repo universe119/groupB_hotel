@@ -9,7 +9,7 @@ export default function Header() {
 	// 상단좌측메뉴
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-	const gnbLArr = ["MEMBERSHIP", "PACKAGE"];
+	const gnbLArr = ["LOCATION", "PACKAGE"];
 	const gnbRArr = ["GALLERY", "YOUTUBE", "CONTACT"];
 
 	// 상단좌측메뉴 토글,,,설정,,,,?

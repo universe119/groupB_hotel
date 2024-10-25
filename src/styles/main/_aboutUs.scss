@@ -26,7 +26,7 @@
 		justify-content: space-between;
 		background: ivory;
 
-		div {
+		.modal1 {
 			width: 48%;
 			margin: 5px;
 			background: #eee;
@@ -34,110 +34,43 @@
 				background: #ccc;
 			}
 		}
-		// .modal1 {
-
-		// }
-		// .modal2 {
-		// 	width: 48%;
-		// 	margin: 5px;
-		// 	background: #eee;
-		// }
-		// .modal3 {
-		// 	width: 48%;
-		// 	margin: 5px;
-		// 	background: #eee;
-		// }
-		// .modal4 {
-		// 	width: 48%;
-		// 	margin: 5px;
-		// 	background: #eee;
-		// }
+		.modal2 {
+			width: 48%;
+			margin: 5px;
+			background: #eee;
+			&:hover {
+				background: #ccc;
+			}
+		}
+		.modal3 {
+			width: 48%;
+			margin: 5px;
+			background: #eee;
+			&:hover {
+				background: #ccc;
+			}
+		}
+		.modal4 {
+			width: 48%;
+			margin: 5px;
+			background: #eee;
+			&:hover {
+				background: #ccc;
+			}
+		}
 	}
 
 	.footerImg {
 		width: 100%;
-		height: 15vh;
-		margin-top: 20px;
+		height: 20vh;
+		margin-top: 50px;
+		p {
+			font: 500 2rem/1.2 v.$orbitron;
+		}
 	}
-
-	// .tit {
-	// 	font-size: 2.5rem;
-	// 	font-weight: bold;
-	// 	margin-bottom: 20px;
-	// 	color: #333;
-	// }
-
-	// .content {
-	// 	display: flex;
-	// 	justify-content: center;
-	// 	align-items: center;
-	// 	flex-wrap: wrap;
-	// 	max-width: 1200px;
-	// 	margin: 0 auto;
-	// }
-
-	// .pic {
-	// 	max-width: 400px;
-	// 	margin-right: 40px;
-	// 	border: 5px solid #222;
-	// 	object-fit: cover;
-	// }
-
-	// .txt {
-	// 	max-width: 500px;
-	// 	text-align: left;
-	// }
-
-	// .highlight {
-	// 	font-size: 6rem;
-	// 	font-weight: bold;
-	// 	color: #b59e58;
-	// }
-
-	// .subhighlight {
-	// 	font-size: 2rem;
-	// 	line-height: 1.5;
-	// 	color: #444;
-	// 	margin-top: 10px;
-	// }
-
-	// .description {
-	// 	font-size: 1.5rem;
-	// 	margin-top: 20px;
-	// 	font-weight: bold;
-	// 	color: #333;
-	// }
-
-	// .details {
-	// 	font-size: 1.2rem;
-	// 	margin-top: 15px;
-	// 	color: #666;
-	// 	line-height: 1.6;
-	// }
-
-	// .info {
-	// 	font-size: 1rem;
-	// 	margin-top: 30px;
-	// 	color: #999;
-	// 	line-height: 1.6;
-	// }
 }
 @media screen and (max-width: v.$tablet) {
 }
 
 @media screen and (max-width: v.$mobile) {
-	// 	.content {
-	// 		flex-direction: column;
-	// 		align-items: center;
-	// 	}
-
-	// 	.pic {
-	// 		margin-right: 0;
-	// 		margin-bottom: 20px;
-	// 	}
-
-	// 	.txt {
-	// 		text-align: center;
-	// 	}
-	// }
 }

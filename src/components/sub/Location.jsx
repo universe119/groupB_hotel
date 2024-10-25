@@ -9,11 +9,10 @@ export default function Location() {
 	const { ref_mapFrame, ref_viewFrame } = useLocation(Traffic, Roadview, setTraffic, setRoadview);
 
 	return (
-		<Layout title="Map">
-			{" "}
+		<Layout title="Location">
 			{/* Layout으로 Map 페이지 레이아웃 설정 */}
-			<section className="map">
-				<h2>Location</h2>
+			<section className="location">
+				<h2>오시는 길</h2>
 
 				{/* 맵과 로드뷰 프레임 */}
 				<figure className="mapFrame">
@@ -32,6 +31,15 @@ export default function Location() {
 						</li>
 					</ul>
 				</nav>
+
+				<article className="transportation">
+					<div>
+						<h3>대중교통</h3>
+					</div>
+					<div>
+						<h3>자가용</h3>
+					</div>
+				</article>
 			</section>
 		</Layout>
 	);

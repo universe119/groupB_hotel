@@ -12,7 +12,10 @@ export default function Offers() {
 	return (
 		<figure className="offers">
 			<div className="inner">
-				<Link to="/">GO TO OFFERS 화살표임티추가 </Link>
+				<Link to="/">
+					GO TO OFFERS{" "}
+					<Pic className="pic" src={"커서2.jpg"} alt="커서이미지" style={{ width: "30px", height: "30px" }} />
+				</Link>
 			</div>
 
 			<div className="swipeArea">

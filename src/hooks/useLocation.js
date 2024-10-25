@@ -5,13 +5,12 @@ export default function useLocation(Traffic) {
 	//, Roadview, setTraffic, setRoadview) {
 	const { kakao } = window;
 
-	// 첫 번째 위치 정보만 참조
 	const ref_info = useRef({
 		title: "PSYH HOTEL",
 		latlng: new kakao.maps.LatLng(37.545453, 127.057083),
-		markerImg: "marker1.png",
-		markerSize: new kakao.maps.Size(232, 99),
-		markerOffset: { offset: new kakao.maps.Point(116, 99) }
+		markerImg: "/maker수정.png", // 이미지 수정
+		markerSize: new kakao.maps.Size(200, 200),
+		markerOffset: { offset: new kakao.maps.Point(100, 200) }
 	});
 
 	const { latlng, markerImg, markerSize, markerOffset } = ref_info.current;

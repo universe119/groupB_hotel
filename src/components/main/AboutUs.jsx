@@ -7,6 +7,7 @@ import { useZustandStore } from "../../hooks/useZustand";
 export default function AboutUs() {
 	const IsModal = useZustandStore(state => state.IsModal);
 	const setModalOpen = useZustandStore(state => state.setModalOpen);
+	console.log(setModalOpen);
 
 	useEffect(() => {
 		document.body.style.overflow = IsModal ? "hidden" : "auto";
@@ -23,33 +24,35 @@ export default function AboutUs() {
 					style={{ width: "100%", height: "100%" }}
 				/>
 			</div>
-			<div
-				className="subImg"
-				onClick={() => {
-					setModalOpen();
-				}}>
-				<div className="modal1">
-					<AnimatePresence>
-						{IsModal && (
-							<Modal>
-								<Pic
-									className="pic"
-									src={"/호텔빌딩2작음수정.jpg"}
-									alt={"호텔빌딩"}
-									style={{ width: "100%", height: "100%" }}
-								/>
-							</Modal>
-						)}
-					</AnimatePresence>
+			<div className="subImg">
+				<div className="modal1" onClick={setModalOpen}>
+					모달1: 호텔 서비스가치
 				</div>
-				<div className="modal2">모달2: 호텔 룸 소개</div>
-				<div className="modal3">사진 대체?</div>
-				<div className="modal4">사진 대체?</div>
+				<div className="modal2" onClick={setModalOpen}>
+					모달2: 호텔 룸 소개
+				</div>
+				<div className="modal3" onClick={setModalOpen}>
+					사진 대체?
+				</div>
+				<div className="modal4" onClick={setModalOpen}>
+					사진 대체?
+				</div>
 			</div>
 			<div className="footerImg">
 				<p>하단 내용은 호텔를 소개하는 설명글</p>
 			</div>
-
+			<AnimatePresence>
+				{IsModal && (
+					<Modal>
+						<Pic
+							className="pic"
+							src={"/호텔빌딩2작음수정.jpg"}
+							alt={"호텔빌딩"}
+							style={{ width: "100%", height: "100%" }}
+						/>
+					</Modal>
+				)}
+			</AnimatePresence>
 			{/* <h2 className="tit">ABOUT US</h2>
 			<div className="content">
 				<Pic src={"/"} alt="Hotel" className="pic" />

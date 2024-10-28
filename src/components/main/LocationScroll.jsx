@@ -20,7 +20,7 @@ export default function LocationScroll() {
 			{/* <article> */}
 			<div className="locationTxt">
 				<h2>Location</h2>
-				<Link to="/sub/location" className="locationLink">
+				<Link to="/location" className="locationLink">
 					Details
 					<FaRegArrowAltCircleRight className="detailIcon" />
 				</Link>

@@ -182,33 +182,32 @@
 
 		.evenTxt,
 		.oddTxt {
-			width: 30%;
+			width: 50%;
 			display: flex;
 			flex-direction: column;
 			justify-content: space-between;
 			position: absolute;
 			z-index: 5;
-
+			bottom: 1.5vh;
 			p {
-				font: 1rem/1.3 "Arial", sans-serif;
-				color: #111;
-				margin-bottom: 8vh;
+				font: 100 1.5rem/1.3 "Arial", sans-serif;
+				color: #888;
 				word-break: break-all;
+				margin-bottom: 8vh;
 			}
-
 			span {
 				font: 400 0.8rem/1 v.$orbitron, sans-serif;
-				color: #333;
+				color: rgba(255, 165, 0, 0.9);
 				letter-spacing: 1px;
 			}
 		}
 		.evenTxt {
-			bottom: 1.2vh;
-			left: 42vh;
+			// left: 42vh; 	// 텍스트 안으로 이동
+			left: 53vh; // 텍스트 밖으로 이동
 		}
 		.oddTxt {
-			bottom: 1.2vh;
-			right: 42vh;
+			// right: 42vh; // 텍스트 안으로 이동
+			right: 53vh; // 텍스트 밖으로 이동
 			text-align: right;
 		}
 

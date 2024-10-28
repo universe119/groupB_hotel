@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
+import SplitText from "./SplitText";
 
 export default function Layout({ title, children }) {
 	const { pathname } = useLocation();
@@ -18,7 +19,7 @@ export default function Layout({ title, children }) {
 
 	return (
 		<main className={currentClass}>
-			{title}
+			{pathname !== "/" && <SplitText delay={0.4}>{title}</SplitText>}
 			<section>{children}</section>
 		</main>
 	);

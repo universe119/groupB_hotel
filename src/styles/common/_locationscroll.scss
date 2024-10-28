@@ -1,0 +1,16 @@
+@use "variables" as v;
+
+.locationScroll {
+	width: 100%;
+	h2 {
+		font: 500 2rem/1 "orbitron";
+		color: #333;
+		letter-spacing: 1px;
+		margin-bottom: 60px;
+	}
+}
+@media screen and (max-width: v.$tablet) {
+}
+
+@media screen and (max-width: v.$mobile) {
+}

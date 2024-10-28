@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 
-export default function Content({ children, duration = 1, delay = 0, customMotion }) {
+export default function Content({ children, duration = 1, delay = 0.3, customMotion }) {
 	const defaultMotion = {
 		init: { opacity: 0, y: 200 },
 		active: { opacity: 1, y: 0 },

@@ -10,7 +10,7 @@ export default function Youtube() {
 	const shortenText = useShortenText();
 	const combineText = useCombineText();
 
-	const { data: Vids, isPending } = useYoutubeQuery({ type: "B" });
+	const { data: Vids, isPending } = useYoutubeQuery({ type: "A" });
 
 	return (
 		<Layout title={"YOUTUBE"}>

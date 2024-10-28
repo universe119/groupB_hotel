@@ -7,10 +7,14 @@
 	justify-content: space-between;
 	margin: 100px 0px;
 
+	.titImg {
+		width: 50%;
+		height: 50vh;
+	}
 	.formBox {
 		width: 48%;
-		border-right: 1px solid #bbb;
-		padding-right: 8vw;
+		// border-right: 1px solid #bbb;
+		// padding-right: 8vw;
 
 		label {
 			display: block;
@@ -37,12 +41,12 @@
 
 		.upper {
 			width: 100%;
-			display: flex;
-			justify-content: space-between;
 			margin-bottom: 50px;
+
 			span {
 				display: block;
-				width: 48%;
+				width: 100%;
+				margin-bottom: 50px;
 
 				input[type="text"],
 				input[type="email"] {
@@ -73,21 +77,21 @@
 			}
 		}
 	}
-	.info {
-		width: 48%;
-		padding-left: 8vw;
+	// .info {
+	// 	width: 48%;
+	// 	padding-left: 8vw;
 
-		h2 {
-			font: 500 2rem/1 "orbitron";
-			letter-spacing: 1px;
-			color: #444;
-			margin-bottom: 30px;
-		}
-		p {
-			font: 0.8rem/1.3 "arial";
-			color: #777;
-		}
-	}
+	// 	h2 {
+	// 		font: 500 2rem/1 "orbitron";
+	// 		letter-spacing: 1px;
+	// 		color: #444;
+	// 		margin-bottom: 30px;
+	// 	}
+	// 	p {
+	// 		font: 0.8rem/1.3 "arial";
+	// 		color: #777;
+	// 	}
+	// }
 }
 
 @media screen and (max-width: v.$tablet) {

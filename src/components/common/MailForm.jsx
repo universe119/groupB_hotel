@@ -1,5 +1,6 @@
 import emailjs from "@emailjs/browser";
 import { useRef } from "react";
+import Pic from "./Pic";
 
 export default function MailForm() {
 	const ref_form = useRef(null);
@@ -29,9 +30,17 @@ export default function MailForm() {
 
 	return (
 		<article className="mailForm">
+			<div className="titImg">
+				<Pic className={"pic"} src={"/로비전화2.jpg"} style={{ width: "100%", height: "100%" }} />
+			</div>
 			<div className="formBox">
 				<form onSubmit={sendForm} ref={ref_form}>
 					{/* 문의자이름, 메일주소 입력받는 상단 영역 */}
+					<div>
+						GET IN TOUCH{" "}
+						<Pic className={"getImg"} src={"/전화이메일2.png"} style={{ width: "100%", height: "100%" }}></Pic>
+					</div>
+
 					<div className="upper">
 						<span>
 							<label htmlFor="uName">Name</label>
@@ -57,7 +66,7 @@ export default function MailForm() {
 				</form>
 			</div>
 
-			<div className="info">
+			{/* <div className="info">
 				<h2>Information</h2>
 				<p>
 					Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate reprehenderit laudantium cupiditate qui?
@@ -68,7 +77,7 @@ export default function MailForm() {
 				<p>
 					Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia, sequi ipsum. Deleniti nesciunt rerum ex!
 				</p>
-			</div>
+			</div> */}
 		</article>
 	);
 }

@@ -1,3 +1,4 @@
+/*
 @use "../common/variables" as v;
 
 .locationScroll {
@@ -13,11 +14,112 @@
 	justify-content: space-between;
 	align-content: center;
 
-	h2 {
-		font: 500 2rem/1 "orbitron";
-		color: #333;
-		letter-spacing: 1px;
-		margin-bottom: 60px;
+	// article {
+	// width: 100%;
+	// display: flex;
+	// flex-wrap: wrap;
+
+	// justify-content: center;
+	// align-content: center;
+
+	.locationTxt {
+		width: 100%;
+
+		h2 {
+			font: 500 4rem/1 v.$alegreya;
+			color: rgba(1, 1, 1, 0.5);
+			letter-spacing: 1px;
+		}
+
+		.locationLink {
+			font-size: 1.5rem;
+			color: rgba(1, 1, 1, 0.5);
+			display: inline-block;
+			border-bottom: 1px solid black;
+			cursor: pointer;
+
+			.detailIcon {
+				margin-left: 8px;
+				font-size: 1.3rem;
+			}
+		}
+	}
+
+	.mapFrame {
+		width: 100%;
+		height: 400px;
+	}
+	// }
+}
+
+@media screen and (max-width: v.$tablet) {
+}
+
+@media screen and (max-width: v.$mobile) {
+}
+*/
+
+@use "../common/variables" as v;
+
+.locationScroll {
+	width: 100%;
+	height: 100vh;
+	position: relative;
+	overflow: hidden;
+
+	background-color: #efefef;
+	padding: 100px 15vw 100px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-content: center;
+
+	article {
+		width: 100%;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-content: center;
+
+		.locationTxt {
+			width: 25%;
+			margin-left: 20px;
+			flex-direction: column;
+			border-style: 1px solid black;
+
+			h2 {
+				font: 500 4rem/1 v.$alegreya;
+				color: rgba(1, 1, 1, 0.5);
+				letter-spacing: 1px;
+			}
+
+			.locationLink {
+				font-size: 1.5rem;
+				color: rgba(1, 1, 1, 0.5);
+				display: inline-block;
+				border-bottom: 1px solid black;
+				cursor: pointer;
+
+				.detailIcon {
+					margin-left: 8px;
+					font-size: 1.3rem;
+				}
+			}
+
+			// &.hover {
+			// 	.locationTxt {
+			// 		color: #efefef;
+			// 	}
+			// 	.locationLink {
+			// 		color: #efefef;
+			// 	}
+			// }
+		}
+
+		.mapFrame {
+			width: 70%;
+			height: 400px;
+		}
 	}
 }
 
@@ -26,19 +128,3 @@
 
 @media screen and (max-width: v.$mobile) {
 }
-// @use "variables" as v;
-
-// .locationScroll {
-// 	width: 100%;
-// 	h2 {
-// 		font: 500 2rem/1 "orbitron";
-// 		color: #333;
-// 		letter-spacing: 1px;
-// 		margin-bottom: 60px;
-// 	}
-// }
-// @media screen and (max-width: v.$tablet) {
-// }
-
-// @media screen and (max-width: v.$mobile) {
-// }

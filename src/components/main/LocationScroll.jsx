@@ -1,4 +1,6 @@
 import useLocation from "../../hooks/useLocation";
+import { Link } from "react-router-dom";
+import { FaRegArrowAltCircleRight } from "react-icons/fa";
 
 export default function LocationScroll() {
 	const centerPosition = new window.kakao.maps.LatLng(37.545453, 127.057083); // 원하는 위치
@@ -15,10 +17,16 @@ export default function LocationScroll() {
 
 	return (
 		<section className="locationScroll">
-			<h2>Location</h2>
-			<div ref={ref_mapFrame} style={{ width: "100%", height: "500px" }}>
-				{/* 지도가 표시될 div */}
+			{/* <article> */}
+			<div className="locationTxt">
+				<h2>Location</h2>
+				<Link to="/sub/location" className="locationLink">
+					Details
+					<FaRegArrowAltCircleRight className="detailIcon" />
+				</Link>
 			</div>
+			<div className="mapFrame" ref={ref_mapFrame}></div>
+			{/* </article> */}
 		</section>
 	);
 }

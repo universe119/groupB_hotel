@@ -18,6 +18,7 @@ export default function App() {
 			<Routes location={location} key={location.pathname}>
 				<Route path="/" element={<Home />} />
 				<Route path="/location" element={<Location />} />
+				<Route path="/sub/location" element={<Location />} />
 				<Route path="/package" element={<Package />} />
 				<Route path="/gallery" element={<Gallery />} />
 				<Route path="/youtube" element={<Youtube />} />

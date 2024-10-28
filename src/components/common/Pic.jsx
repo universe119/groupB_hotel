@@ -7,10 +7,10 @@ export default function Pic({ className, style, src, shadow = false }) {
 		height: "100%",
 		objectFit: "cover",
 		position: "absolute",
-		top: 20,
-		left: 20,
+		top: 10,
+		left: 10,
 		filter: "blur(20px)",
-		opacity: 0.8
+		opacity: 0.5
 	};
 	//기본 이미지 스타일
 	const picStyle = { width: "100%", height: "100%", objectFit: "cover", position: "absolute", top: 0, left: 0 };

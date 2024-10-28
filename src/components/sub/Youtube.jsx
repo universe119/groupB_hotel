@@ -11,7 +11,7 @@ export default function Youtube() {
 	const combineText = useCombineText();
 
 	const { data: Vids, isPending } = useYoutubeQuery({ type: "A" });
-
+	/*
 	return (
 		<Layout title={"YOUTUBE"}>
 			<Content delay={1}>
@@ -30,6 +30,32 @@ export default function Youtube() {
 						</article>
 					);
 				})}
+			</Content>
+		</Layout>
+	);*/
+	return (
+		<Layout title={"YOUTUBE"}>
+			<Content delay={1}>
+				{isPending && <p>Loading...</p>}
+				<div className="youtube">
+					{Vids?.map((vid, idx) => (
+						<article key={idx}>
+							<h3 className={idx % 2 === 0 ? "evenTit" : "oddTit"}>
+								<Link to={`/youtube/${vid.id}`}>{shortenText(vid.snippet.title, 60)}</Link>
+							</h3>
+							<div className={idx % 2 === 0 ? "evenTxt" : "oddTxt"}>
+								<p>{shortenText(vid.snippet.description, 150)}</p>
+								<span>{combineText(vid.snippet.publishedAt.split("T")[0], "-", ".")}</span>
+							</div>
+							<div className={idx % 2 === 0 ? "evenBox" : "oddBox"}></div>
+							<Pic
+								style={{ position: "absolute" }}
+								className={idx % 2 === 0 ? "evenThumb" : "oddThumb"}
+								src={vid.snippet.thumbnails.high.url}
+							/>
+						</article>
+					))}
+				</div>
 			</Content>
 		</Layout>
 	);

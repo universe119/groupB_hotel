@@ -13,17 +13,31 @@
 	}
 	.formBox {
 		width: 48%;
-		// border-right: 1px solid #bbb;
-		// padding-right: 8vw;
 
+		.mailMark {
+			display: flex;
+			align-items: center;
+			margin-bottom: 50px;
+			h2 {
+				font: 100 2.2rem/1 v.$alegreya;
+			}
+
+			.getImg {
+				display: flex;
+				width: 45px;
+				height: 45px;
+				margin-left: 5px;
+			}
+		}
 		label {
 			display: block;
-			font: 500 1rem/1 "orbitron";
+			font: 500 1.2rem/1 v.$alegreya;
 			color: #333;
 			margin-bottom: 20px;
 		}
 		input[type="text"],
 		input[type="email"],
+		input[type="tel"],
 		textarea {
 			border: none;
 			width: 100%;

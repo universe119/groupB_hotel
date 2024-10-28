@@ -16,7 +16,7 @@ export default function AboutUs() {
 	return (
 		<section className="aboutUs">
 			<div className="titImg">
-				<Pic className="pic" src={"/호텔빌딩2작음수정.jpg"} style={{ width: "100%", height: "100%" }} />
+				<Pic className="pic" src={"/호텔빌딩2작음수정.jpg"} style={{ width: "100%", height: "100%" }} shadow />
 			</div>
 			<div className="subImg">
 				<div className="modal1" onClick={setModalOpen}>
@@ -66,7 +66,7 @@ export default function AboutUs() {
 				{/* 추후 사진 4개 map돌려야함 */}
 				{IsModal && (
 					<Modal>
-						<Pic className="pic" src={"/호텔빌딩2작음수정.jpg"} style={{ width: "100%", height: "100%" }} />
+						<Pic className="pic" src={"/호텔빌딩2작음수정.jpg"} style={{ width: "100%", height: "100%" }} shadow />
 					</Modal>
 				)}
 			</AnimatePresence>

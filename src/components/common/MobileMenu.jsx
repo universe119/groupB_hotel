@@ -2,6 +2,7 @@
 // import useThrottle from "../../hooks/useThrottle";
 // import { useEffect } from "react";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 export default function MobileMenu({ menuClose }) {
 	// 각 메뉴 항목의 하위 메뉴 상태를 관리하기 위한 상태 추가

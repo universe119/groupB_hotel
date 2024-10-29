@@ -36,6 +36,7 @@
 	}
 	.clock {
 		position: relative;
+		font-family: v.$allura;
 		font-size: 5rem;
 		color: rgba(var(--keyNight));
 		z-index: 2;
@@ -62,7 +63,7 @@
 			position: relative;
 			z-index: 2;
 			h2 {
-				font: 500 5rem/1 v.$alegreya;
+				font: 500 5rem/1 v.$allura;
 				color: rgba(var(--keyNight));
 				margin-bottom: 5px;
 				text-align: center;

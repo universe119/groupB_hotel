@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import useThrottle from "../../hooks/useThrottle";
 
 export default function HomeScroll() {
-	const sideMenuArr = ["Home", "About us", "Offers", "Location", "Retail Business"];
+	const sideMenuArr = ["Home", "About us", "Offers", "Retail Business", "Location"];
 	const [currentPage, setCurrentPage] = useState(0);
 	const [pageHeight, setPageHeight] = useState(window.innerHeight); // pageHeight를 상태로 설정
 	const totalPages = sideMenuArr.length;

@@ -45,7 +45,7 @@ export default function MobileMenu({ menuClose }) {
 		},
 		{
 			title: "OFFERS",
-			subItems: ["PACKAGE", "EVENT"]
+			subItems: ["COMMUNITY", "EVENT"]
 		},
 		{
 			title: "MEDIA",
@@ -79,7 +79,7 @@ export default function MobileMenu({ menuClose }) {
 											to={
 												subItem === "GALLERY"
 													? "GALLERY"
-													: subItem === "PACKAGE"
+													: subItem === "COMMUNITY"
 													? "PACKAGE"
 													: subItem === "YOUTUBE"
 													? "YOUTUBE"

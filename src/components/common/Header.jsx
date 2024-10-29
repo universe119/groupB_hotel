@@ -1,12 +1,15 @@
 import { Link, useLocation } from "react-router-dom";
 import { useZustandStore } from "../../hooks/useZustand";
+import { FaBars, FaEnvelope, FaInstagram, FaYoutube } from "react-icons/fa";
 
 export default function Header({ menuOpen, menuClose }) {
 	const { pathname } = useLocation();
 
-	// 상단좌측메뉴
-	const gnbLArr = ["LOCATION", "PACKAGE"];
-	const gnbRArr = ["GALLERY", "YOUTUBE", "CONTACT"];
+	//상단좌측메뉴
+	// const gnbLArr = ["LOCATION", "COMMUNITY"];
+	// const gnbRArr = ["GALLERY", "YOUTUBE", "CONTACT"];
+	//sns 메뉴
+	const snsArr = [FaEnvelope, FaInstagram, FaYoutube];
 
 	const setMenuToggle = useZustandStore(state => state.setMenuToggle);
 
@@ -29,7 +32,7 @@ export default function Header({ menuOpen, menuClose }) {
 					</button>
 				</div>
 
-				<nav>
+				{/* <nav>
 					<ul className="gnbL">
 						{gnbLArr.map((data, idx) => {
 							return (
@@ -41,7 +44,7 @@ export default function Header({ menuOpen, menuClose }) {
 							);
 						})}
 					</ul>
-				</nav>
+				</nav> */}
 
 				<h1>
 					<Link to={"/"} onClick={menuClose}>
@@ -49,7 +52,7 @@ export default function Header({ menuOpen, menuClose }) {
 					</Link>
 				</h1>
 
-				<nav>
+				{/* <nav>
 					<ul className="gnbR">
 						{gnbRArr.map((data, idx) => {
 							return (
@@ -60,6 +63,17 @@ export default function Header({ menuOpen, menuClose }) {
 								</li>
 							);
 						})}
+					</ul>
+				</nav> */}
+
+				{/* sns 설정 */}
+				<nav>
+					<ul className="sns">
+						{snsArr.map((Data, idx) => (
+							<li key={idx}>
+								<Data />
+							</li>
+						))}
 					</ul>
 				</nav>
 			</header>

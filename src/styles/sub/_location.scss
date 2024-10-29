@@ -1,13 +1,6 @@
 @use "../common/variables" as v;
 
 .location {
-	h2 {
-		font: 500 2rem/1 "orbitron";
-		color: #333;
-		letter-spacing: 1px;
-		margin-bottom: 60px;
-	}
-
 	// 맵과 로드뷰 프레임 스타일
 	.mapFrame {
 		position: relative;
@@ -79,6 +72,15 @@ article {
 	text-align: left; // 모든 텍스트 좌측 정렬
 	margin-bottom: 50px;
 
+	h1 {
+		width: 100%;
+		flex-wrap: wrap;
+		font: 500 2rem/1 "orbitron";
+		color: #333;
+		letter-spacing: 1px;
+		margin-bottom: 30px;
+	}
+
 	.transportation {
 		width: 50%;
 		display: flex;
@@ -90,33 +92,35 @@ article {
 
 			h2 {
 				font: 500 2rem;
+				margin-bottom: 50px;
 			}
 
 			.detailSub,
 			.detailBus {
 				h3 {
 					font: 1.5rem;
-					margin-bottom: 15px;
+					margin-bottom: 10px;
 				}
 
 				p {
 					font: 1.5rem;
-					margin-bottom: 50px;
+					margin-bottom: 30px;
 				}
 			}
 		}
 	}
 
 	.reservation {
-		width: 25%;
+		width: 40%;
 		text-align: left;
 
 		h2 {
 			font-size: 2rem;
+			margin-bottom: 30px;
 		}
 
 		p {
-			font-size: 1.5rem;
+			font-size: 1rem;
 			margin-bottom: 10px;
 			opacity: 0.5;
 		}

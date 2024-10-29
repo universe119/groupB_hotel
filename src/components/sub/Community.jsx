@@ -1,9 +1,9 @@
 import Content from "../common/Content";
 import Layout from "../common/Layout";
 
-export default function Package() {
+export default function Community() {
 	return (
-		<Layout title={"PACKAGE"}>
+		<Layout title={"COMMUNITY"}>
 			<Content></Content>
 		</Layout>
 	);

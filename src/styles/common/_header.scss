@@ -58,27 +58,33 @@
 	}
 
 	h1 {
-		width: 22%;
-		font: 300 3rem/1 v.$alegreya;
+		width: 100%;
+		font: 300 3rem / 1 v.$alegreya;
 		color: rgba(var(--keyNight));
 		letter-spacing: 7px;
+		text-align: center;
 	}
 	nav {
-		width: 40vh;
-
 		ul {
 			display: flex;
 			font: 600 1.2rem/1 v.$raleway;
 			color: rgba(var(--keyNight));
 		}
 
-		.gnbL {
-			gap: 90px;
+		.sns {
+			display: flex;
+			font-size: 1rem;
+			color: #fff;
+			gap: 10px;
 		}
 
-		.gnbR {
-			gap: 60px;
-		}
+		// .gnbL {
+		// 	gap: 90px;
+		// }
+
+		// .gnbR {
+		// 	gap: 60px;
+		// }
 	}
 }
 

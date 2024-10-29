@@ -18,11 +18,11 @@ export default function SplitText({ children = "", style, interval = 0.1, delay 
 	//서식 외의 스타일구문은 자식요소로 자동 상속이 안됨 (marginBottom은 span에 상속이 안 먹고 부모요소인 h2에만 적용됨)
 	const titStyle = {
 		display: "inline-block",
-		marginBottom: 50,
 		fontWeight: 100,
 		fontSize: "4vmax",
 		fontFamily: "Alegreya",
 		lineHeight: 1,
+		marginTop: "10vh",
 		color: "#333",
 		...style
 	};

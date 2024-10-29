@@ -13,8 +13,8 @@ export default function Home() {
 			<HomeVisual />
 			<AboutUs />
 			<Offers />
-			<LocationScroll />
 			<RetailBusiness />
+			<LocationScroll />
 		</Layout>
 	);
 }

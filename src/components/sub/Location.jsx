@@ -15,8 +15,6 @@ export default function Location() {
 			<Content>
 				{/* Layout으로 Map 페이지 레이아웃 설정 */}
 				<section className="location">
-					<h2>오시는 길</h2>
-
 					{/* 맵과 로드뷰 프레임 */}
 					<figure className="mapFrame">
 						<article ref={ref_mapFrame} className={`mapFrame ${!Roadview && "on"}`}></article>
@@ -35,6 +33,7 @@ export default function Location() {
 						</ul>
 					</nav>
 					<article>
+						<h1>오시는 길</h1>
 						<div className="transportation">
 							<div className="subway">
 								<h2>지하철역</h2>

@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import Pic from "../common/Pic";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper/modules";
-import memberData from "../../data/memberData";
+import offerData from "../../data/offerData";
 
 import "swiper/css";
 import "swiper/css/navigation";
@@ -13,7 +13,7 @@ export default function Offers() {
 		<figure className="offers">
 			<div className="inner">
 				<Link to="/">
-					GO TO OFFERS{" "}
+					<h3>GO TO OFFERS</h3>
 					<Pic className="pic" src={"커서2.jpg"} alt="커서이미지" style={{ width: "30px", height: "30px" }} />
 				</Link>
 			</div>
@@ -32,17 +32,19 @@ export default function Offers() {
 							}}
 							modules={[Pagination]}
 							className="mySwiper">
-							{memberData.map((pic, idx) => {
+							{offerData.map((data, idx) => {
 								return (
 									<SwiperSlide key={idx}>
 										<li className="swipeSlide">
 											<span className="thum">
-												<Pic className="pic" src={pic.pic} alt={pic.name} />
+												<Pic className="pic" src={data.pic} alt={data.name} />
 											</span>
-											<strong className="tit">{pic.name}</strong>
-											<p className="txt">{pic.position}</p>
-											<p className="date">{pic.position}</p>
-											<p className="hotelName">{pic.position}</p>
+											<span className="thumTxt">
+												<strong className="tit">{data.title}</strong>
+												<p className="txt">{data.description}</p>
+												<p className="period">{data.period}</p>
+												<p className="location">{data.location}</p>
+											</span>
 										</li>
 									</SwiperSlide>
 								);

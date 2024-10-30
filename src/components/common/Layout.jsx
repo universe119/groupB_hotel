@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import SplitText from "./SplitText";
+import Mask from "./Mask";
 
 export default function Layout({ title, children }) {
 	const { pathname } = useLocation();
@@ -18,9 +19,12 @@ export default function Layout({ title, children }) {
 	}, [pathname]); // pathname이 변경될 때마다 호출
 
 	return (
-		<main className={currentClass}>
-			{pathname !== "/" && <SplitText delay={0.4}>{title}</SplitText>}
-			<section>{children}</section>
-		</main>
+		<>
+			<main className={currentClass}>
+				{pathname !== "/" && <SplitText delay={0.4}>{title}</SplitText>}
+				<section>{children}</section>
+			</main>
+			<Mask duration={0.5} delay={0} style={{ position: "fixed" }} />
+		</>
 	);
 }

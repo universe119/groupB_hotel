@@ -37,9 +37,9 @@ export default function Youtube() {
 		<Layout title={"YOUTUBE"}>
 			<Content delay={1}>
 				{isPending && <p>Loading...</p>}
-				<div className="youtube">
+				<>
 					{Vids?.map((vid, idx) => (
-						<article key={idx}>
+						<article key={idx} className="youtube">
 							<h3 className={idx % 2 === 0 ? "evenTit" : "oddTit"}>
 								<Link to={`/youtube/${vid.id}`}>{shortenText(vid.snippet.title, 60)}</Link>
 							</h3>
@@ -55,7 +55,7 @@ export default function Youtube() {
 							/>
 						</article>
 					))}
-				</div>
+				</>
 			</Content>
 		</Layout>
 	);

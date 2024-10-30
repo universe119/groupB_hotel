@@ -63,7 +63,6 @@
 					margin: 0 15px; // 슬라이드 간 간격
 					opacity: 1;
 					transition: opacity 400ms, transform 400ms;
-					text-align: center;
 
 					.thum {
 						width: 100%;
@@ -88,21 +87,29 @@
 							}
 						}
 					}
+					.thumTxt {
+						display: flex;
+						width: 100%;
+						flex-wrap: wrap;
+						justify-content: center;
 
-					.tit {
-						margin-top: 10px;
-						font-size: 20px; // 글자 크기 증가
-						font-weight: bold;
-						text-align: center; // 제목 중앙 정렬
-					}
+						.tit {
+							margin-top: 10px;
+							font-size: 20px; // 글자 크기 증가
+							font-weight: bold;
+						}
 
-					.txt,
-					.date,
-					.hotelName {
-						margin-top: 5px;
-						font-size: 14px;
-						color: #666;
-						text-align: center; // 텍스트 중앙 정렬
+						.txt,
+						.period,
+						.location {
+							margin-top: 5px;
+							font-size: 14px;
+							color: #666;
+							text-align: center; // 텍스트 중앙 정렬
+						}
+						.period {
+							color: orange;
+						}
 					}
 				}
 			}

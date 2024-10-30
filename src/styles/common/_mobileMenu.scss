@@ -15,7 +15,7 @@
 	z-index: 10;
 
 	nav {
-		width: 80%;
+		width: 90%;
 
 		.subMenuList {
 			display: flex;
@@ -26,7 +26,7 @@
 			.subMenu {
 				h1 {
 					color: white;
-					font-size: 3rem;
+					font: 3.5vh/1.1 v.$cinzel;
 					margin-bottom: 2rem;
 					text-align: center;
 				}
@@ -39,7 +39,7 @@
 
 					li {
 						color: rgb(194, 178, 178);
-						font-size: 1.5rem;
+						font: 1.8vh/1.1 v.$cinzel;
 						text-decoration: none;
 						transition: color 0.3s;
 						margin-bottom: 20px;

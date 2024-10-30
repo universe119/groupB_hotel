@@ -48,7 +48,7 @@ export default function Header({ menuOpen, menuClose }) {
 
 				<h1>
 					<Link to={"/"} onClick={menuClose}>
-						psyh Hotel
+						PSYH HOTEL
 					</Link>
 				</h1>
 

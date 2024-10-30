@@ -149,34 +149,39 @@ export default function Gallery() {
 		<>
 			<Layout title={"GALLERY"}>
 				<Content>
-					<div className="notice">
-						<p>This web page was created for study purposes, not for commercial use.</p>
-						<p>The Images below are sourced from unsplash.com</p>
-					</div>
-					<div className="gallerySlider" style={{ fontSize: 40 }}>
-						{Index + 1} / {Flickr.length}
-					</div>
-					<section className="galleryList">
-						<Swiper
-							spaceBetween={15}
-							slidesPerView={3}
-							loop={Flickr.length > 2}
-							centeredSlides={true}
-							onSlideChange={handleSlideChange}>
-							{Flickr.map((data, idx) => (
-								<SwiperSlide key={idx} onClick={() => handleSlideClick(idx)}>
-									<div className="inner">
-										<Pic
-											src={`https://live.staticflickr.com/${data.server}/${data.id}_${data.secret}_z.jpg`}
-											className="pic"
-										/>
-									</div>
-									<div className="overlay">
-										<h3>{data.title}</h3>
-									</div>
-								</SwiperSlide>
-							))}
-						</Swiper>
+					<section className="gallery">
+						<div className="textZone">
+							<p>
+								This web page was created for study purposes, not for commercial use.
+								<br />
+								The Images below are sourced from &quot;flickr.com&quot;
+							</p>
+							<div className="gallerySlider">
+								{Index + 1} / {Flickr.length}
+							</div>
+						</div>
+						<section className="galleryList">
+							<Swiper
+								spaceBetween={15}
+								slidesPerView={3}
+								loop={Flickr.length > 2}
+								centeredSlides={true}
+								onSlideChange={handleSlideChange}>
+								{Flickr.map((data, idx) => (
+									<SwiperSlide key={idx} onClick={() => handleSlideClick(idx)}>
+										<div className="inner">
+											<Pic
+												src={`https://live.staticflickr.com/${data.server}/${data.id}_${data.secret}_z.jpg`}
+												className="pic"
+											/>
+										</div>
+										<div className="overlay">
+											<h3>{data.title}</h3>
+										</div>
+									</SwiperSlide>
+								))}
+							</Swiper>
+						</section>
 					</section>
 				</Content>
 			</Layout>

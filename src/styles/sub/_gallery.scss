@@ -1,9 +1,26 @@
 @use "../common/variables" as v;
 
 .gallery {
+	.textZone {
+		width: 100%;
+		margin-top: 10px;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		margin-bottom: none;
+
+		p {
+			font-size: 1rem;
+		}
+		.gallerySlider {
+			font: 500 4rem/1 v.$cinzel;
+		}
+	}
+
 	.galleryList {
 		width: 100%;
 		position: relative;
+		top: -50px;
 
 		.swiper {
 			width: 100%;

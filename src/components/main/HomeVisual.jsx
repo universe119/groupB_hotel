@@ -60,22 +60,22 @@ export default function HomeVisual() {
 				style={{ width: "100%", height: "100%", position: "absolute", opacity: 0.8 }}
 			/>
 
-			<div className="clock" style={theme === "night" ? { color: "#efefef" } : { color: "#282828" }}>
+			<div className="clock" style={theme === "morning" ? { color: "#000" } : { color: "#fff" }}>
 				<span>{time.hr}</span> : <span>{time.min}</span> : <span>{time.sec}</span>
 				<em
 					className={time.period === "AM" ? "on" : ""}
-					style={theme === "night" ? { color: "#efefef" } : { color: "#282828" }}>
+					style={theme === "morning" ? { color: "#000" } : { color: "#fff" }}>
 					{time.period === "AM" ? "AM" : ""}
 				</em>
 				<em
 					className={time.period === "PM" ? "on" : ""}
-					style={theme === "night" ? { color: "#efefef" } : { color: "#282828" }}>
+					style={theme === "morning" ? { color: "#000" } : { color: "#fff" }}>
 					{time.period === "PM" ? "PM" : ""}
 				</em>
 			</div>
 
 			<div className="slogan">
-				<h2 style={theme === "night" ? { color: "#efefef" } : { color: "#282828" }}>Experience the Difference</h2>
+				<h2 style={theme === "morning" ? { color: "#000" } : { color: "#fff" }}>Experience the Difference</h2>
 			</div>
 		</div>
 	);

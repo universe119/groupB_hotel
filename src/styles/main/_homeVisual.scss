@@ -12,7 +12,7 @@
 	flex-direction: column;
 
 	&.morning {
-		background-image: url("/public/morning.jpg");
+		background-image: url("/morning.jpg");
 		background-size: cover;
 		background-repeat: no-repeat;
 		object-fit: cover;
@@ -20,7 +20,7 @@
 	}
 
 	&.evening {
-		background-image: url("/public/evening.jpg");
+		background-image: url("/evening.jpg");
 		background-size: cover;
 		background-repeat: no-repeat;
 		object-fit: cover;
@@ -28,7 +28,7 @@
 	}
 
 	&.night {
-		background-image: url("/public/night.jpg");
+		background-image: url("/night.jpg");
 		background-size: cover;
 		background-repeat: no-repeat;
 		object-fit: cover;
@@ -59,16 +59,15 @@
 	// }
 
 	.slogan {
-		article {
-			width: 100%;
-			position: relative;
-			z-index: 2;
-			h2 {
-				font: 500 5rem/1 v.$allura;
-				color: rgba(var(--keyNight));
-				margin-bottom: 5px;
-				text-align: center;
-			}
+		width: 100%;
+		position: relative;
+		z-index: 2;
+
+		h2 {
+			font: 500 5rem/1 v.$allura;
+			color: rgba(var(--keyNight));
+			margin-bottom: 5px;
+			text-align: center;
 		}
 	}
 }

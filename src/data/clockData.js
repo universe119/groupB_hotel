@@ -1,5 +1,5 @@
 export const timeData = [
-	{ className: "morning", period: [7, 14] },
-	{ className: "evening", period: [15, 22] },
-	{ className: "night", period: [23, 6] }
+	{ className: "morning", period: [6, 12] },
+	{ className: "evening", period: [12, 20] },
+	{ className: "night", period: [20, 6] }
 ];

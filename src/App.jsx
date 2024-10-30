@@ -2,6 +2,9 @@ import Header from "./components/common/Header";
 import Home from "./components/main/Home";
 import Location from "./components/sub/Location";
 import Community from "./components/sub/Community";
+import CommunityDetail from "./components/sub/CommunityDetail";
+import CommunityAdd from "./components/sub/CommunityAdd";
+import CommunityEdit from "./components/sub/CommunityEdit";
 import Gallery from "./components/sub/Gallery";
 import Youtube from "./components/sub/Youtube";
 import YoutubeDetail from "./components/sub/YoutubeDetail";
@@ -25,6 +28,9 @@ export default function App() {
 				<Route path="/" element={<Home />} />
 				<Route path="/location" element={<Location />} />
 				<Route path="/community" element={<Community />} />
+				<Route path="/community/:slug" element={<CommunityDetail />} />
+				<Route path="/community-add" element={<CommunityAdd />} />
+				<Route path="/community-edit/:slug" element={<CommunityEdit />} />
 				<Route path="/gallery" element={<Gallery />} />
 				<Route path="/youtube" element={<Youtube />} />
 				<Route path="/youtube/:id" element={<YoutubeDetail />} />

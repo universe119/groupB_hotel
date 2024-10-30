@@ -7,6 +7,7 @@ export default function useThrottle(func, interval = 300) {
 		if (ref_timer.current) return;
 
 		ref_timer.current = setTimeout(() => {
+			// func();
 			func();
 			ref_timer.current = null;
 		}, interval);

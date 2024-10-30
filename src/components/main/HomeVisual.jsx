@@ -18,9 +18,10 @@ export default function HomeVisual() {
 	const updateTime = () => {
 		const now = new Date();
 		let hr = now.getHours();
+		// let hr = 20; // 테스트
+
 		let min = now.getMinutes();
 		let sec = now.getSeconds();
-		// let hr = 23; // 테스트
 		const period = hr >= 12 ? "PM" : "AM";
 
 		if (hr === 0) hr = 12; // 0시를 12시로 변환
@@ -36,7 +37,8 @@ export default function HomeVisual() {
 
 	const updateTheme = () => {
 		const currentHour = new Date().getHours();
-		// const currentHour = 23; // 테스트
+		// const currentHour = 20; // 테스트
+
 		const newTheme = timeData.find(data => {
 			if (data.className !== "night") {
 				return currentHour >= data.period[0] && currentHour < data.period[1];
@@ -58,24 +60,22 @@ export default function HomeVisual() {
 				style={{ width: "100%", height: "100%", position: "absolute", opacity: 0.8 }}
 			/>
 
-			<div className="clock" style={time.period === "AM" ? { color: "#282828" } : { color: "#efefef" }}>
+			<div className="clock" style={theme === "night" ? { color: "#efefef" } : { color: "#282828" }}>
 				<span>{time.hr}</span> : <span>{time.min}</span> : <span>{time.sec}</span>
 				<em
 					className={time.period === "AM" ? "on" : ""}
-					style={time.period === "AM" ? { color: "#282828" } : { color: "#efefef" }}>
+					style={theme === "night" ? { color: "#efefef" } : { color: "#282828" }}>
 					{time.period === "AM" ? "AM" : ""}
 				</em>
 				<em
 					className={time.period === "PM" ? "on" : ""}
-					style={time.period === "PM" ? { color: "#282828" } : { color: "#efefef" }}>
+					style={theme === "night" ? { color: "#efefef" } : { color: "#282828" }}>
 					{time.period === "PM" ? "PM" : ""}
 				</em>
 			</div>
 
 			<div className="slogan">
-				<article>
-					<h2>Experience the Difference</h2>
-				</article>
+				<h2 style={theme === "night" ? { color: "#efefef" } : { color: "#282828" }}>Experience the Difference</h2>
 			</div>
 		</div>
 	);

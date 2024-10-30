@@ -80,7 +80,7 @@ export default function MobileMenu({ menuClose }) {
 												subItem === "GALLERY"
 													? "GALLERY"
 													: subItem === "COMMUNITY"
-													? "PACKAGE"
+													? "COMMUNITY"
 													: subItem === "YOUTUBE"
 													? "YOUTUBE"
 													: "/"

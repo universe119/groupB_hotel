@@ -30,7 +30,7 @@ export default function MailForm() {
 	};
 
 	return (
-		<article className="mailForm">
+		<div className="mailForm">
 			<div className="titImg">
 				<Pic className={"pic"} src={"/로비전화2.jpg"} style={{ width: "100%", height: "100%" }} shadow />
 			</div>
@@ -83,6 +83,6 @@ export default function MailForm() {
 					Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia, sequi ipsum. Deleniti nesciunt rerum ex!
 				</p>
 			</div> */}
-		</article>
+		</div>
 	);
 }

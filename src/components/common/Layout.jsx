@@ -10,7 +10,7 @@ export default function Layout({ title, children }) {
 	//path명을 통해 레이아웃에 다른 클래스명 적용
 	if (isDetail) currentClass = "detail";
 	else if (pathname === "/") currentClass = "main";
-	else currentClass = title.toLowerCase();
+	else currentClass = title; // .toLowerCase();
 
 	// 페이지 전환 시마다 스크롤을 상단으로 이동
 	useEffect(() => {

@@ -53,7 +53,7 @@ export default function Facility() {
 			<section className="restaurant">
 				<div className="fac_Content">
 					<h2>RESTAURANT</h2>
-					<Pic className={"fac_Pic"} src={"/fac_restaurant.jpg"} alt="fac_restaurantl" />
+					<Pic className={"fac_Pic"} src={"/fac_restaurant.jpg"} alt="fac_restaurant" />
 				</div>
 				<p className="fac_detail">
 					위치 : 3F

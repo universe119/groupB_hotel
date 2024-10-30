@@ -7,12 +7,12 @@ export default function Footer() {
 			<h1>
 				{/* Pic 컴포넌트를 사용해 로고3 이미지 추가 */}
 				<Pic
-					src="/로고3.png"
-					alt="로고 이미지"
-					className="logo"
+					src={"/로고3.png"}
+					alt={"로고 이미지"}
+					className={"logo"}
 					style={{ width: "100px", height: "50px", marginRight: "10px" }}
 				/>
-				<Link to="/">psyh Hotel</Link>
+				<Link to={"/"}>psyh Hotel</Link>
 			</h1>
 
 			{/* 커튼 사진 출력은 css로 */}
@@ -20,11 +20,17 @@ export default function Footer() {
 			<section>
 				<ul>
 					<li>
-						<Link to="/contact">고객센터</Link>
+						<Link to={"/contact"}>고객센터</Link>
 					</li>
-					<li>웹사이트 이용약관</li>
-					<li>멤버십 이용약관</li>
-					<li>개인정보처리방침</li>
+					<li>
+						<Link to={"/community"}>고객센터</Link> 웹사이트 이용약관
+					</li>
+					<li>
+						<Link to={"/community"}>고객센터</Link> 멤버십 이용약관
+					</li>
+					<li>
+						<Link to={"/community"}>고객센터</Link> 개인정보처리방침
+					</li>
 				</ul>
 				<p>© 2024 PSYH Hotel & RESORTS Co. All rights reserved.</p>
 			</section>

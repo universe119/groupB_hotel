@@ -1,12 +1,36 @@
 import { AnimatePresence } from "framer-motion";
 import Pic from "../common/Pic";
 import Modal from "../common/Modal";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useZustandStore } from "../../hooks/useZustand";
 
 export default function AboutUs() {
 	const IsModal = useZustandStore(state => state.IsModal);
 	const setModalOpen = useZustandStore(state => state.setModalOpen);
+	const [Index, setIndex] = useState(0);
+
+	const roomData = [
+		{
+			tit: "MISSION",
+			dec: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, pariatur.",
+			pic: "/호텔빌딩2작음수정.jpg"
+		},
+		{
+			tit: "SWEET ROOM",
+			dec: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, pariatur.",
+			pic: "/SWEET_ROOM.jpg"
+		},
+		{
+			tit: "DELUXE ROOM",
+			dec: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, pariatur.",
+			pic: "/DELUXER_ROOM2.jpg"
+		},
+		{
+			tit: "STANDARD ROOM",
+			dec: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, pariatur.",
+			pic: "/STANDARD_ROOM.jpg"
+		}
+	];
 
 	useEffect(() => {
 		document.body.style.overflow = IsModal ? "hidden" : "auto";
@@ -16,37 +40,22 @@ export default function AboutUs() {
 	return (
 		<section className="aboutUs">
 			<div className="titImg">
-				<Pic className="pic" src={"/호텔빌딩2작음수정.jpg"} style={{ width: "100%", height: "100%" }} shadow />
+				<Pic className={"pic"} src={"/호텔빌딩2작음수정.jpg"} style={{ width: "100%", height: "100%" }} shadow />
 			</div>
 			<div className="subImg">
-				<div className="modal1" onClick={setModalOpen}>
-					모달1: 호텔 서비스가치
-					<p>MISSION</p>
-				</div>
-				<div className="modal2" onClick={setModalOpen}>
-					모달2: 호텔 룸 소개
-					<p>
-						Sweet
-						<br />
-						Room
-					</p>
-				</div>
-				<div className="modal3" onClick={setModalOpen}>
-					사진 대체?
-					<p>
-						Deluxe
-						<br />
-						Room
-					</p>
-				</div>
-				<div className="modal4" onClick={setModalOpen}>
-					사진 대체?
-					<p>
-						Standard
-						<br />
-						Room
-					</p>
-				</div>
+				{roomData.map((data, idx) => {
+					return (
+						<div
+							key={idx}
+							className={`modal${idx + 1}`}
+							onClick={() => {
+								setModalOpen();
+								setIndex(idx);
+							}}>
+							<p>{data.tit}</p>
+						</div>
+					);
+				})}
 			</div>
 			<div className="footerImg">
 				<div className="title">
@@ -62,11 +71,19 @@ export default function AboutUs() {
 					</p>
 				</div>
 			</div>
+
 			<AnimatePresence>
-				{/* 추후 사진 4개 map돌려야함 */}
 				{IsModal && (
 					<Modal>
-						<Pic className="pic" src={"/호텔빌딩2작음수정.jpg"} style={{ width: "100%", height: "100%" }} shadow />
+						<Pic
+							key={Index}
+							className={"pic"}
+							src={roomData[Index].pic}
+							alt={roomData[Index].tit}
+							style={{ width: "100%", height: "100%" }}
+						/>
+						<h1>{roomData[Index].tit}</h1>
+						<p>{roomData[Index].dec}</p>
 					</Modal>
 				)}
 			</AnimatePresence>

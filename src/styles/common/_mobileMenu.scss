@@ -29,6 +29,10 @@
 					font: 3.5vh/1.1 v.$cinzel;
 					margin-bottom: 2rem;
 					text-align: center;
+
+					&:hover {
+						color: #f39c12;
+					}
 				}
 
 				ul {

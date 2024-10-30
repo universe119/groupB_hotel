@@ -25,69 +25,9 @@
 		flex-wrap: wrap;
 		justify-content: space-between;
 
-		.modal1 {
-			width: 48%;
-			margin: 5px;
-			border-top: 1px solid #111;
-			border-bottom: 1px solid #111;
-			position: relative;
-			p {
-				margin-top: 10px;
-				font: 300 2.5rem bold;
-				position: absolute;
-				left: 0;
-				bottom: 0;
-			}
-			&:hover {
-				background: #111;
-				p {
-					color: #efefef;
-					border-bottom: 1px solid #111;
-				}
-			}
-		}
-		.modal2 {
-			width: 48%;
-			margin: 5px;
-			border-top: 1px solid #111;
-			border-bottom: 1px solid #111;
-			position: relative;
-			p {
-				margin-top: 10px;
-				font: 300 2.5rem bold;
-				position: absolute;
-				left: 0;
-				bottom: 0;
-			}
-			&:hover {
-				background: #111;
-				p {
-					color: #efefef;
-					border-bottom: 1px solid #111;
-				}
-			}
-		}
-		.modal3 {
-			width: 48%;
-			margin: 5px;
-			border-top: 1px solid #111;
-			border-bottom: 1px solid #111;
-			position: relative;
-			p {
-				margin-top: 10px;
-				font: 300 2.5rem bold;
-				position: absolute;
-				left: 0;
-				bottom: 0;
-			}
-			&:hover {
-				background: #111;
-				p {
-					color: #efefef;
-					border-bottom: 1px solid #111;
-				}
-			}
-		}
+		.modal1,
+		.modal2,
+		.modal3,
 		.modal4 {
 			width: 48%;
 			margin: 5px;
@@ -109,6 +49,69 @@
 				}
 			}
 		}
+		// .modal2 {
+		// 	width: 48%;
+		// 	margin: 5px;
+		// 	border-top: 1px solid #111;
+		// 	border-bottom: 1px solid #111;
+		// 	position: relative;
+		// 	p {
+		// 		margin-top: 10px;
+		// 		font: 300 2.5rem bold;
+		// 		position: absolute;
+		// 		left: 0;
+		// 		bottom: 0;
+		// 	}
+		// 	&:hover {
+		// 		background: #111;
+		// 		p {
+		// 			color: #efefef;
+		// 			border-bottom: 1px solid #111;
+		// 		}
+		// 	}
+		// }
+		// .modal3 {
+		// 	width: 48%;
+		// 	margin: 5px;
+		// 	border-top: 1px solid #111;
+		// 	border-bottom: 1px solid #111;
+		// 	position: relative;
+		// 	p {
+		// 		margin-top: 10px;
+		// 		font: 300 2.5rem bold;
+		// 		position: absolute;
+		// 		left: 0;
+		// 		bottom: 0;
+		// 	}
+		// 	&:hover {
+		// 		background: #111;
+		// 		p {
+		// 			color: #efefef;
+		// 			border-bottom: 1px solid #111;
+		// 		}
+		// 	}
+		// }
+		// .modal4 {
+		// 	width: 48%;
+		// 	margin: 5px;
+		// 	border-top: 1px solid #111;
+		// 	border-bottom: 1px solid #111;
+		// 	position: relative;
+		// 	p {
+		// 		margin-top: 10px;
+		// 		font: 300 2.5rem bold;
+		// 		position: absolute;
+		// 		left: 0;
+		// 		bottom: 0;
+		// 	}
+		// 	&:hover {
+		// 		background: #111;
+		// 		p {
+		// 			color: #efefef;
+		// 			border-bottom: 1px solid #111;
+		// 		}
+		// 	}
+		// }
 	}
 
 	.footerImg {
@@ -118,14 +121,15 @@
 		display: flex;
 		justify-content: flex-end;
 		flex-wrap: wrap;
+
 		.title {
 			width: 100%;
 			font: 300 8vh/1.1 v.$orbitron;
 		}
 		.subTitle {
 			width: 60%;
-			font: 100 1.8vh/1.1 v.$orbitron;
-			text-align: end;
+			font: 1.9vh/1.1 v.$orbitron;
+			text-align: right;
 		}
 	}
 }

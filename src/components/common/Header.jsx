@@ -1,6 +1,6 @@
 import { Link, useLocation } from "react-router-dom";
 import { useZustandStore } from "../../hooks/useZustand";
-import { FaBars, FaEnvelope, FaInstagram, FaYoutube } from "react-icons/fa";
+import { FaEnvelope, FaInstagram, FaYoutube } from "react-icons/fa";
 
 export default function Header({ menuOpen, menuClose }) {
 	const { pathname } = useLocation();

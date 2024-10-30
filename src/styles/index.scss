@@ -28,7 +28,7 @@
 :root {
 	--keyRGB: 40, 40, 40;
 	--keyNight: 255, 255, 255;
-	--keyMorning: 40, 40, 40;
+	--keyMorning: 17, 17, 17;
 }
 //rgba(var(--keyMorning), 0.5);
 //rgba(40,40,40,0.5); 위에 입력시 이런식으로 표현됨
@@ -41,5 +41,6 @@
 // }
 // .test {
 // 	color: rgb(0, 120, 250);
+// 	color: rgb(17, 17, 17);
 // 	color: rgb(255, 255, 255);
 // }

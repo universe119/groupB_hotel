@@ -58,10 +58,18 @@ export default function HomeVisual() {
 				style={{ width: "100%", height: "100%", position: "absolute", opacity: 0.8 }}
 			/>
 
-			<div className="clock">
+			<div className="clock" style={time.period === "AM" ? { color: "#282828" } : { color: "#efefef" }}>
 				<span>{time.hr}</span> : <span>{time.min}</span> : <span>{time.sec}</span>
-				<em className={time.period === "AM" ? "on" : ""}>{time.period === "AM" ? "AM" : ""}</em>
-				<em className={time.period === "PM" ? "on" : ""}>{time.period === "PM" ? "PM" : ""}</em>
+				<em
+					className={time.period === "AM" ? "on" : ""}
+					style={time.period === "AM" ? { color: "#282828" } : { color: "#efefef" }}>
+					{time.period === "AM" ? "AM" : ""}
+				</em>
+				<em
+					className={time.period === "PM" ? "on" : ""}
+					style={time.period === "PM" ? { color: "#282828" } : { color: "#efefef" }}>
+					{time.period === "PM" ? "PM" : ""}
+				</em>
 			</div>
 
 			<div className="slogan">

@@ -95,7 +95,7 @@ export default function MobileMenu({ menuClose }) {
 						<li key={index} className="subMenu">
 							<h1 style={{ cursor: "pointer" }}>
 								<Link
-									to={"/"}
+									to={menu.title === "CONTACT" ? menu.title : menu.title === "MEDIA" ? "GALLERY" : "/"}
 									state={{ section: menu.title }}
 
 									// {menu.title === "CONTACT" ? menu.title : menu.title === "MEDIA" ? "GALLERY" : "/"}
@@ -107,7 +107,21 @@ export default function MobileMenu({ menuClose }) {
 								{menu.subItems.map((subItem, idx) => (
 									<li key={idx}>
 										<Link
-											to={"/"}
+											to={
+												subItem === "GALLERY"
+													? subItem
+													: subItem == "COMMUNITY"
+													? "COMMUNITY"
+													: subItem == "Q&A"
+													? "COMMUNITY"
+													: subItem === "YOUTUBE"
+													? subItem
+													: subItem === "LOCATION"
+													? subItem
+													: subItem === "FAQ"
+													? "CONTACT"
+													: "/"
+											}
 											state={{ section: subItem }}
 											// {
 											// 	subItem === "GALLERY"

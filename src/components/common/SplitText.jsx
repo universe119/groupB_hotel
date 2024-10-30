@@ -23,7 +23,7 @@ export default function SplitText({ children = "", style, interval = 0.1, delay 
 		fontFamily: "Alegreya",
 		lineHeight: 1,
 		marginTop: "10vh",
-		color: "#333",
+		color: "#efefef",
 		...style
 	};
 

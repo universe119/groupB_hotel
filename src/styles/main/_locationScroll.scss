@@ -6,7 +6,7 @@
 	position: relative;
 	// overflow: hidden;
 
-	background-color: #efefef;
+	background-color: rgba(var(--keyBackground));
 	padding-top: 20px;
 	display: flex;
 	flex-wrap: wrap;
@@ -20,7 +20,7 @@
 
 		h2 {
 			font: 500 5rem/1 v.$alegreya;
-			color: rgba(1, 1, 1, 0.5);
+			color: rgba(var(--keyMorning), 0.8);
 			letter-spacing: 1px;
 		}
 
@@ -28,9 +28,9 @@
 			height: fit-content;
 			margin-top: 50px;
 			font-size: 1.5rem;
-			color: rgba(1, 1, 1, 0.5);
+			color: rgba(var(--keyMorning), 0.8);
 			display: inline-block;
-			border-bottom: 1px solid black;
+			border-bottom: 1px solid rgba(var(--keyMorning), 0.8);
 			cursor: pointer;
 
 			.detailIcon {
@@ -39,34 +39,24 @@
 				font-size: 1.3rem;
 			}
 			&:hover {
-				background-color: black;
-				color: #efefef;
+				background-color: rgba(var(--keyMorning));
+				color: rgba(var(--keyNight));
 
 				.detailIcon {
-					color: #efefef;
+					color: rgba(var(--keyNight));
 				}
 			}
-		} /* 
-		// &:hover {
-		// 	background-color: black;
-
-		// 	h2 {
-		// 		color: #efefef;
-		// 	}
-
-		// 	.locationLink {
-		// 		color: #efefef;
-
-		// 		.detailIcon {
-		// 			color: #efefef;
-		// 		}
-		// 	}
-		// }*/
+		}
 	}
 
 	.mapFrame {
 		width: 100%;
 		height: 100vh;
+		filter: grayscale(100%);
+
+		&:hover {
+			filter: none;
+		}
 	}
 }
 

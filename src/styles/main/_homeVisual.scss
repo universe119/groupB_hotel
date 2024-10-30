@@ -10,6 +10,7 @@
 	align-content: center;
 	justify-content: center;
 	flex-direction: column;
+	background-color: white;
 
 	&.morning {
 		background-image: url("/morning.jpg");
@@ -39,14 +40,14 @@
 		font-family: v.$cinzel; //v.$allura
 		font-size: 5rem;
 		font-weight: 350;
-		color: rgba(var(--keyNight));
+		color: rgba(var(--keyMorning));
 		z-index: 2;
 		display: flex;
 		justify-content: center;
 		gap: 15px;
 
 		em.on {
-			color: rgba(var(--keyNight));
+			color: rgba(var(--keyMorning));
 		}
 	}
 
@@ -66,7 +67,7 @@
 
 		h2 {
 			font: 500 4.2rem/1 v.$cinzel;
-			color: rgba(var(--keyNight));
+			color: rgba(var(--keyMorning));
 			margin-bottom: 5px;
 			text-align: center;
 		}

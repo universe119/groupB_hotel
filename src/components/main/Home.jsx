@@ -3,8 +3,8 @@ import HomeScroll from "./HomeScroll";
 import HomeVisual from "./HomeVisual";
 import AboutUs from "./AboutUs";
 import Offers from "./Offers";
+import Facility from "./Facility";
 import LocationScroll from "./LocationScroll";
-import RetailBusiness from "./RetailBusiness";
 
 export default function Home() {
 	return (
@@ -13,7 +13,7 @@ export default function Home() {
 			<HomeVisual />
 			<AboutUs />
 			<Offers />
-			<RetailBusiness />
+			<Facility />
 			<LocationScroll />
 		</Layout>
 	);

@@ -3,17 +3,16 @@
 .youtube {
 	width: 100%;
 	height: 30vh;
-	background-color: #efefef;
+	// background-color: rgba(var(--keyBackground), 0.7);
 	position: relative;
-	// padding: 20px;
-	margin-bottom: 20px;
+	margin: 20px 0px;
 	// border: 1px solid #111;
 
 	.evenTit,
 	.oddTit {
 		width: 100%;
 		font: 700 1.5rem/1.2 v.$raleway, sans-serif;
-		color: #111;
+		color: rgba(var(--keyMorning));
 		position: absolute;
 		z-index: 5;
 	}
@@ -27,7 +26,7 @@
 
 	.evenTxt,
 	.oddTxt {
-		width: 50%;
+		width: 39%;
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
@@ -36,7 +35,7 @@
 		bottom: 1.5vh;
 		p {
 			font: 100 1.1rem/1.3 "Arial", sans-serif;
-			color: #888;
+			color: rgba(var(--keyMorning));
 			word-break: break-all;
 			margin-bottom: 8vh;
 		}
@@ -48,11 +47,11 @@
 	}
 	.evenTxt {
 		// left: 42vh; 	// 텍스트 안으로 이동
-		left: 63vh; // 텍스트 밖으로 이동
+		left: 54vh; // 텍스트 밖으로 이동
 	}
 	.oddTxt {
 		// right: 42vh; // 텍스트 안으로 이동
-		right: 63vh; // 텍스트 밖으로 이동
+		right: 54vh; // 텍스트 밖으로 이동
 		text-align: right;
 	}
 
@@ -74,9 +73,11 @@
 	.oddBox {
 		width: 43vh;
 		height: 24vh;
-		border: 1px solid black;
+		border: 1px solid rgba(var(--keyMorning));
 		position: absolute;
 		top: 3vh;
+
+		transition: 0.3s 0.2s linear; // 아티클 빠질 때 동작
 	}
 	.evenBox {
 		left: 9vh;
@@ -85,4 +86,27 @@
 		right: 9vh;
 		text-align: right;
 	}
+
+	&:hover {
+		.evenBox,
+		.oddBox {
+			width: 100%;
+			height: 104%;
+			top: -2%;
+			transition: 0.3s linear; // 아티클에 들어갈 때 동작
+		}
+		.evenBox {
+			left: 3%;
+		}
+		.oddBox {
+			right: 3%;
+			text-align: right;
+		}
+	}
+}
+
+@media screen and (max-width: v.$tablet) {
+}
+
+@media screen and (max-width: v.$mobile) {
 }

@@ -1,0 +1,69 @@
+@use "../common/variables" as v;
+
+.facility {
+	width: 100%;
+	height: 100vh;
+	position: relative;
+	overflow: hidden;
+	background-color: rgba(var(--keyBackground));
+	padding: 100px 15vw 100px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-content: center;
+
+	.fac_Title {
+		width: 100%;
+		font: 500 4rem/1 v.$cinzel;
+		color: rgba(var(--keyMorning));
+		margin-bottom: 30px;
+	}
+
+	.gym,
+	.pool,
+	.restaurant {
+		width: 30%;
+	}
+
+	.fac_Content {
+		position: relative;
+
+		.fac_Pic {
+			width: 100%;
+			height: 30vh;
+			margin-bottom: 20px;
+			transition: opacity 0.3s ease;
+		}
+		h2 {
+			width: 100%;
+			height: 100%;
+			opacity: 0;
+			position: absolute;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			color: rgba(var(--keyMorning));
+			transition: opacity 0.3s ease;
+		}
+		&:hover {
+			.fac_Pic {
+				opacity: 0.5;
+			}
+			h2 {
+				opacity: 1;
+			}
+		}
+	}
+
+	.fac_detail {
+		font: 100 1.2rem/2 v.$kohsantepheap;
+		letter-spacing: 1px;
+		color: rgba(var(--keyMorning));
+	}
+}
+
+@media screen and (max-width: v.$tablet) {
+}
+
+@media screen and (max-width: v.$mobile) {
+}

@@ -3,20 +3,20 @@ import { motion } from "framer-motion";
 import useThrottle from "../../hooks/useThrottle";
 
 export default function HomeScroll() {
-	const sideMenuArr = ["Home", "About us", "Offers", "Retail Business", "Location"];
+	const sideMenuArr = ["Home", "About us", "Offers", "Facilities", "Location"];
 	const [currentPage, setCurrentPage] = useState(0);
 	const [pageHeight, setPageHeight] = useState(window.innerHeight); // pageHeight를 상태로 설정
 	const totalPages = sideMenuArr.length;
 
-	// 페이지별 색상 맵
+	// 페이지별 디폴트 색상 맵
 	const colorMap = {
-		1: "#282828",
-		2: "#282828",
-		3: "#282828",
-		4: "#282828"
+		1: "#ffffff", // ABOUT US
+		2: "#ffffff",
+		3: "#ffffff",
+		4: "#282828" // LOCATION
 	};
 	// currentPage에 따른 색상 지정 (기본값 white)
-	const chColor = colorMap[currentPage] || "#ffffff";
+	const chColor = colorMap[currentPage] || "#ffffff"; // HOME
 
 	// 스크롤 위치에 따라 currentPage 업데이트
 	useEffect(() => {

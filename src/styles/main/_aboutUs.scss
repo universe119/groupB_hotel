@@ -5,7 +5,7 @@
 	height: 100vh;
 	position: relative;
 	overflow: hidden;
-	background-color: #efefef;
+	background-color: rgba(var(--keyBackground));
 	padding: 100px 15vw 100px;
 	display: flex;
 	flex-wrap: wrap;
@@ -31,21 +31,22 @@
 		.modal4 {
 			width: 48%;
 			margin: 5px;
-			border-top: 1px solid #111;
-			border-bottom: 1px solid #111;
+			border-top: 1px solid rgba(var(--keyMorning));
+			border-bottom: 1px solid rgba(var(--keyMorning));
 			position: relative;
 			p {
 				margin-top: 10px;
-				font: 300 2.5rem bold;
+				font: 300 2.5rem v.$cinzel;
 				position: absolute;
 				left: 0;
 				bottom: 0;
+				color: rgba(var(--keyMorning));
 			}
 			&:hover {
-				background: #111;
+				background: rgba(var(--keyMorning));
 				p {
-					color: #efefef;
-					border-bottom: 1px solid #111;
+					color: rgba(var(--keyNight));
+					border-bottom: 1px solid rgba(var(--keyNight));
 				}
 			}
 		}
@@ -124,12 +125,14 @@
 
 		.title {
 			width: 100%;
-			font: 300 8vh/1.1 v.$orbitron;
+			font: 500 8vh/1.1 v.$cinzel;
+			color: rgba(var(--keyMorning));
 		}
 		.subTitle {
 			width: 60%;
-			font: 1.9vh/1.1 v.$orbitron;
+			font: 1.9vh/1.4 v.$kohsantepheap;
 			text-align: right;
+			color: rgba(var(--keyMorning));
 		}
 	}
 }

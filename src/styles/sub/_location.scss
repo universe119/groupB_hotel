@@ -9,6 +9,7 @@
 		background-color: #f0f0f0;
 		overflow: hidden;
 		margin-bottom: 15px;
+		// filter: grayscale(100%); // 지도 흑백 필터 적용
 
 		> article {
 			position: absolute;
@@ -55,6 +56,9 @@
 				opacity: 0.5;
 				transition: 0.5s;
 
+				&:hover {
+					opacity: 1;
+				}
 				&.on {
 					opacity: 1;
 				}
@@ -75,7 +79,7 @@
 			width: 100%;
 			flex-wrap: wrap;
 			font: 500 2rem/1 "orbitron";
-			color: #333;
+			color: #ddd;
 			letter-spacing: 1px;
 			margin-bottom: 30px;
 		}
@@ -84,6 +88,7 @@
 			width: 50%;
 			display: flex;
 			flex-wrap: wrap;
+			color: rgba(var(--keyMorning));
 
 			.subway,
 			.bus {
@@ -112,6 +117,7 @@
 		.reservation {
 			width: 40%;
 			text-align: left;
+			color: rgba(var(--keyMorning));
 
 			h2 {
 				font-size: 2rem;

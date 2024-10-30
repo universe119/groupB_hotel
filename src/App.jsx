@@ -9,21 +9,21 @@ import Gallery from "./components/sub/Gallery";
 import Youtube from "./components/sub/Youtube";
 import YoutubeDetail from "./components/sub/YoutubeDetail";
 import Contact from "./components/sub/Contact";
+import MobileMenu from "./components/common/MobileMenu";
 import Footer from "./components/common/Footer";
 import { Route, Routes, useLocation } from "react-router-dom";
 import { useZustandStore } from "./hooks/useZustand";
 import { AnimatePresence } from "framer-motion";
-import MobileMenu from "./components/common/MobileMenu";
 
 export default function App() {
 	const location = useLocation();
-
 	const IsMenu = useZustandStore(state => state.IsMenu);
 	const setMenuClose = useZustandStore(state => state.setMenuClose);
 
 	return (
 		<>
 			<Header menuOpen={IsMenu} menuClose={setMenuClose} />
+
 			<Routes location={location} key={location.pathname}>
 				<Route path="/" element={<Home />} />
 				<Route path="/location" element={<Location />} />
@@ -36,7 +36,9 @@ export default function App() {
 				<Route path="/youtube/:id" element={<YoutubeDetail />} />
 				<Route path="/contact" element={<Contact />} />
 			</Routes>
+
 			<AnimatePresence>{IsMenu && <MobileMenu menuClose={setMenuClose} />}</AnimatePresence>
+
 			<Footer />
 		</>
 	);

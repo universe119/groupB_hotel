@@ -17,7 +17,6 @@ export default function LocationScroll() {
 
 	return (
 		<section className="locationScroll">
-			{/* <article> */}
 			<div className="locationTxt">
 				<h2>Location</h2>
 				<Link to="/location" className="locationLink">
@@ -26,7 +25,6 @@ export default function LocationScroll() {
 				</Link>
 			</div>
 			<div className="mapFrame" ref={ref_mapFrame}></div>
-			{/* </article> */}
 		</section>
 	);
 }

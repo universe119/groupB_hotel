@@ -30,25 +30,42 @@ export default function CommunityDetail() {
 	};
 
 	return (
-		<Layout title="DetailCommunity">
-			<section>
-				<div className="category">category: {Detail?.category}</div>
-				<h3>{Detail?.title}</h3>
-				<p>{Detail?.body}</p>
-				<span>Created : {Detail?.created.split("T")[0]}</span>
-			</section>
-			<button>
-				<Link to={`/community-edit/${slug}`}>Edit</Link>
-			</button>
-			<br />
-			<button onClick={handleDelete}>Delete</button>
-			<br />
-			<button
-				onClick={() => {
-					navigate(-1);
-				}}>
-				뒤로가기
-			</button>
+		<Layout title={"detailCommunity"}>
+			<table className="detailTable">
+				<tbody>
+					<tr>
+						<th>Category</th>
+						<td>{Detail?.category}</td>
+					</tr>
+					<tr>
+						<th>Title</th>
+						<td>{Detail?.title}</td>
+					</tr>
+					<tr>
+						<th>Content</th>
+						<td>{Detail?.body}</td>
+					</tr>
+					<tr>
+						<th>Created</th>
+						<td>
+							{Detail?.created.split("T")[0] + " "}
+							{Detail?.created.split("T")[1].split(".")[0]}
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<div className="buttonGroup">
+				<button>
+					<Link to={`/community-edit/${slug}`}>Edit</Link>
+				</button>
+				<button onClick={handleDelete}>Delete</button>
+				<button
+					onClick={() => {
+						navigate(`/community`);
+					}}>
+					Back to Page
+				</button>
+			</div>
 		</Layout>
 	);
 }

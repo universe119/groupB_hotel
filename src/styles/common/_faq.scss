@@ -1,3 +1,5 @@
+@use "variables" as v;
+
 .fAQ {
 	width: 100%;
 	margin: 100px auto;
@@ -25,7 +27,7 @@
 			display: flex;
 			border-bottom: 1px solid #ccc;
 			padding: 8px 10px;
-			color: #ffffff;
+			color: #fff;
 			font-weight: bold;
 			font-size: 1.1rem;
 		}
@@ -36,4 +38,10 @@
 			line-height: 1.6;
 		}
 	}
+}
+
+@media screen and (max-width: v.$tablet) {
+}
+
+@media screen and (max-width: v.$mobile) {
 }

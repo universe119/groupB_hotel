@@ -14,14 +14,14 @@ export default function Home() {
 	const ref_wrap = useRef(null);
 	const ref_posArr = useRef([]);
 
-	// 페이지별 디폴트 색상 맵
+	// 페이지별 디폴트 글씨 색상 맵
 	const colorMap = {
 		1: "#ffffff", // ABOUT US
 		2: "#ffffff",
 		3: "#ffffff",
 		4: "#282828" // LOCATION
 	};
-	// currentPage에 따른 색상 지정 (기본값 white)
+	// currentPage에 따른 글씨 색상 지정 (기본값 white)
 	const chColor = colorMap[currentPage] || "#ffffff"; // HOME
 
 	useEffect(() => {

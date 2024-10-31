@@ -1,5 +1,115 @@
 @use "../common/variables" as v;
 
+.community {
+	width: 100%;
+	margin: 0 auto;
+	color: #ffffff;
+	font-family: Arial, sans-serif;
+
+	// 타이틀
+	h1 {
+		font-size: 2em;
+		margin-bottom: 20px;
+		text-align: center;
+		color: #ffffff;
+	}
+
+	// 검색 박스 스타일링
+	.searchBox {
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 15px;
+		margin-top: 20px;
+
+		input[type="text"] {
+			flex: 1;
+			padding: 10px;
+			font-size: 1em;
+			border: none;
+			border-radius: 5px;
+			margin-right: 10px;
+			outline: none;
+		}
+
+		button {
+			padding: 10px 20px;
+			background-color: #007bff;
+			border: none;
+			border-radius: 5px;
+			color: #ffffff;
+			font-size: 1em;
+			cursor: pointer;
+
+			&:hover {
+				background-color: #0056b3;
+			}
+		}
+	}
+
+	// 카테고리 선택 및 글 작성 버튼 스타일
+	.options {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-bottom: 20px;
+
+		select {
+			padding: 8px;
+			font-size: 1em;
+			border: 1px solid #ccc;
+			border-radius: 5px;
+			background-color: #fff;
+			color: #333;
+		}
+
+		.writeButton {
+			padding: 8px 16px;
+			background-color: #28a745;
+			color: #ffffff;
+			border-radius: 5px;
+			text-decoration: none;
+			font-size: 1em;
+
+			&:hover {
+				background-color: #218838;
+			}
+		}
+	}
+
+	// 포스트 목록 테이블 스타일
+	.postsTable {
+		width: 100%;
+		border-collapse: collapse;
+		margin-top: 20px;
+
+		th,
+		td {
+			padding: 15px;
+			border: 1px solid #444;
+			text-align: left;
+		}
+
+		th {
+			background-color: #333;
+			font-weight: bold;
+		}
+
+		td {
+			background-color: #222;
+			color: #eee;
+
+			a {
+				color: #007bff;
+				text-decoration: none;
+
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+		}
+	}
+}
+
 @media screen and (max-width: v.$tablet) {
 }
 

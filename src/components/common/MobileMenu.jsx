@@ -11,7 +11,7 @@ export default function MobileMenu({ menuClose }) {
 	// const closeMenu = () => {
 	// 	console.log("closeMenu");
 
-	// 	if (window.innerWidth >= 2000) setMenuClose();
+	// 	if (window.innerWidth <= 2000) setMenuClose();
 	// };
 	// const throttledCloseMenu = useThrottle(closeMenu);
 
@@ -70,15 +70,15 @@ export default function MobileMenu({ menuClose }) {
 								<Link
 									to={
 										menu.title === "CONTACT"
-											? menu.title
+											? menu.title.toLowerCase()
 											: menu.title === "MEDIA"
-											? "GALLERY"
+											? "GALLERY".toLowerCase()
 											: menu.title === "COMMUNITY"
-											? menu.title
+											? menu.title.toLowerCase()
 											: menu.title === "CONTACT"
-											? menu.title
+											? menu.title.toLowerCase()
 											: menu.title === "LOCATION"
-											? menu.title
+											? menu.title.toLowerCase()
 											: "/"
 									}>
 									{menu.title}
@@ -90,15 +90,15 @@ export default function MobileMenu({ menuClose }) {
 										<Link
 											to={
 												subItem === "GALLERY"
-													? subItem
+													? subItem.toLowerCase()
 													: subItem == "COMMUNITY"
-													? `COMMUNITY`
+													? "COMMUNITY".toLowerCase()
 													: subItem == "Q&A"
-													? "COMMUNITY"
+													? "COMMUNITY".toLowerCase()
 													: subItem === "YOUTUBE"
-													? subItem
+													? subItem.toLowerCase()
 													: subItem === "FAQ"
-													? "CONTACT"
+													? "CONTACT".toLowerCase()
 													: "/"
 											}>
 											{subItem}

@@ -1,8 +1,8 @@
+import offerData from "../../data/offerData";
 import { Link } from "react-router-dom";
 import Pic from "../common/Pic";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper/modules";
-import offerData from "../../data/offerData";
 
 import "swiper/css";
 import "swiper/css/navigation";

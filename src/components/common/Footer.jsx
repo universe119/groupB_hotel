@@ -23,13 +23,13 @@ export default function Footer() {
 						<Link to={"/contact"}>고객센터</Link>
 					</li>
 					<li>
-						<Link to={"/community"}>고객센터</Link> 웹사이트 이용약관
+						<Link to={"/community/55"}>웹사이트 이용약관</Link>
 					</li>
 					<li>
-						<Link to={"/community"}>고객센터</Link> 멤버십 이용약관
+						<Link to={"/community/-5Exjj"}>멤버십 이용약관</Link>
 					</li>
 					<li>
-						<Link to={"/community"}>고객센터</Link> 개인정보처리방침
+						<Link to={"/community/-kRnh4"}>개인정보처리방침</Link>
 					</li>
 				</ul>
 				<p>© 2024 PSYH Hotel & RESORTS Co. All rights reserved.</p>

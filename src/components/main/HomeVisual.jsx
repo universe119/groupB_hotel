@@ -1,5 +1,5 @@
+import timeData from "../../data/clockData"; // 시간 데이터 불러오기
 import { useState, useEffect } from "react";
-import { timeData } from "../../data/clockData.js"; // 시간 데이터 불러오기
 import Pic from "../common/Pic";
 
 export default function HomeVisual({ Sc }) {

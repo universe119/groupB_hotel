@@ -6,7 +6,6 @@ import Content from "../common/Content";
 
 export default function Community() {
 	const [Posts, setPosts] = useState([]);
-
 	//검색어가 담길 state
 	const [SearchText, setSearchText] = useState("");
 
@@ -18,7 +17,6 @@ export default function Community() {
 		axios
 			.get("http://localhost:8000/posts")
 			.then(res => {
-				console.log(res.data);
 				setPosts(res.data);
 			})
 			.catch(err => console.log(err));
@@ -27,9 +25,10 @@ export default function Community() {
 	//검색폼에서 submit 이벤트 발생시 input요소의 입력값으로 SearchText상태 변경
 	const handleSubmit = e => {
 		e.preventDefault();
-		if (!e.target[0].value.trim()) return alert("검색어를 입력해주세요!");
+		if (!e.target[0].value.trim()) return alert("검색어를 입력해주세요!"), (e.target[0].value = "");
 
 		setSearchText(e.target[0].value);
+		e.target[0].value = "";
 	};
 
 	// Category 상태값에 따라 기존 Posts에서 해당 카테고리명에 매칭되는 데이터만 filtering해서 FilteredPosts라는 이름의 state로 저장
@@ -60,30 +59,40 @@ export default function Community() {
 	}, [SearchText]);
 
 	return (
-		<Layout title={"Community"}>
+		<Layout title={"community"}>
 			<Content>
 				<form className="searchBox" onSubmit={handleSubmit}>
-					<input type="text" />
+					<input type="text" placeholder="검색어를 입력해주세요." />
 					<button>Search</button>
 				</form>
+				<div className="options">
+					<select onChange={e => setCategory(e.target.value)}>
+						<option value="">All Notes</option>
+						<option value="BUSINESS">Business</option>
+						<option value="PERSONAL">Personal</option>
+						<option value="IMPORTANT">Important</option>
+					</select>
+					<Link to={`/community-add`} className="writeButton">
+						Write Post
+					</Link>
+				</div>
 				{Posts?.length === 0 && <p>해당 검색어의 검색 결과가 없습니다.</p>}
-
-				<select onChange={e => setCategory(e.target.value)}>
-					<option value="">All Notes</option>
-					<option value="BUSINESS">Business</option>
-					<option value="PERSONAL">Personal</option>
-					<option value="IMPORTANT">Important</option>
-				</select>
-
-				<button>
-					<Link to={`/community-add`}>Write Post</Link>
-				</button>
-				{/* FilteredPosts 상태값으로 반복 렌더링 */}
-				{FilteredPosts?.map(post => (
-					<h3 key={post.id}>
-						<Link to={`/community/${post.slug}`}>{post.title}</Link>
-					</h3>
-				))}
+				<table className="postsTable">
+					<thead>
+						<tr>
+							<th>Q&A</th>
+						</tr>
+					</thead>
+					<tbody>
+						{FilteredPosts?.map(post => (
+							<tr key={post.id}>
+								<td>
+									<Link to={`/community/${post.slug}`}>{post.title}</Link>
+								</td>
+							</tr>
+						))}
+					</tbody>
+				</table>
 			</Content>
 		</Layout>
 	);

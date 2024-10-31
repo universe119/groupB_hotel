@@ -12,7 +12,8 @@ export default function CommunityAdd() {
 	const handleSubmit = e => {
 		// 리액트 스럽게 스테이트값을 받아서 할 수 있다고 하심
 		e.preventDefault();
-		if (!ref_title.current.value || !ref_body.current.value) return alert("제목, 본문은 필수 입력 항목입니다!!");
+		if (!ref_title.current.value.trim() || !ref_body.current.value.trim())
+			return alert("제목, 본문은 필수 입력 항목입니다!!");
 
 		const postData = {
 			title: ref_title.current.value,
@@ -31,26 +32,51 @@ export default function CommunityAdd() {
 			.catch(err => console.log(err));
 	};
 	return (
-		<Layout className="AddCommunity">
+		<Layout title={"addCommunity"}>
 			<form onSubmit={handleSubmit}>
-				<input ref={ref_title} type="text" name="title" id=" title" placeholder="제목을 입력하세요" />
-				<br />
-				<textarea ref={ref_body} name="body" id="body" placeholder="본문을 입력하세요" />
-				<br />
-				<select ref={ref_category} name="category" id="category">
-					<option value="PERSONAL">PERSONAL</option>
-					<option value="BUSINESS">BUSINESS</option>
-					<option value="IMPORTANT">IMPORTANT</option>
-				</select>
-				<input type="reset" value="취소" />
-				<input type="submit" value="전송" />
+				<table>
+					<tbody>
+						<tr>
+							<td>
+								<label htmlFor="title">Title :</label>
+							</td>
+							<td>
+								<input ref={ref_title} type="text" id="title" placeholder="제목을 입력하세요" />
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<label htmlFor="body">Text :</label>
+							</td>
+							<td>
+								<textarea ref={ref_body} id="body" placeholder="본문을 입력하세요" />
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<label htmlFor="category">Category :</label>
+							</td>
+							<td>
+								<select ref={ref_category} id="category">
+									<option value="PERSONAL">PERSONAL</option>
+									<option value="BUSINESS">BUSINESS</option>
+									<option value="IMPORTANT">IMPORTANT</option>
+								</select>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+				<div className="button-group">
+					<input type="reset" value="Cancel" />
+					<input type="submit" value="Submit" />
+				</div>
 			</form>
 			<br />
 			<button
 				onClick={() => {
 					navigate(-1);
 				}}>
-				뒤로가기
+				Back to Page
 			</button>
 		</Layout>
 	);

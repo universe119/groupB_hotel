@@ -1,4 +1,5 @@
 //common
+@use "common/faq";
 @use "common/footer";
 @use "common/header";
 @use "common/layout";
@@ -7,18 +8,20 @@
 @use "common/modal";
 @use "common/reset";
 @use "common/variables";
-@use "common/faq";
 
 //main
 @use "main/aboutUs";
+@use "main/facility";
 @use "main/home";
 @use "main/homeVisual";
 @use "main/locationScroll";
 @use "main/offers";
-@use "main/facility";
 
 //sub
 @use "sub/community";
+@use "sub/communityAdd";
+@use "sub/communityDetail";
+@use "sub/communityEdit";
 @use "sub/contact";
 @use "sub/gallery";
 @use "sub/location";
@@ -35,7 +38,7 @@
 	// 배경색
 	--keyBackground: 23, 27, 51;
 }
-//rgba(var(--keyBackground), 0.5);
+//rgba(var(	--keyMorning), 0.5);
 //rgba(40,40,40,0.5); 위에 입력시 이런식으로 표현됨
 
 // .mask {
@@ -48,5 +51,4 @@
 // 	color: rgb(0, 120, 250);
 // 	color: rgb(17, 17, 17);
 // 	color: rgb(255, 255, 255);
-
 // }

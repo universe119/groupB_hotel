@@ -13,7 +13,7 @@ export default function Pic({ className, style, src, shadow = false }) {
 		opacity: 0.5
 	};
 	//기본 이미지 스타일
-	const picStyle = { width: "100%", height: "100%", objectFit: "cover", position: "absolute", top: 0, left: 0 };
+	const picStyle = { width: "100%", height: "100%", objectFit: "cover", position: "relative", top: 0, left: 0 };
 
 	return (
 		//className외에 외부에서 전달된 style옵션객체값으로도 해당 스타일 변경가능

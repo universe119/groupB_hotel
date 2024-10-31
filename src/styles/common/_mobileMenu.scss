@@ -57,7 +57,55 @@
 	}
 }
 @media screen and (max-width: v.$tablet) {
+	.overlayMenu {
+		nav {
+			width: 60%;
+
+			.subMenuList {
+				flex-wrap: wrap;
+
+				.subMenu {
+					margin: 0px 30px 20px 20px;
+					h1 {
+						font: 3.2vh/1.1 v.$cinzel;
+					}
+
+					ul {
+						li {
+							font: 1.7vh/1 v.$cinzel;
+							margin-bottom: 20px;
+						}
+					}
+				}
+			}
+		}
+	}
 }
 
 @media screen and (max-width: v.$mobile) {
+	.overlayMenu {
+		nav {
+			width: 60%;
+
+			.subMenuList {
+				flex-wrap: wrap;
+
+				.subMenu {
+					width: 100%;
+					margin-bottom: 30px;
+
+					h1 {
+						font: 2.5vh/1 v.$cinzel;
+					}
+
+					ul {
+						li {
+							font: 1.5vh/1.1 v.$cinzel;
+							margin-bottom: 10px;
+						}
+					}
+				}
+			}
+		}
+	}
 }

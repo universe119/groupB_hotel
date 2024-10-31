@@ -11,6 +11,7 @@
 	flex-wrap: wrap;
 	justify-content: space-between;
 	align-content: center;
+	perspective: 1000px;
 
 	.inner {
 		width: 100%;
@@ -54,9 +55,9 @@
 				display: flex; // 수평 레이아웃을 위해 flex 사용
 				height: 500px;
 				padding-top: 35px;
-				background: rgba(238, 228, 206, 0.63);
+				background: rgba(241, 238, 238, 0.8);
 				border-radius: 20px;
-				box-shadow: inset 0 0 0px rgb(238, 228, 206), 0 0 50px rgb(238, 228, 206, 0.4);
+				box-shadow: inset 0 0 0px rgb(0, 0, 0), 0 0 50px rgba(161, 161, 161, 0.4);
 
 				.swiper-wrapper {
 					left: 3%;
@@ -114,6 +115,7 @@
 						}
 						.period {
 							color: orange;
+							font-weight: bold;
 						}
 					}
 				}
@@ -131,32 +133,37 @@
 		}
 	}
 }
+
 @media screen and (max-width: v.$tablet) {
-	.offers {
-		padding: 80px 10vw;
-		.inner {
-			width: 1000px;
-			margin: -220px 0 0 -500px;
-		}
-		.swipeArea {
-			.swipeGroup {
-				width: 900px;
-			}
-		}
-	}
 }
 
 @media screen and (max-width: v.$mobile) {
-	.offers {
-		padding: 60px 5vw;
-		.inner {
-			width: 700px;
-			margin: -180px 0 0 -350px;
-		}
-		.swipeArea {
-			.swipeGroup {
-				width: 700px;
-			}
-		}
-	}
+	// .offers {
+	// 	padding: 80px 10vw;
+	// 	.swipeArea {
+	// 		.swipeGroup {
+	// 			// width: 100vh;
+	// 			.swipeCont {
+	// 				.swiper {
+	// 					.swiper-wrapper {
+	// 						.swiper-slide {
+	// 							// margin-left: -75px;
+	// 							right: 10vh;
+	// 							.swipeSlide {
+	// 								.thum {
+	// 									.pic {
+	// 										img {
+	// 											max-height: 200px; /* 모바일에서 이미지 최대 높이 */
+	// 											object-fit: cover;
+	// 										}
+	// 									}
+	// 								}
+	// 							}
+	// 						}
+	// 					}
+	// 				}
+	// 			}
+	// 		}
+	// 	}
+	// }
 }

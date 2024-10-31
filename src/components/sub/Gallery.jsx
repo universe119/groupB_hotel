@@ -153,6 +153,33 @@ export default function Gallery() {
 		}
 	};
 
+	const swiperOptions = {
+		spaceBetween: 15,
+		slidesPerView: 3,
+		loop: true,
+		centeredSlides: true,
+		modules: [Autoplay, Pagination],
+		pagination: { type: "fraction" },
+		autoplay: { delay: 2500, disableOnInteraction: true }, // disableOnInteraction true일때 사용자가 스와프시 멈춤
+		onSwiper: swiper => {
+			setTimeout(() => {
+				swiper.slideNext();
+				swiper.autoplay.start();
+			}, 2500);
+		},
+		onSlideChange: handleSlideChange,
+		breakpoints: {
+			999: {
+				slidesPerView: 3,
+				spaceBetween: 10
+			},
+			0: {
+				slidesPerView: 1,
+				spaceBetween: 5
+			}
+		}
+	};
+
 	return (
 		<>
 			<Layout title={"GALLERY"}>
@@ -172,22 +199,7 @@ export default function Gallery() {
 							</div>
 						</div>
 						<section className="galleryList">
-							<Swiper
-								spaceBetween={15}
-								slidesPerView={3}
-								loop={Flickr.length > 2}
-								centeredSlides={true}
-								onSlideChange={handleSlideChange}
-								modules={[Autoplay, Pagination]}
-								pagination={{ type: "fraction" }}
-								autoplay={{ delay: 2500 }} // , disableOnInteraction: false }}
-								// 사용자가 슬라이드와 상호작용하더라도 autoplay가 계속되도록 설정
-								onSwiper={swiper => {
-									setTimeout(() => {
-										swiper.slideNext();
-										swiper.autoplay.start();
-									}, 2500);
-								}}>
+							<Swiper {...swiperOptions} loop={Flickr.length > 2}>
 								{Flickr.map((data, idx) => (
 									<SwiperSlide key={idx} onClick={() => handleSlideClick(idx)}>
 										<div className="inner">

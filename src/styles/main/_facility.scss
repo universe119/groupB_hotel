@@ -64,7 +64,87 @@
 }
 
 @media screen and (max-width: v.$tablet) {
+	.facility {
+		align-items: flex-end;
+		margin-top: 10px;
+
+		.fac_Title {
+			font: 500 3vmax/1 v.$cinzel;
+			margin: 30px 0px;
+		}
+
+		.gym,
+		.pool,
+		.restaurant {
+			width: 100%;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			align-content: center;
+			margin-bottom: 0px;
+		}
+
+		.fac_Content {
+			width: 48%;
+			position: relative;
+
+			.fac_Pic {
+				width: 100%;
+				height: 22vh;
+			}
+			h2 {
+				font-size: vmin;
+			}
+		}
+
+		.fac_detail {
+			width: 48%;
+			height: 20vh;
+			font: 100 2.4vmin/1.5 v.$kohsantepheap;
+			align-content: center;
+		}
+	}
 }
 
 @media screen and (max-width: v.$mobile) {
+	.facility {
+		align-items: flex-end;
+		margin-top: 10px;
+
+		.fac_Title {
+			font: 500 3vmax/1 v.$cinzel;
+			margin: 30px 0px;
+		}
+
+		.gym,
+		.pool,
+		.restaurant {
+			width: 100%;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			align-content: center;
+			margin-bottom: 0px;
+		}
+
+		.fac_Content {
+			width: 48%;
+			position: relative;
+
+			.fac_Pic {
+				width: 100%;
+				height: 20vh;
+			}
+			h2 {
+				font-size: 4vmin;
+			}
+		}
+
+		.fac_detail {
+			width: 48%;
+			height: 20vh;
+			font: 100 2.4vmin/1.5 v.$kohsantepheap;
+			align-content: center;
+		}
+	}
 }

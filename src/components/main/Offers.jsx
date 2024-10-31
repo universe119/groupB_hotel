@@ -17,9 +17,35 @@ export default function Offers({ Sc, pos }) {
 	};
 
 	const swipeAreaMS = {
-		transform: `translateY(${currentScroll * 1.5 <= 0 ? currentScroll * 1.5 : 0}px)`,
-		opacity: 1 + currentScroll / 1000
+		transform: `translateY(${currentScroll * 1.5 <= 0 ? currentScroll * 1.5 : currentScroll * 1.5}px)`,
+		opacity: `${currentScroll * 1.5 <= 0 ? 1 + currentScroll / 800 : 1 - currentScroll / 500}`
 	};
+
+	const swiperOptions = {
+		slidesPerView: 3,
+		spaceBetween: 30,
+		centeredSlides: true,
+		grabCursor: true,
+		pagination: {
+			clickable: true
+		},
+		modules: [Pagination],
+		breakpoints: {
+			999: {
+				slidesPerView: 2,
+				spaceBetween: 15
+			},
+			599: {
+				slidesPerView: 2,
+				spaceBetween: 10
+			},
+			0: {
+				slidesPerView: 1,
+				spaceBetween: 5
+			}
+		}
+	};
+
 	return (
 		<figure className="offers">
 			<div className="inner" style={innerMS}>
@@ -33,22 +59,13 @@ export default function Offers({ Sc, pos }) {
 				{/* <button>&lt;</button> */}
 				<div className="swipeGroup">
 					<ul className="swipeCont">
-						<Swiper
-							slidesPerView={3}
-							centeredSlides={true}
-							spaceBetween={30}
-							grabCursor={true}
-							pagination={{
-								clickable: true
-							}}
-							modules={[Pagination]}
-							className="mySwiper">
+						<Swiper {...swiperOptions}>
 							{offerData.map((data, idx) => {
 								return (
 									<SwiperSlide key={idx}>
 										<li className="swipeSlide">
 											<span className="thum">
-												<Pic className="pic" src={data.pic} alt={data.name} />
+												<Pic className={"pic"} src={data.pic} alt={data.name} />
 											</span>
 											<span className="thumTxt">
 												<strong className="tit">{data.title}</strong>

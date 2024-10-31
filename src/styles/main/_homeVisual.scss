@@ -76,7 +76,32 @@
 }
 
 @media screen and (max-width: v.$tablet) {
+	.homeVisual {
+		.clock {
+			font-size: 6vmax;
+			gap: 12px;
+		}
+
+		.slogan {
+			h2 {
+				font: 500 7vmax/1 v.$cinzel;
+			}
+		}
+	}
 }
 
 @media screen and (max-width: v.$mobile) {
+	.homeVisual {
+		.clock {
+			font-size: 3vmax;
+			gap: 10px;
+		}
+
+		.slogan {
+			margin-top: 20px;
+			h2 {
+				font: 500 5vmax/1 v.$cinzel;
+			}
+		}
+	}
 }

@@ -2,7 +2,7 @@
 
 .locationScroll {
 	width: 100%;
-	height: 100%;
+	height: 100vh;
 	position: relative;
 	overflow: hidden;
 
@@ -17,16 +17,19 @@
 		width: 100%;
 		display: flex;
 		justify-content: space-between;
+		margin-bottom: 10px;
 
 		h2 {
-			font: 500 5rem/1 v.$alegreya;
+			font: 400 4.5rem/1 v.$alegreya;
 			color: rgba(var(--keyMorning), 0.8);
 			letter-spacing: 1px;
+			margin-left: 10px;
 		}
 
 		.locationLink {
 			height: fit-content;
 			margin-top: 50px;
+			margin-right: 10px;
 			font-size: 1.5rem;
 			color: rgba(var(--keyMorning), 0.8);
 			display: inline-block;
@@ -39,11 +42,11 @@
 				font-size: 1.3rem;
 			}
 			&:hover {
-				background-color: rgba(var(--keyMorning));
-				color: rgba(var(--keyNight));
+				border-color: rgba(var(--keyMorning));
+				color: rgba(var(--keyMorning));
 
 				.detailIcon {
-					color: rgba(var(--keyNight));
+					color: rgba(var(--keyMorning));
 				}
 			}
 		}
@@ -51,7 +54,7 @@
 
 	.mapFrame {
 		width: 100%;
-		height: 100vh;
+		height: 60vh;
 		filter: grayscale(100%);
 
 		&:hover {
@@ -61,9 +64,33 @@
 }
 
 @media screen and (max-width: v.$tablet) {
+	.locationScroll {
+		.locationTxt {
+			h2 {
+				font: 500 4rem/1 v.$alegreya;
+				margin-left: 30px;
+			}
+		}
+	}
 }
 
 @media screen and (max-width: v.$mobile) {
+	.locationScroll {
+		.locationTxt {
+			h2 {
+				font: 500 3rem/1 v.$alegreya;
+			}
+			.locationLink {
+				margin-top: 10px;
+				font-size: 1.8vmax;
+
+				.detailIcon {
+					margin-left: 4px;
+					font-size: 1.8vmax;
+				}
+			}
+		}
+	}
 }
 /*
 @use "../common/variables" as v;

@@ -10,7 +10,6 @@ export default function AboutUs({ Sc, pos }) {
 	const [Index, setIndex] = useState(0);
 
 	const currentScroll = Sc - pos || 0;
-	console.log(currentScroll);
 
 	const roomData = [
 		{
@@ -36,18 +35,18 @@ export default function AboutUs({ Sc, pos }) {
 	];
 
 	const titMS = {
-		transform: `translateX(${currentScroll * 3 <= 0 ? currentScroll * 3 : 0}px)`,
-		opacity: 1 + currentScroll / 600
+		transform: `translateX(${currentScroll * 2 <= 0 ? currentScroll * 2 : -currentScroll * 2}px)`,
+		opacity: `${currentScroll * 1 <= 0 ? 1 + currentScroll / 700 : 1 - currentScroll / 500}`
 	};
 
 	const subMS = {
-		transform: `translateX(${-currentScroll * 3 >= 0 ? -currentScroll * 3 : 0}px)`,
-		opacity: 1 + currentScroll / 600
+		transform: `translateX(${-currentScroll * 2 >= 0 ? -currentScroll * 2 : currentScroll * 2}px)`,
+		opacity: `${currentScroll * 1 <= 0 ? 1 + currentScroll / 700 : 1 - currentScroll / 500}`
 	};
 
 	const footerMS = {
-		transform: `translateY(${currentScroll * 1 <= 0 ? currentScroll * 1 : 0 ? currentScroll * 1 : 0}px)`,
-		opacity: 1 + currentScroll / 700
+		transform: `translateY(${currentScroll / 1.1 <= 0 ? currentScroll / 1.1 : currentScroll / 1.1}px)`,
+		opacity: `${currentScroll * 1 <= 0 ? 1 + currentScroll / 700 : 1 - currentScroll / 500}`
 	};
 
 	useEffect(() => {

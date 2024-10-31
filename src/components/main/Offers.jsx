@@ -35,10 +35,6 @@ export default function Offers({ Sc, pos }) {
 				slidesPerView: 2,
 				spaceBetween: 15
 			},
-			599: {
-				slidesPerView: 2,
-				spaceBetween: 10
-			},
 			0: {
 				slidesPerView: 1,
 				spaceBetween: 5

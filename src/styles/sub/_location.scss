@@ -134,6 +134,17 @@
 }
 
 @media screen and (max-width: v.$tablet) {
+	.location {
+		article {
+			.transportation {
+				width: 100%;
+			}
+
+			.reservation {
+				width: 100%;
+			}
+		}
+	}
 }
 
 @media screen and (max-width: v.$mobile) {

@@ -30,11 +30,12 @@
 		.modal2,
 		.modal3,
 		.modal4 {
-			width: 48%;
+			width: 47%;
 			margin: 5px;
 			border-top: 1px solid rgba(var(--keyMorning));
 			border-bottom: 1px solid rgba(var(--keyMorning));
 			position: relative;
+			word-break: break-all;
 			p {
 				margin-top: 10px;
 				font: 300 2.5rem v.$cinzel;
@@ -152,6 +153,7 @@
 
 				p {
 					margin-left: 5px;
+					font-size: 2.7vmax;
 				}
 				&:hover {
 					background: rgba(var(--keyMorning));

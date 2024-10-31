@@ -39,7 +39,12 @@ export default function MailForm() {
 	return (
 		<div className="mailForm">
 			<div className="titImg">
-				<Pic className={"pic"} src={"/로비전화2.jpg"} style={{ width: "100%", height: "100%" }} shadow />
+				<Pic
+					className={"pic"}
+					src={"/로비전화2.jpg"}
+					style={{ width: "100%", height: "100%", position: "relative" }}
+					shadow
+				/>
 			</div>
 
 			{/* <div className="formBox"> */}
@@ -77,6 +82,7 @@ export default function MailForm() {
 					<input type="submit" value="Send" />
 				</nav>
 			</form>
+
 			{/* </div> */}
 		</div>
 	);

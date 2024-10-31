@@ -135,35 +135,55 @@
 }
 
 @media screen and (max-width: v.$tablet) {
+	.offers {
+		.swipeArea {
+			.swipeGroup {
+				.swipeCont {
+					.swiper {
+						.swiper-wrapper {
+							left: 25%;
+							.swiper-slide {
+								.swipeSlide {
+									.thum {
+										.pic {
+											img {
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
 }
 
 @media screen and (max-width: v.$mobile) {
-	// .offers {
-	// 	padding: 80px 10vw;
-	// 	.swipeArea {
-	// 		.swipeGroup {
-	// 			// width: 100vh;
-	// 			.swipeCont {
-	// 				.swiper {
-	// 					.swiper-wrapper {
-	// 						.swiper-slide {
-	// 							// margin-left: -75px;
-	// 							right: 10vh;
-	// 							.swipeSlide {
-	// 								.thum {
-	// 									.pic {
-	// 										img {
-	// 											max-height: 200px; /* 모바일에서 이미지 최대 높이 */
-	// 											object-fit: cover;
-	// 										}
-	// 									}
-	// 								}
-	// 							}
-	// 						}
-	// 					}
-	// 				}
-	// 			}
-	// 		}
-	// 	}
-	// }
+	.offers {
+		padding: 80px 10vw;
+		.swipeArea {
+			.swipeGroup {
+				.swipeCont {
+					.swiper {
+						.swiper-wrapper {
+							left: 3%;
+							.swiper-slide {
+								.swipeSlide {
+									.thum {
+										.pic {
+											img {
+												object-fit: cover;
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
 }

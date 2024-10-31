@@ -93,24 +93,26 @@
 			}
 		}
 	}
-	// .info {
-	// 	width: 48%;
-	// 	padding-left: 8vw;
-
-	// 	h2 {
-	// 		font: 500 2rem/1 "orbitron";
-	// 		letter-spacing: 1px;
-	// 		color: #444;
-	// 		margin-bottom: 30px;
-	// 	}
-	// 	p {
-	// 		font: 0.8rem/1.3 "arial";
-	// 		color: #777;
-	// 	}
-	// }
 }
 
 @media screen and (max-width: v.$tablet) {
+	.mailForm {
+		.titImg {
+			width: 100%;
+			.pic {
+				:nth-last-child(1) {
+					position: relative;
+				}
+			}
+		}
+		.formBox {
+			width: 100%;
+
+			.mailMark {
+				margin: 20px 0px;
+			}
+		}
+	}
 }
 
 @media screen and (max-width: v.$mobile) {

@@ -14,6 +14,7 @@
 		color: rgba(var(--keyMorning));
 
 		p {
+			width: 80%;
 			font: 300 1rem/1.2 "raleway";
 			letter-spacing: 2px;
 			color: orange;
@@ -135,10 +136,11 @@
 @media screen and (max-width: v.$tablet) {
 	.gallery {
 		.textZone {
+			p {
+				width: 70%;
+			}
 			.gallerySlider {
-				width: 100%;
 				display: flex;
-				flex-wrap: wrap;
 				justify-content: flex-end;
 				align-items: baseline;
 			}

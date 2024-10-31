@@ -118,6 +118,12 @@ export default function Gallery() {
 	const IsModal = useZustandStore(state => state.IsModal);
 	const setModalOpen = useZustandStore(state => state.setModalOpen);
 
+	const customMotion = {
+		init: { opacity: 0, y: 200 },
+		active: { opacity: 1, x: 0 },
+		end: { opacity: 0, y: -200 }
+	};
+
 	useEffect(() => {
 		const method = "flickr.people.getPhotos";
 		const flickr_api = import.meta.env.VITE_FLICKR_API;
@@ -150,7 +156,7 @@ export default function Gallery() {
 	return (
 		<>
 			<Layout title={"GALLERY"}>
-				<Content>
+				<Content delay={1.5} customMotion={customMotion}>
 					<section className="gallery">
 						<div className="textZone">
 							<p>

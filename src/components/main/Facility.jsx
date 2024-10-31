@@ -1,6 +1,6 @@
 import Pic from "../common/Pic";
 
-export default function Facility() {
+export default function Facility({ Sc, pos }) {
 	return (
 		<figure className="facility">
 			<h2 className="fac_Title">FACILITIES</h2>

@@ -96,4 +96,30 @@
 }
 
 @media screen and (max-width: v.$mobile) {
+	.header {
+		.topUtil {
+			.btnDetailMenu {
+				width: 20px;
+				height: 18px;
+			}
+
+			.btnDetailMenu.active {
+				.top {
+					transform: translateY(8px) rotate(225deg);
+				}
+
+				.bottom {
+					transform: translateY(-8px) rotate(-225deg);
+				}
+			}
+		}
+
+		h1 {
+			font: 200 2rem / 1 v.$cinzel;
+			letter-spacing: 5px;
+		}
+		nav {
+			display: none;
+		}
+	}
 }

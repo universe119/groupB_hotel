@@ -26,14 +26,14 @@
 @use "sub/youtubeDetail";
 
 :root {
-	--keyRGB: 40, 40, 40;
+	--keyRGB: 222, 133, 0;
 
 	// 글씨색
 	--keyMorning: 255, 255, 255;
 	--keyNight: 17, 17, 17;
 
 	// 배경색
-	--keyBackground: 0, 0, 35;
+	--keyBackground: 23, 27, 51;
 }
 //rgba(var(--keyBackground), 0.5);
 //rgba(40,40,40,0.5); 위에 입력시 이런식으로 표현됨

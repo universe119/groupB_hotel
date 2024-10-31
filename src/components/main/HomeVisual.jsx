@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { timeData } from "../../data/clockData.js"; // 시간 데이터 불러오기
 import Pic from "../common/Pic";
 
-export default function HomeVisual() {
+export default function HomeVisual({ Sc }) {
 	const [time, setTime] = useState({ hr: "00", min: "00", sec: "00", period: "AM" });
 	const [theme, setTheme] = useState("");
 
@@ -52,6 +52,16 @@ export default function HomeVisual() {
 		}
 	};
 
+	const cMS = {
+		transform: `translateY(${Sc}px) scale(${1 + Sc / 600})`,
+		opacity: `${1 - Sc / 550}`
+	};
+
+	const sMS = {
+		transform: `translateY(${Sc}px) scale(${1 + Sc / 600})`,
+		opacity: 1 - Sc / 550
+	};
+
 	return (
 		<div className="homeVisual">
 			<Pic
@@ -60,22 +70,18 @@ export default function HomeVisual() {
 				style={{ width: "100%", height: "100%", position: "absolute", opacity: 0.8 }}
 			/>
 
-			<div className="clock" style={theme === "morning" ? { color: "#000" } : { color: "#fff" }}>
+			<div className="clock" style={{ ...cMS, color: theme === "morning" ? "#000" : "#fff" }}>
 				<span>{time.hr}</span> : <span>{time.min}</span> : <span>{time.sec}</span>
-				<em
-					className={time.period === "AM" ? "on" : ""}
-					style={theme === "morning" ? { color: "#000" } : { color: "#fff" }}>
+				<em className={time.period === "AM" ? "on" : ""} style={{ color: theme === "morning" ? "#000" : "#fff" }}>
 					{time.period === "AM" ? "AM" : ""}
 				</em>
-				<em
-					className={time.period === "PM" ? "on" : ""}
-					style={theme === "morning" ? { color: "#000" } : { color: "#fff" }}>
+				<em className={time.period === "PM" ? "on" : ""} style={{ color: theme === "morning" ? "#000" : "#fff" }}>
 					{time.period === "PM" ? "PM" : ""}
 				</em>
 			</div>
 
-			<div className="slogan">
-				<h2 style={theme === "morning" ? { color: "#000" } : { color: "#fff" }}>Experience the Difference</h2>
+			<div className="slogan" style={sMS}>
+				<h2 style={{ color: theme === "morning" ? "#000" : "#fff" }}>Experience the Difference</h2>
 			</div>
 		</div>
 	);

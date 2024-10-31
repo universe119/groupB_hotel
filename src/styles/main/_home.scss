@@ -8,7 +8,12 @@
 	top: 50%;
 	z-index: 9;
 	transform: translateY(-50%);
+	transition: 0.4s linear;
+	opacity: 0;
 
+	&:hover {
+		opacity: 1;
+	}
 	.navigator {
 		width: 150px;
 		height: 280px;
@@ -22,7 +27,7 @@
 			line-height: 40px;
 			position: absolute;
 			left: 5px;
-			transition: 0.5s linear;
+			transition: 0.7s linear;
 
 			.bar {
 				position: absolute;

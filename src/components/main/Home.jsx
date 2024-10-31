@@ -10,6 +10,7 @@ import { motion } from "framer-motion";
 export default function Home() {
 	const sideMenuArr = ["Home", "About us", "Offers", "Facilities", "Location"];
 	const [currentPage, setCurrentPage] = useState(0);
+	const [Scroll, setScroll] = useState(0);
 	const ref_wrap = useRef(null);
 	const ref_posArr = useRef([]);
 
@@ -25,8 +26,8 @@ export default function Home() {
 
 	useEffect(() => {
 		// 휠 스크롤을 통한 페이지 이동을 비활성화
-		const handleWheel = e => {
-			e.preventDefault(); // 휠 이벤트 발생 시 기본 스크롤 방지
+		const handleWheel = () => {
+			// e.preventDefault(); // 휠 이벤트 발생 시 기본 스크롤 방지
 		};
 
 		window.addEventListener("wheel", handleWheel);
@@ -41,6 +42,7 @@ export default function Home() {
 		const handleScroll = () => {
 			const newPage = ref_posArr.current.findIndex(pos => window.scrollY < pos + window.innerHeight / 2);
 			setCurrentPage(newPage >= 0 ? newPage : sideMenuArr.length - 1);
+			setScroll(window.scrollY);
 		};
 		window.addEventListener("scroll", handleScroll);
 		return () => window.removeEventListener("scroll", handleScroll);
@@ -86,11 +88,11 @@ export default function Home() {
 				</div>
 			</div>
 			<div ref={ref_wrap}>
-				<HomeVisual />
-				<AboutUs />
-				<Offers />
-				<Facility />
-				<LocationScroll />
+				<HomeVisual Sc={Scroll} pos={ref_posArr} />
+				<AboutUs Sc={Scroll} pos={ref_posArr.current[1]} />
+				<Offers Sc={Scroll} pos={ref_posArr.current[2]} />
+				<Facility Sc={Scroll} pos={ref_posArr.current[3]} />
+				<LocationScroll Sc={Scroll} pos={ref_posArr.current[4]} />
 			</div>
 		</Layout>
 	);

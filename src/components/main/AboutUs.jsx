@@ -4,10 +4,13 @@ import Modal from "../common/Modal";
 import { useEffect, useState } from "react";
 import { useZustandStore } from "../../hooks/useZustand";
 
-export default function AboutUs() {
+export default function AboutUs({ Sc, pos }) {
 	const IsModal = useZustandStore(state => state.IsModal);
 	const setModalOpen = useZustandStore(state => state.setModalOpen);
 	const [Index, setIndex] = useState(0);
+
+	const currentScroll = Sc - pos || 0;
+	console.log(currentScroll);
 
 	const roomData = [
 		{
@@ -32,6 +35,21 @@ export default function AboutUs() {
 		}
 	];
 
+	const titMS = {
+		transform: `translateX(${currentScroll * 3 <= 0 ? currentScroll * 3 : 0}px)`,
+		opacity: 1 + currentScroll / 600
+	};
+
+	const subMS = {
+		transform: `translateX(${-currentScroll * 3 >= 0 ? -currentScroll * 3 : 0}px)`,
+		opacity: 1 + currentScroll / 600
+	};
+
+	const footerMS = {
+		transform: `translateY(${currentScroll * 1 <= 0 ? currentScroll * 1 : 0 ? currentScroll * 1 : 0}px)`,
+		opacity: 1 + currentScroll / 700
+	};
+
 	useEffect(() => {
 		document.body.style.overflow = IsModal ? "hidden" : "auto";
 	}, [IsModal]);
@@ -39,10 +57,10 @@ export default function AboutUs() {
 	// 호텔소개 어떤 느낌으로?
 	return (
 		<section className="aboutUs">
-			<div className="titImg">
+			<div className="titImg" style={titMS}>
 				<Pic className={"pic"} src={"/호텔빌딩2작음수정.jpg"} style={{ width: "100%", height: "100%" }} shadow />
 			</div>
-			<div className="subImg">
+			<div className="subImg" style={subMS}>
 				{roomData.map((data, idx) => {
 					return (
 						<div
@@ -57,7 +75,7 @@ export default function AboutUs() {
 					);
 				})}
 			</div>
-			<div className="footerImg">
+			<div className="footerImg" style={footerMS}>
 				<div className="title">
 					<p>
 						PSYH <br /> HOTEL

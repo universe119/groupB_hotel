@@ -1,7 +1,11 @@
 .fAQ {
 	width: 100%;
 	margin: 100px auto;
-
+	h2 {
+		font: 100 2rem/1;
+		color: #fff;
+		margin-bottom: 20px;
+	}
 	.title {
 		border-bottom: 1px solid #aaa;
 
@@ -21,14 +25,14 @@
 			display: flex;
 			border-bottom: 1px solid #ccc;
 			padding: 8px 10px;
-			color: #222;
+			color: #ffffff;
 			font-weight: bold;
 			font-size: 1.1rem;
 		}
 		.a {
 			padding: 8px 10px;
 			border-bottom: 1px solid #ccc;
-			color: #444;
+			color: #afafaf;
 			line-height: 1.6;
 		}
 	}

@@ -11,8 +11,9 @@
 		color: rgba(var(--keyMorning));
 
 		p {
-			font-size: 1rem;
-			color: rgba(205, 58, 58, 0.787);
+			font: 300 1rem/1.2 "raleway";
+			letter-spacing: 2px;
+			color: orange;
 		}
 		.gallerySlider {
 			.num {
@@ -22,7 +23,7 @@
 
 			.left {
 				font: 500 3rem v.$cinzel;
-				color: rgb(205, 58, 58);
+				color: orange;
 				margin: 0px 0.35vw;
 			}
 

@@ -2,7 +2,7 @@ import useLocation from "../../hooks/useLocation";
 import { Link } from "react-router-dom";
 import { FaRegArrowAltCircleRight } from "react-icons/fa";
 
-export default function LocationScroll() {
+export default function LocationScroll({ Sc, pos }) {
 	const centerPosition = new window.kakao.maps.LatLng(37.545453, 127.057083); // 원하는 위치
 	const zoomLevel = 3; // 고정 확대 값
 

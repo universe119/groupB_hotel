@@ -17,7 +17,7 @@ export default function Header({ menuOpen, menuClose }) {
 
 	return (
 		<>
-			<header className={`header ${pathname === "/" ? "main" : pathname === "youtube" ? "youtubeH" : "false"}`}>
+			<header className={`header ${pathname === "/" ? "main" : pathname === "/youtube" ? "youtubeH" : "false"}`}>
 				<div className="topUtil">
 					<button className={`btnDetailMenu ${menuOpen ? "active" : ""}`} onClick={setMenuToggle}>
 						<span className="top" />

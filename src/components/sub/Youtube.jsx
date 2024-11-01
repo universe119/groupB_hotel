@@ -14,6 +14,20 @@ export default function Youtube() {
 	// const ref_wrap = useRef(null);
 	// const ref_posArr = useRef([]);
 
+	// const MS = {
+	// 	init: { opacity: 0, x: 200 },
+	// 	active: { opacity: 1, x: 0 },
+	// 	end: { opacity: 0, x: 200 }
+	// }; customMotion={MS}
+	// const evenMS = {
+	// 	transform: `translateX(500px)`
+	// };
+
+	// const oddMS = {
+	// 	transform: `translateX(-500px)`
+	// };
+	//${idx % 2 === 0 ? "evenMS" : "oddMS"} style={idx % 2 === 0 ? evenMS : oddMS}
+
 	const { data: Vids, isPending } = useYoutubeQuery({ type: "A" });
 
 	const [Scroll, setScroll] = useState(0);
@@ -29,25 +43,14 @@ export default function Youtube() {
 			window.removeEventListener("scroll", handleScroll);
 		};
 	}, []);
-	const evenMS = {
-		transform: `translateX(${Scroll * 2 <= 0 ? Scroll * 2 : -Scroll * 2}px)`,
-		opacity: `${Scroll * 1 <= 0 ? 1 + Scroll / 700 : 1 - Scroll / 500}`
-	};
 
-	const oddMS = {
-		transform: `translateX(${-Scroll * 2 >= 0 ? -Scroll * 2 : Scroll * 2}px)`,
-		opacity: `${Scroll * 1 <= 0 ? 1 + Scroll / 700 : 1 - Scroll / 500}`
-	};
 	return (
-		<Layout title={"youtube"}>
-			<Content delay={1}>
+		<Layout title={"YOUTUBE"}>
+			<Content>
 				{isPending && <p>Loading...</p>}
 				<>
 					{Vids?.map((vid, idx) => (
-						<article
-							key={idx}
-							className={`youtubeBody ${idx % 2 === 0 ? "evenMS" : "oddMS"}`}
-							style={idx % 2 === 0 ? evenMS : oddMS}>
+						<article key={idx} className={`youtubeBody`}>
 							<h3 className={idx % 2 === 0 ? "evenTit" : "oddTit"}>
 								<Link to={`/youtube/${vid.id}`}>{shortenText(vid.snippet.title, 60)}</Link>
 							</h3>

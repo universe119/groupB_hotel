@@ -54,7 +54,7 @@ export default function MobileMenu({ menuClose }) {
 	return (
 		<motion.div
 			className={"overlayMenu"}
-			onClick={menuClose}
+			// onClick={menuClose}
 			initial={initial}
 			animate={animate}
 			exit={exit}
@@ -63,7 +63,7 @@ export default function MobileMenu({ menuClose }) {
 				<ul className="subMenuList">
 					{menuData.map((menu, index) => (
 						<li key={index} className="subMenu">
-							<h1 style={{ cursor: "pointer" }}>
+							<h1 style={{ cursor: "pointer" }} onClick={menuClose}>
 								<Link
 									to={
 										menu.title === "CONTACT"

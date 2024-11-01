@@ -59,40 +59,42 @@ export default function Community() {
 	}, [SearchText]);
 
 	return (
-		<Layout title={"community"}>
+		<Layout title={"COMMUNITY"}>
 			<Content>
-				<form className="searchBox" onSubmit={handleSubmit}>
-					<input type="text" placeholder="검색어를 입력해주세요." />
-					<button>Search</button>
-				</form>
-				<div className="options">
-					<select onChange={e => setCategory(e.target.value)}>
-						<option value="">All Notes</option>
-						<option value="BUSINESS">Business</option>
-						<option value="PERSONAL">Personal</option>
-						<option value="IMPORTANT">Important</option>
-					</select>
-					<Link to={`/community-add`} className="writeButton">
-						Write Post
-					</Link>
-				</div>
-				{Posts?.length === 0 && <p>해당 검색어의 검색 결과가 없습니다.</p>}
-				<table className="postsTable">
-					<thead>
-						<tr>
-							<th>Q&A</th>
-						</tr>
-					</thead>
-					<tbody>
-						{FilteredPosts?.map(post => (
-							<tr key={post.id}>
-								<td>
-									<Link to={`/community/${post.slug}`}>{post.title}</Link>
-								</td>
+				<div className="community">
+					<form className="searchBox" onSubmit={handleSubmit}>
+						<input type="text" placeholder="검색어를 입력해주세요." />
+						<button>Search</button>
+					</form>
+					<div className="options">
+						<select onChange={e => setCategory(e.target.value)}>
+							<option value="">All Notes</option>
+							<option value="BUSINESS">Business</option>
+							<option value="PERSONAL">Personal</option>
+							<option value="IMPORTANT">Important</option>
+						</select>
+						<Link to={`/community-add`} className="writeButton">
+							Write Post
+						</Link>
+					</div>
+					{Posts?.length === 0 && <p>해당 검색어의 검색 결과가 없습니다.</p>}
+					<table className="postsTable">
+						<thead>
+							<tr>
+								<th>Q&A</th>
 							</tr>
-						))}
-					</tbody>
-				</table>
+						</thead>
+						<tbody>
+							{FilteredPosts?.map(post => (
+								<tr key={post.id}>
+									<td>
+										<Link to={`/community/${post.slug}`}>{post.title}</Link>
+									</td>
+								</tr>
+							))}
+						</tbody>
+					</table>
+				</div>
 			</Content>
 		</Layout>
 	);

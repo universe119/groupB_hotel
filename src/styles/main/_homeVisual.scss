@@ -11,7 +11,7 @@
 	align-content: center;
 	justify-content: center;
 	flex-direction: column;
-	background-color: white;
+	background-color: rgba(var(--keyBackground), 0.97);
 
 	&.morning {
 		background-image: url("/morning.jpg");

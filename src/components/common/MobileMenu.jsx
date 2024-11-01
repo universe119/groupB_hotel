@@ -32,25 +32,22 @@ export default function MobileMenu({ menuClose }) {
 	// 상위 메뉴와 하위 메뉴 데이터를 배열로 정의
 	const menuData = [
 		{
-			title: "MAIN",
-			subItems: ["HOME", "ABOUT US", "OFFERS", "RETAIL BUSINESS", "LOCATION"]
+			title: "HOME"
 		},
 		{
-			title: "MEDIA",
-			subItems: ["GALLERY", "YOUTUBE"]
+			title: "GALLERY"
 		},
 		{
-			title: "COMMUNITY",
-			subItems: [""]
+			title: "YOUTUBE"
 		},
 		{
-			title: "CONTACT",
-			subItems: ["FAQ"]
+			title: "COMMUNITY"
 		},
-
 		{
-			title: "LOCATION",
-			subItems: [""]
+			title: "CONTACT"
+		},
+		{
+			title: "LOCATION"
 		}
 	];
 
@@ -71,11 +68,11 @@ export default function MobileMenu({ menuClose }) {
 									to={
 										menu.title === "CONTACT"
 											? menu.title.toLowerCase()
-											: menu.title === "MEDIA"
-											? "GALLERY".toLowerCase()
+											: menu.title === "GALLERY"
+											? menu.title.toLowerCase()
 											: menu.title === "COMMUNITY"
 											? menu.title.toLowerCase()
-											: menu.title === "CONTACT"
+											: menu.title === "YOUTUBE"
 											? menu.title.toLowerCase()
 											: menu.title === "LOCATION"
 											? menu.title.toLowerCase()
@@ -84,7 +81,7 @@ export default function MobileMenu({ menuClose }) {
 									{menu.title}
 								</Link>
 							</h1>
-							<ul className="A">
+							{/* <ul className="A">
 								{menu.subItems.map((subItem, idx) => (
 									<li key={idx}>
 										<Link
@@ -105,7 +102,7 @@ export default function MobileMenu({ menuClose }) {
 										</Link>
 									</li>
 								))}
-							</ul>
+							</ul> */}
 						</li>
 					))}
 				</ul>

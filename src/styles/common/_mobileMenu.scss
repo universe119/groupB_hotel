@@ -19,39 +19,51 @@
 
 		.subMenuList {
 			display: flex;
-			/* 큰 메뉴를 가로로 배치 */
-			justify-content: space-around;
+			// /* 큰 메뉴를 가로로 배치 */
+			// justify-content: space-around;
 			width: 100%;
+			flex-wrap: wrap;
+			justify-content: center;
 
 			.subMenu {
+				width: 30%;
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+
 				h1 {
+					width: 100%;
 					color: rgba(var(--keyMorning));
-					font: 3.5vh/1.1 v.$cinzel;
-					margin-bottom: 2rem;
+					font: 5vh/4 v.$cinzel;
 					text-align: center;
+					border-top: 1px solid rgba(var(--keyMorning));
+					border-bottom: 1px solid rgba(var(--keyMorning));
+					margin: 10px 20px;
 
 					&:hover {
+						border-top: 1px solid #f39c12;
+						border-bottom: 1px solid #f39c12;
 						color: #f39c12;
 					}
 				}
 
-				ul {
-					display: flex;
-					/* 하위 메뉴를 세로로 배치 */
-					flex-direction: column;
-					align-items: center;
+				// ul {
+				// 	display: flex;
+				// 	/* 하위 메뉴를 세로로 배치 */
+				// 	flex-direction: column;
+				// 	align-items: center;
 
-					li {
-						color: rgba(var(--keyMorning), 0.9);
-						font: 1.8vh/1.1 v.$cinzel;
-						margin-bottom: 20px;
-						transition: color 0.3s;
+				// 	li {
+				// 		color: rgba(var(--keyMorning), 0.9);
+				// 		font: 1.8vh/1.1 v.$cinzel;
+				// 		margin-bottom: 20px;
+				// 		transition: color 0.3s;
 
-						&:hover {
-							color: #f39c12;
-						}
-					}
-				}
+				// 		&:hover {
+				// 			color: #f39c12;
+				// 		}
+				// 	}
+				// }
 			}
 		}
 	}
@@ -59,22 +71,14 @@
 @media screen and (max-width: v.$tablet) {
 	.overlayMenu {
 		nav {
-			width: 60%;
-
 			.subMenuList {
-				flex-wrap: wrap;
-
 				.subMenu {
-					margin: 0px 30px 20px 20px;
-					h1 {
-						font: 3.2vh/1.1 v.$cinzel;
-					}
+					width: 48%;
 
-					ul {
-						li {
-							font: 1.7vh/1 v.$cinzel;
-							margin-bottom: 20px;
-						}
+					h1 {
+						width: 100%;
+						font: 3vmax/4 v.$cinzel;
+						margin: 20px 30px;
 					}
 				}
 			}
@@ -85,24 +89,14 @@
 @media screen and (max-width: v.$mobile) {
 	.overlayMenu {
 		nav {
-			width: 60%;
-
 			.subMenuList {
-				flex-wrap: wrap;
-
 				.subMenu {
 					width: 100%;
-					margin-bottom: 30px;
+					height: 90px;
 
 					h1 {
-						font: 2.5vh/1 v.$cinzel;
-					}
-
-					ul {
-						li {
-							font: 1.5vh/1.1 v.$cinzel;
-							margin-bottom: 10px;
-						}
+						font: 2.4vmax/3 v.$cinzel;
+						margin: 0px 60px;
 					}
 				}
 			}

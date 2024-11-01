@@ -1,17 +1,17 @@
 @use "../common/variables" as v;
 
-.youtube {
+.youtubeBody {
 	width: 100%;
 	height: 30vh;
 	// background-color: rgba(var(--keyBackground), 0.7);
 	position: relative;
-	margin: 20px 0px;
+	margin: 30px 0px;
 	// border: 1px solid #111;
 
 	.evenTit,
 	.oddTit {
 		width: 100%;
-		font: 700 1.8vmax/1.2 v.$raleway, sans-serif;
+		font: 600 1.8vmax/1.2 v.$raleway, sans-serif;
 		color: rgba(var(--keyMorning));
 		position: absolute;
 		z-index: 5;
@@ -34,10 +34,10 @@
 		z-index: 5;
 		bottom: 1.5vh;
 		p {
-			font: 100 1.4vmax/1.3 v.$arial;
+			font: 200 1.4vmax/1.3 v.$raleway;
 			color: rgba(var(--keyMorning));
 			word-break: break-all;
-			margin-bottom: 8vh;
+			margin-bottom: 5vh;
 		}
 		span {
 			font: 400 1vmax/1 v.$orbitron, sans-serif;

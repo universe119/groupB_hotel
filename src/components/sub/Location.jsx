@@ -16,7 +16,7 @@ export default function Location() {
 				{/* Layout으로 Map 페이지 레이아웃 설정 */}
 				<section className="location">
 					{/* 맵과 로드뷰 프레임 */}
-					<figure className="mapFrame">
+					<figure className="mapFrame-wrap">
 						<article ref={ref_mapFrame} className={`mapFrame ${!Roadview && "on"}`}></article>
 						<article ref={ref_viewFrame} className={`viewFrame ${Roadview && "on"}`}></article>
 					</figure>

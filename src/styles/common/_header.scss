@@ -13,6 +13,16 @@
 	&.main {
 		position: fixed;
 	}
+	&.youtubeH {
+		width: 100%;
+		padding: 30px 10vw;
+		backdrop-filter: blur(10px);
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		position: fixed;
+		z-index: 3;
+	}
 
 	.topUtil {
 		// width: 100%;

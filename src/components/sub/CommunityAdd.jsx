@@ -32,7 +32,7 @@ export default function CommunityAdd() {
 			.catch(err => console.log(err));
 	};
 	return (
-		<Layout title={"addCommunity"}>
+		<Layout title={"ADDCOMMUNITY"}>
 			<form onSubmit={handleSubmit}>
 				<table>
 					<tbody>

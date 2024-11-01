@@ -30,7 +30,7 @@ export default function CommunityDetail() {
 	};
 
 	return (
-		<Layout title={"detailCommunity"}>
+		<Layout title={"DETAILCOMMUNITY"}>
 			<table className="detailTable">
 				<tbody>
 					<tr>

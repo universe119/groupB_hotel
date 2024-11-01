@@ -57,7 +57,7 @@ export default function CommunityEdit() {
 		// 처음 마운트시 수정할 데이터를 폼요소 안쪽에 넣어줌
 		// 이때 value속성이 아닌 defaultValue 속성을 지정한 이유
 		// value속성을 연결시에는 무조건 onChange이벤트가 같이 전달되야 하기 때문
-		<Layout title={"editCommunity"}>
+		<Layout title={"EDITCOMMUNITY"}>
 			<form onSubmit={handleSubmit} className="editForm">
 				<table>
 					<tbody>

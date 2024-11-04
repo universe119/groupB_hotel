@@ -15,7 +15,7 @@ export default function Community() {
 	//전체 포스트 목록 초기화를 편하게 하도록 함수 분리
 	const fetchAllPosts = () => {
 		axios
-			.get("http://localhost:8000/posts")
+			.get("https://psyh-hotelcommunitydb.onrender.com/posts")
 			.then(res => {
 				setPosts(res.data);
 			})
@@ -50,7 +50,7 @@ export default function Community() {
 	useEffect(() => {
 		if (!SearchText) return;
 		axios
-			.get(`http://localhost:8000/posts-search/?search=${SearchText}`)
+			.get(`https://psyh-hotelcommunitydb.onrender.com/posts-search/?search=${SearchText}`)
 			.then(res => {
 				console.log(res.data);
 				setPosts(res.data);

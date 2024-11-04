@@ -29,7 +29,7 @@ export default function CommunityEdit() {
 		console.log(editData);
 
 		axios
-			.put(`http://127.0.0.1:8000/posts/${slug}/`, editData)
+			.put(`https://psyh-hotelcommunitydb.onrender.com/posts/${slug}/`, editData)
 			.then(res => {
 				console.log(res);
 
@@ -41,7 +41,7 @@ export default function CommunityEdit() {
 	// 컴포넌트 마운트시 슬러그값을 이용해 get방식으로 수정할 데이터 가져옴
 	useEffect(() => {
 		axios
-			.get(`http://127.0.0.1:8000/posts/${slug}`)
+			.get(`https://psyh-hotelcommunitydb.onrender.com/posts/${slug}`)
 			.then(res => {
 				setData(res.data);
 			})

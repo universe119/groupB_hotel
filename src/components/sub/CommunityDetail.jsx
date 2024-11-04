@@ -10,7 +10,7 @@ export default function CommunityDetail() {
 
 	// 상세페이지 마운트시 자동으로 상세데이터 가져옴
 	useEffect(() => {
-		axios.get(`http://127.0.0.1:8000/posts/${slug}`).then(res => {
+		axios.get(`https://psyh-hotelcommunitydb.onrender.com/posts/${slug}`).then(res => {
 			setDetail(res.data);
 		});
 	}, [slug]);
@@ -19,7 +19,7 @@ export default function CommunityDetail() {
 	const handleDelete = () => {
 		if (!window.confirm("게시글 삭제하겠습니까?")) return;
 		axios
-			.delete(`http://127.0.0.1:8000/posts/${slug}/`)
+			.delete(`https://psyh-hotelcommunitydb.onrender.com/posts/${slug}/`)
 			.then(res => {
 				console.log(res);
 

@@ -23,7 +23,7 @@ export default function CommunityAdd() {
 
 		console.log(postData);
 		axios
-			.post(`http://127.0.0.1:8000/posts`, postData)
+			.post(`https://psyh-hotelcommunitydb.onrender.com/posts`, postData)
 			.then(res => {
 				console.log(res);
 

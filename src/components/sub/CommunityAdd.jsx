@@ -10,7 +10,6 @@ export default function CommunityAdd() {
 	const ref_category = useRef(null);
 
 	const handleSubmit = e => {
-		// 리액트 스럽게 스테이트값을 받아서 할 수 있다고 하심
 		e.preventDefault();
 		if (!ref_title.current.value.trim() || !ref_body.current.value.trim())
 			return alert("제목, 본문은 필수 입력 항목입니다!!");
@@ -32,7 +31,7 @@ export default function CommunityAdd() {
 			.catch(err => console.log(err));
 	};
 	return (
-		<Layout title={"ADDCOMMUNITY"}>
+		<Layout title={"ADD COMMUNITY"}>
 			<form onSubmit={handleSubmit}>
 				<table>
 					<tbody>

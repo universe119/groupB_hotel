@@ -7,6 +7,7 @@ export default function Header({ menuOpen, menuClose }) {
 
 	//sns 메뉴
 	const snsArr = [FaEnvelope, FaInstagram, FaYoutube];
+	const snsUrl = ["/contact", "/gallery", "/youtube"];
 	const setMenuToggle = useZustandStore(state => state.setMenuToggle);
 
 	if (menuOpen) {
@@ -37,7 +38,9 @@ export default function Header({ menuOpen, menuClose }) {
 					<ul className="sns">
 						{snsArr.map((Data, idx) => (
 							<li key={idx}>
-								<Data />
+								<Link to={snsUrl[idx]}>
+									<Data />
+								</Link>
 							</li>
 						))}
 					</ul>

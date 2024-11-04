@@ -19,7 +19,7 @@ export default function Home() {
 		1: "#ffffff", // ABOUT US
 		2: "#ffffff",
 		3: "#ffffff",
-		4: "#282828" // LOCATION
+		4: "#ffffff" // LOCATION
 	};
 	// currentPage에 따른 글씨 색상 지정 (기본값 white)
 	const chColor = colorMap[currentPage] || "#ffffff"; // HOME

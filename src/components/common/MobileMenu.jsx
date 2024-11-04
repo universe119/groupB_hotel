@@ -52,35 +52,29 @@ export default function MobileMenu({ menuClose }) {
 	];
 
 	return (
-		<motion.div
-			className={"overlayMenu"}
-			// onClick={menuClose}
-			initial={initial}
-			animate={animate}
-			exit={exit}
-			transition={transition}>
+		<motion.div className={"overlayMenu"} initial={initial} animate={animate} exit={exit} transition={transition}>
 			<nav>
 				<ul className="subMenuList">
 					{menuData.map((menu, index) => (
 						<li key={index} className="subMenu">
-							<h1 style={{ cursor: "pointer" }} onClick={menuClose}>
-								<Link
-									to={
-										menu.title === "CONTACT"
-											? menu.title.toLowerCase()
-											: menu.title === "GALLERY"
-											? menu.title.toLowerCase()
-											: menu.title === "COMMUNITY"
-											? menu.title.toLowerCase()
-											: menu.title === "YOUTUBE"
-											? menu.title.toLowerCase()
-											: menu.title === "LOCATION"
-											? menu.title.toLowerCase()
-											: "/"
-									}>
+							<Link
+								to={
+									menu.title === "CONTACT"
+										? menu.title.toLowerCase()
+										: menu.title === "GALLERY"
+										? menu.title.toLowerCase()
+										: menu.title === "COMMUNITY"
+										? menu.title.toLowerCase()
+										: menu.title === "YOUTUBE"
+										? menu.title.toLowerCase()
+										: menu.title === "LOCATION"
+										? menu.title.toLowerCase()
+										: "/"
+								}>
+								<h1 style={{ cursor: "pointer" }} onClick={menuClose}>
 									{menu.title}
-								</Link>
-							</h1>
+								</h1>
+							</Link>
 							{/* <ul className="A">
 								{menu.subItems.map((subItem, idx) => (
 									<li key={idx}>

@@ -30,7 +30,7 @@ export default function CommunityDetail() {
 	};
 
 	return (
-		<Layout title={"DETAILCOMMUNITY"}>
+		<Layout title={"DETAIL COMMUNITY"}>
 			<table className="detailTable">
 				<tbody>
 					<tr>
@@ -48,8 +48,7 @@ export default function CommunityDetail() {
 					<tr>
 						<th>Created</th>
 						<td>
-							{Detail?.created.split("T")[0] + " "}
-							{Detail?.created.split("T")[1].split(".")[0]}
+							{Detail?.created.split("T")[0] + " " + Detail?.created.split("T")[1].split(".")[0].split(":")[0] + "시"}
 						</td>
 					</tr>
 				</tbody>

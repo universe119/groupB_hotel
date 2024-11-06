@@ -5,7 +5,7 @@ import useCombineText from "../../hooks/useCombineText";
 import { Link } from "react-router-dom";
 import Content from "../common/Content";
 import { useYoutubeQuery } from "../../hooks/useYoutube";
-import { useEffect, useRef, useState } from "react";
+// import { useEffect, useRef, useState } from "react";
 
 export default function Youtube() {
 	const shortenText = useShortenText();
@@ -30,19 +30,19 @@ export default function Youtube() {
 
 	const { data: Vids, isPending } = useYoutubeQuery({ type: "A" });
 
-	const [Scroll, setScroll] = useState(0);
-	console.log(Scroll);
+	// const [Scroll, setScroll] = useState(0);
+	// console.log(Scroll);
 
-	const handleScroll = () => {
-		setScroll(window.scrollY);
-	};
+	// const handleScroll = () => {
+	// 	setScroll(window.scrollY);
+	// };
 
-	useEffect(() => {
-		window.addEventListener("scroll", handleScroll);
-		return () => {
-			window.removeEventListener("scroll", handleScroll);
-		};
-	}, []);
+	// useEffect(() => {
+	// 	window.addEventListener("scroll", handleScroll);
+	// 	return () => {
+	// 		window.removeEventListener("scroll", handleScroll);
+	// 	};
+	// }, []);
 
 	return (
 		<Layout title={"YOUTUBE"}>

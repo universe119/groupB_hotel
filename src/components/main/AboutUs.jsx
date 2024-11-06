@@ -13,22 +13,22 @@ export default function AboutUs({ Sc, pos }) {
 
 	const roomData = [
 		{
-			tit: "MISSION",
+			tit: `MISSION`,
 			dec: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, pariatur.",
 			pic: "/호텔빌딩2작음수정.jpg"
 		},
 		{
-			tit: "SWEET ROOM",
+			tit: `SWEET <br/> ROOM`,
 			dec: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, pariatur.",
 			pic: "/SWEET_ROOM.jpg"
 		},
 		{
-			tit: "DELUXE ROOM",
+			tit: `DELUXE <br/> ROOM`,
 			dec: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, pariatur.",
 			pic: "/DELUXER_ROOM2.jpg"
 		},
 		{
-			tit: "STANDARD ROOM",
+			tit: `STANDARD <br/> ROOM`,
 			dec: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, pariatur.",
 			pic: "/STANDARD_ROOM.jpg"
 		}
@@ -69,7 +69,7 @@ export default function AboutUs({ Sc, pos }) {
 								setModalOpen();
 								setIndex(idx);
 							}}>
-							<p>{data.tit}</p>
+							<p dangerouslySetInnerHTML={{ __html: data.tit }} />
 						</div>
 					);
 				})}
@@ -99,7 +99,7 @@ export default function AboutUs({ Sc, pos }) {
 							alt={roomData[Index].tit}
 							style={{ width: "100%", height: "100%" }}
 						/>
-						<h1>{roomData[Index].tit}</h1>
+						<h1 dangerouslySetInnerHTML={{ __html: roomData[Index].tit }} />
 						<p>{roomData[Index].dec}</p>
 					</Modal>
 				)}

@@ -40,31 +40,34 @@
 
 			input[type="reset"],
 			input[type="submit"] {
-				padding: 10px 15px;
-				border: none;
-				border-radius: 4px;
 				cursor: pointer;
+				border: none;
+				border-radius: 5px;
+				font-size: 1em;
+				padding: 10px 20px;
+				color: rgba(var(--keyMorning));
+				background-color: orange;
 				transition: background-color 0.3s;
 
 				&:hover {
-					background-color: #f0f0f0;
+					background-color: rgb(179, 107, 0);
 				}
 			}
 		}
 	}
+}
+.backButton {
+	cursor: pointer;
+	border: none;
+	border-radius: 5px;
+	font-size: 1em;
+	padding: 10px 20px;
+	color: rgba(var(--keyMorning));
+	background-color: orange;
+	transition: background-color 0.3s;
 
-	button {
-		padding: 10px 15px;
-		border: none;
-		border-radius: 4px;
-		background-color: orange;
-		color: white;
-		cursor: pointer;
-		transition: background-color 0.3s;
-
-		&:hover {
-			background-color: rgb(179, 107, 0);
-		}
+	&:hover {
+		background-color: rgb(179, 107, 0);
 	}
 }
 

@@ -49,16 +49,24 @@ export default function CommunityDetail() {
 						<tr>
 							<th>Created</th>
 							<td>
-								{Detail?.created.split("T")[0] + " " + Detail?.created.split("T")[1].split(".")[0].split(":")[0] + "시"}
+								{Detail?.created.split("T")[0] +
+									" " +
+									Detail?.created.split("T")[1].split(".")[0].split(":")[0] +
+									"시 " +
+									Detail?.created.split("T")[1].split(".")[0].split(":")[1] +
+									"분 " +
+									Detail?.created.split("T")[1].split(".")[0].split(":")[2] +
+									"초 "}
 							</td>
 						</tr>
 					</tbody>
 				</table>
 			</div>
 			<div className="buttonGroup">
-				<button>
-					<Link to={`/community-edit/${slug}`}>Edit</Link>
-				</button>
+				<Link to={`/community-edit/${slug}`}>
+					<button>Edit</button>
+				</Link>
+
 				<button onClick={handleDelete}>Delete</button>
 				<button
 					onClick={() => {

@@ -74,6 +74,7 @@ export default function CommunityAdd() {
 			</div>
 			<br />
 			<button
+				className="backButton"
 				onClick={() => {
 					navigate(-1);
 				}}>

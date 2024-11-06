@@ -1,50 +1,53 @@
 @use "../common/variables" as v;
-
-.detailTable {
+.detailCommunity {
 	width: 100%;
 	margin: 0 auto;
 	border-collapse: collapse;
+	.detailTable {
+		width: 100%;
+		margin: 0 auto;
+		border-collapse: collapse;
 
-	th {
-		color: white;
-		font-size: 1.2em;
-		padding: 10px;
-		text-align: left;
-	}
-
-	td {
-		padding: 10px;
-		line-height: 1.6;
-		font-size: 1em;
-		color: #e0e0e0;
-	}
-
-	tr:nth-child(even) {
-		background-color: rgba(var(--keyMorning), 0.1);
-	}
-
-	// 반응형 디자인
-	@media screen and (max-width: v.$tablet) {
 		th {
-			font-size: 1.1em;
+			color: white;
+			font-size: 1.2em;
+			padding: 10px;
+			text-align: left;
 		}
 
 		td {
-			font-size: 0.9em;
-		}
-	}
-
-	@media screen and (max-width: v.$mobile) {
-		th {
+			padding: 10px;
+			line-height: 1.6;
 			font-size: 1em;
+			color: #e0e0e0;
 		}
 
-		td {
-			font-size: 0.8em;
+		tr:nth-child(even) {
+			background-color: rgba(var(--keyMorning), 0.1);
+		}
+
+		// 반응형 디자인
+		@media screen and (max-width: v.$tablet) {
+			th {
+				font-size: 1.1em;
+			}
+
+			td {
+				font-size: 0.9em;
+			}
+		}
+
+		@media screen and (max-width: v.$mobile) {
+			th {
+				font-size: 1em;
+			}
+
+			td {
+				font-size: 0.8em;
+			}
 		}
 	}
 }
-
 .buttonGroup {
 	margin-top: 20px;
 

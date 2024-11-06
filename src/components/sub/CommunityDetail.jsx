@@ -31,28 +31,30 @@ export default function CommunityDetail() {
 
 	return (
 		<Layout title={"DETAIL COMMUNITY"}>
-			<table className="detailTable">
-				<tbody>
-					<tr>
-						<th>Category</th>
-						<td>{Detail?.category}</td>
-					</tr>
-					<tr>
-						<th>Title</th>
-						<td>{Detail?.title}</td>
-					</tr>
-					<tr>
-						<th>Content</th>
-						<td>{Detail?.body}</td>
-					</tr>
-					<tr>
-						<th>Created</th>
-						<td>
-							{Detail?.created.split("T")[0] + " " + Detail?.created.split("T")[1].split(".")[0].split(":")[0] + "시"}
-						</td>
-					</tr>
-				</tbody>
-			</table>
+			<div className="detailCommunity">
+				<table className="detailTable">
+					<tbody>
+						<tr>
+							<th>Category</th>
+							<td>{Detail?.category}</td>
+						</tr>
+						<tr>
+							<th>Title</th>
+							<td>{Detail?.title}</td>
+						</tr>
+						<tr>
+							<th>Content</th>
+							<td>{Detail?.body}</td>
+						</tr>
+						<tr>
+							<th>Created</th>
+							<td>
+								{Detail?.created.split("T")[0] + " " + Detail?.created.split("T")[1].split(".")[0].split(":")[0] + "시"}
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
 			<div className="buttonGroup">
 				<button>
 					<Link to={`/community-edit/${slug}`}>Edit</Link>

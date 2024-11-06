@@ -32,44 +32,46 @@ export default function CommunityAdd() {
 	};
 	return (
 		<Layout title={"ADD COMMUNITY"}>
-			<form onSubmit={handleSubmit}>
-				<table>
-					<tbody>
-						<tr>
-							<td>
-								<label htmlFor="title">Title :</label>
-							</td>
-							<td>
-								<input ref={ref_title} type="text" id="title" placeholder="제목을 입력하세요" />
-							</td>
-						</tr>
-						<tr>
-							<td>
-								<label htmlFor="body">Text :</label>
-							</td>
-							<td>
-								<textarea ref={ref_body} id="body" placeholder="본문을 입력하세요" />
-							</td>
-						</tr>
-						<tr>
-							<td>
-								<label htmlFor="category">Category :</label>
-							</td>
-							<td>
-								<select ref={ref_category} id="category">
-									<option value="PERSONAL">PERSONAL</option>
-									<option value="BUSINESS">BUSINESS</option>
-									<option value="IMPORTANT">IMPORTANT</option>
-								</select>
-							</td>
-						</tr>
-					</tbody>
-				</table>
-				<div className="button-group">
-					<input type="reset" value="Cancel" />
-					<input type="submit" value="Submit" />
-				</div>
-			</form>
+			<div className="addCommunity">
+				<form onSubmit={handleSubmit}>
+					<table>
+						<tbody>
+							<tr>
+								<td>
+									<label htmlFor="title">Title :</label>
+								</td>
+								<td>
+									<input ref={ref_title} type="text" id="title" placeholder="제목을 입력하세요" />
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<label htmlFor="body">Text :</label>
+								</td>
+								<td>
+									<textarea ref={ref_body} id="body" placeholder="본문을 입력하세요" />
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<label htmlFor="category">Category :</label>
+								</td>
+								<td>
+									<select ref={ref_category} id="category">
+										<option value="PERSONAL">PERSONAL</option>
+										<option value="BUSINESS">BUSINESS</option>
+										<option value="IMPORTANT">IMPORTANT</option>
+									</select>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					<div className="button-group">
+						<input type="reset" value="Cancel" />
+						<input type="submit" value="Submit" />
+					</div>
+				</form>
+			</div>
 			<br />
 			<button
 				onClick={() => {

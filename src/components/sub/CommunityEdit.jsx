@@ -58,66 +58,68 @@ export default function CommunityEdit() {
 		// 이때 value속성이 아닌 defaultValue 속성을 지정한 이유
 		// value속성을 연결시에는 무조건 onChange이벤트가 같이 전달되야 하기 때문
 		<Layout title={"EDIT COMMUNITY"}>
-			<form onSubmit={handleSubmit} className="editForm">
-				<table>
-					<tbody>
-						<tr>
-							<th>
-								<label htmlFor="category">Category</label>
-							</th>
-							<td>
-								<select name="category" id="category" ref={ref_category} defaultValue={Data?.category}>
-									<option value="PERSONAL">Personal</option>
-									<option value="BUSINESS">Business</option>
-									<option value="IMPORTANT">Important</option>
-								</select>
-							</td>
-						</tr>
-						<tr>
-							<th>
-								<label htmlFor="title">Title</label>
-							</th>
-							<td>
-								<input
-									ref={ref_title}
-									type="text"
-									name="title"
-									id="title"
-									placeholder="제목을 입력하세요"
-									defaultValue={Data?.title}
-								/>
-							</td>
-						</tr>
-						<tr>
-							<th>
-								<label htmlFor="body">Body</label>
-							</th>
-							<td>
-								<textarea
-									ref={ref_body}
-									name="body"
-									id="body"
-									placeholder="본문을 입력하세요"
-									defaultValue={Data?.body}
-								/>
-							</td>
-						</tr>
-						<tr>
-							<td colSpan="2" className="buttonGroup">
-								<input type="reset" value="Undo Edit" onClick={() => navigate(`/community/${slug}`)} />
-								<input type="submit" value="Edit" />
-							</td>
-						</tr>
-					</tbody>
-				</table>
-				<button
-					className="backButton"
-					onClick={() => {
-						navigate(`/community/${slug}`);
-					}}>
-					Back to Page
-				</button>
-			</form>
+			<div className="editCommunity">
+				<form onSubmit={handleSubmit} className="editForm">
+					<table>
+						<tbody>
+							<tr>
+								<th>
+									<label htmlFor="category">Category</label>
+								</th>
+								<td>
+									<select name="category" id="category" ref={ref_category} defaultValue={Data?.category}>
+										<option value="PERSONAL">Personal</option>
+										<option value="BUSINESS">Business</option>
+										<option value="IMPORTANT">Important</option>
+									</select>
+								</td>
+							</tr>
+							<tr>
+								<th>
+									<label htmlFor="title">Title</label>
+								</th>
+								<td>
+									<input
+										ref={ref_title}
+										type="text"
+										name="title"
+										id="title"
+										placeholder="제목을 입력하세요"
+										defaultValue={Data?.title}
+									/>
+								</td>
+							</tr>
+							<tr>
+								<th>
+									<label htmlFor="body">Body</label>
+								</th>
+								<td>
+									<textarea
+										ref={ref_body}
+										name="body"
+										id="body"
+										placeholder="본문을 입력하세요"
+										defaultValue={Data?.body}
+									/>
+								</td>
+							</tr>
+							<tr>
+								<td colSpan="2" className="buttonGroup">
+									<input type="reset" value="Undo Edit" onClick={() => navigate(`/community/${slug}`)} />
+									<input type="submit" value="Edit" />
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					<button
+						className="backButton"
+						onClick={() => {
+							navigate(`/community/${slug}`);
+						}}>
+						Back to Page
+					</button>
+				</form>
+			</div>
 		</Layout>
 	);
 }

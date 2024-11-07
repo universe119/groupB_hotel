@@ -23,6 +23,17 @@ export default function Gallery() {
 		end: { opacity: 0, y: -200 }
 	};
 
+	const handleSlideChange = swiper => {
+		const newIndex = swiper.realIndex;
+		setIndex(newIndex);
+	};
+
+	const handleSlideClick = idx => {
+		if (idx === Index) {
+			setModalOpen(true);
+		}
+	};
+
 	const swiperOptions = {
 		spaceBetween: 15,
 		slidesPerView: 3,
@@ -47,17 +58,6 @@ export default function Gallery() {
 				slidesPerView: 1,
 				spaceBetween: 5
 			}
-		}
-	};
-
-	const handleSlideChange = swiper => {
-		const newIndex = swiper.realIndex;
-		setIndex(newIndex);
-	};
-
-	const handleSlideClick = idx => {
-		if (idx === Index) {
-			setModalOpen(true);
 		}
 	};
 

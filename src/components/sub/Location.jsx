@@ -11,7 +11,7 @@ export default function Location() {
 	const { ref_mapFrame, ref_viewFrame } = useLocation({ Traffic, Roadview });
 
 	return (
-		<Layout title="LOCATION">
+		<Layout title={"LOCATION"}>
 			<Content>
 				{/* Layout으로 Map 페이지 레이아웃 설정 */}
 				<section className="location">

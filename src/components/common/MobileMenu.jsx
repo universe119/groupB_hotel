@@ -1,10 +1,8 @@
-// import { useZustandStore } from "../../hooks/useZustand";
-// import useThrottle from "../../hooks/useThrottle";
-// import { useEffect } from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
+import { useZustandStore } from "../../hooks/useZustand";
 
-export default function MobileMenu({ menuClose }) {
+export default function MobileMenu() {
 	// 메뉴 열고 닫고 모션!
 	const { initial, animate, exit, transition } = {
 		initial: { y: -1200, opacity: 0 },
@@ -15,6 +13,8 @@ export default function MobileMenu({ menuClose }) {
 
 	// 상위 메뉴와 하위 메뉴 데이터를 배열로 정의
 	const menuData = ["HOME", "GALLERY", "YOUTUBE", "COMMUNITY", "CONTACT", "LOCATION"];
+
+	const setMenuClose = useZustandStore(state => state.setMenuClose);
 
 	return (
 		<motion.div className={"overlayMenu"} initial={initial} animate={animate} exit={exit} transition={transition}>
@@ -36,7 +36,7 @@ export default function MobileMenu({ menuClose }) {
 										? menu.toLowerCase()
 										: "/"
 								}>
-								<h1 style={{ cursor: "pointer" }} onClick={menuClose}>
+								<h1 style={{ cursor: "pointer" }} onClick={setMenuClose}>
 									{menu}
 								</h1>
 							</Link>

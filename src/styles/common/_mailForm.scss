@@ -79,16 +79,18 @@
 			gap: 10px;
 
 			input {
-				display: inline-block;
-				background: rgba(var(--keyRGB), 1);
-				border-radius: 3px;
-				padding: 10px 20px;
-				font: 700 0.6rem/1 "orbitron";
-				letter-spacing: 1px;
-				color: rgba(var(--keyMorning));
 				cursor: pointer;
 				border: none;
-				box-shadow: 5px 5px 10px rgba(var(--keyRGB), 0.05);
+				border-radius: 5px;
+				font-size: 1em;
+				padding: 10px 20px;
+				color: rgba(var(--keyMorning));
+				background-color: orange;
+				transition: background-color 0.3s;
+
+				&:hover {
+					background-color: rgb(179, 107, 0);
+				}
 			}
 		}
 	}

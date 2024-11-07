@@ -17,12 +17,12 @@ import { AnimatePresence } from "framer-motion";
 
 export default function App() {
 	const location = useLocation();
+
 	const isMenu = useZustandStore(state => state.isMenu);
-	const setMenuClose = useZustandStore(state => state.setMenuClose);
 
 	return (
 		<>
-			<Header menuOpen={isMenu} menuClose={setMenuClose} />
+			<Header />
 
 			<AnimatePresence mode="wait">
 				<Routes location={location} key={location.pathname}>
@@ -39,7 +39,7 @@ export default function App() {
 				</Routes>
 			</AnimatePresence>
 
-			<AnimatePresence>{isMenu && <MobileMenu menuClose={setMenuClose} />}</AnimatePresence>
+			<AnimatePresence>{isMenu && <MobileMenu />}</AnimatePresence>
 
 			<Footer />
 		</>

@@ -17,7 +17,7 @@ export default function CommunityDetail() {
 	const isModal = useZustandStore(state => state.isModal);
 
 	if (isModal) {
-		document.body.style.overflow = "hidden"; // 모달이 열리면 스크롤을 막음
+		document.body.style.overflow = "hidden"; // 모달이 열리면 스크롤을 막음!
 	} else {
 		document.body.style.overflow = "auto"; // 모달이 닫히면 스크롤을 다시 허용
 	}

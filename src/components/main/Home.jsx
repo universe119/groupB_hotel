@@ -39,22 +39,36 @@ export default function Home() {
 		return () => window.removeEventListener("scroll", handleScroll);
 	}, [sideMenuArr.length]);
 
-	// 리사이즈 및 섹션 위치 업데이트
 	useEffect(() => {
 		const handleResize = () => {
+			// 섹션 위치 업데이트
 			ref_posArr.current = Array.from(ref_wrap.current.children).map(el => el.offsetTop);
-			// 현재 페이지에 맞는 위치로 스크롤 이동
-			window.scrollTo({ top: ref_posArr.current[currentPage], behavior: "smooth" });
+
+			// 현재 스크롤 위치와 가장 가까운 섹션을 찾음
+			let closestSection = ref_posArr.current[0];
+			let closestIndex = 0;
+			ref_posArr.current.forEach((pos, index) => {
+				if (Math.abs(pos - window.scrollY) < Math.abs(closestSection - window.scrollY)) {
+					closestSection = pos;
+					closestIndex = index;
+				}
+			});
+
+			// 가까운 섹션으로 스크롤 위치를 이동하고, 현재 페이지를 업데이트
+			setCurrentPage(closestIndex);
+			window.scrollTo({ top: closestSection, behavior: "smooth" });
 		};
-		handleResize(); // 초기 위치 설정
+
+		// 초기 위치 설정 및 리사이즈 이벤트 등록
+		handleResize();
 		window.addEventListener("resize", handleResize);
 		return () => window.removeEventListener("resize", handleResize);
-	}, [currentPage]);
+	}, []);
 
 	// 네비게이션 클릭 시 scrollTo가 끝난 후 currentPage 업데이트
 	const handleNavClick = index => {
 		window.scrollTo({ top: ref_posArr.current[index], behavior: "smooth" });
-		setTimeout(() => setCurrentPage(index), 500); // 스크롤 애니메이션이 완료된 후 currentPage 설정
+		setCurrentPage(index);
 	};
 
 	return (

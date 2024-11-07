@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 import { useZustandStore } from "../../hooks/useZustand";
 
 export default function AboutUs({ Sc, pos }) {
-	const IsModal = useZustandStore(state => state.IsModal);
+	const isModal = useZustandStore(state => state.isModal);
 	const setModalOpen = useZustandStore(state => state.setModalOpen);
 	const [Index, setIndex] = useState(0);
 
@@ -50,8 +50,8 @@ export default function AboutUs({ Sc, pos }) {
 	};
 
 	useEffect(() => {
-		document.body.style.overflow = IsModal ? "hidden" : "auto";
-	}, [IsModal]);
+		document.body.style.overflow = isModal ? "hidden" : "auto";
+	}, [isModal]);
 
 	// 호텔소개 어떤 느낌으로?
 	return (
@@ -90,8 +90,10 @@ export default function AboutUs({ Sc, pos }) {
 			</div>
 
 			<AnimatePresence>
-				{IsModal && (
+				{isModal && (
 					<Modal>
+						<h1 dangerouslySetInnerHTML={{ __html: roomData[Index].tit }} />
+						<p>{roomData[Index].dec}</p>
 						<Pic
 							key={Index}
 							className={"pic"}
@@ -99,8 +101,6 @@ export default function AboutUs({ Sc, pos }) {
 							alt={roomData[Index].tit}
 							style={{ width: "100%", height: "100%" }}
 						/>
-						<h1 dangerouslySetInnerHTML={{ __html: roomData[Index].tit }} />
-						<p>{roomData[Index].dec}</p>
 					</Modal>
 				)}
 			</AnimatePresence>

@@ -1,11 +1,13 @@
 import { create } from "zustand";
 
 export const useZustandStore = create(set => ({
-	IsModal: false,
-	IsMenu: false,
+	isModal: false,
+	isMenu: false,
+	isLoggedIn: false,
 
-	setModalOpen: () => set({ IsModal: true }),
-	setModalClose: () => set({ IsModal: false }),
-	setMenuClose: () => set({ IsMenu: false }),
-	setMenuToggle: () => set(state => ({ IsMenu: !state.IsMenu }))
+	setModalOpen: () => set({ isModal: true }),
+	setModalClose: () => set({ isModal: false }),
+	setMenuClose: () => set({ isMenu: false }),
+	setMenuToggle: () => set(state => ({ isMenu: !state.isMenu })),
+	login: () => set({ isLoggedIn: true, isModal: false })
 }));

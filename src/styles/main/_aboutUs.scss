@@ -7,7 +7,7 @@
 	overflow: hidden;
 
 	background-color: rgba(var(--keyBackground));
-	padding: 100px 10vw;
+	padding: 10vh;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
@@ -68,7 +68,7 @@
 		}
 		.subTitle {
 			width: 60%;
-			font: 1.9vh/1.4 v.$kohsantepheap;
+			font: 1.9vh/1.3 v.$kohsantepheap;
 			text-align: right;
 			color: rgba(var(--keyMorning));
 		}

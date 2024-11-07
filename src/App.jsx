@@ -17,27 +17,29 @@ import { AnimatePresence } from "framer-motion";
 
 export default function App() {
 	const location = useLocation();
-	const IsMenu = useZustandStore(state => state.IsMenu);
+	const isMenu = useZustandStore(state => state.isMenu);
 	const setMenuClose = useZustandStore(state => state.setMenuClose);
 
 	return (
 		<>
-			<Header menuOpen={IsMenu} menuClose={setMenuClose} />
+			<Header menuOpen={isMenu} menuClose={setMenuClose} />
 
-			<Routes location={location} key={location.pathname}>
-				<Route path="/" element={<Home />} />
-				<Route path="/location" element={<Location />} />
-				<Route path="/community" element={<Community />} />
-				<Route path="/community/:slug" element={<CommunityDetail />} />
-				<Route path="/community-add" element={<CommunityAdd />} />
-				<Route path="/community-edit/:slug" element={<CommunityEdit />} />
-				<Route path="/gallery" element={<Gallery />} />
-				<Route path="/youtube" element={<Youtube />} />
-				<Route path="/youtube/:id" element={<YoutubeDetail />} />
-				<Route path="/contact" element={<Contact />} />
-			</Routes>
+			<AnimatePresence mode="wait">
+				<Routes location={location} key={location.pathname}>
+					<Route path="/" element={<Home />} />
+					<Route path="/location" element={<Location />} />
+					<Route path="/community" element={<Community />} />
+					<Route path="/community/:slug" element={<CommunityDetail />} />
+					<Route path="/community-add" element={<CommunityAdd />} />
+					<Route path="/community-edit/:slug" element={<CommunityEdit />} />
+					<Route path="/gallery" element={<Gallery />} />
+					<Route path="/youtube" element={<Youtube />} />
+					<Route path="/youtube/:id" element={<YoutubeDetail />} />
+					<Route path="/contact" element={<Contact />} />
+				</Routes>
+			</AnimatePresence>
 
-			<AnimatePresence>{IsMenu && <MobileMenu menuClose={setMenuClose} />}</AnimatePresence>
+			<AnimatePresence>{isMenu && <MobileMenu menuClose={setMenuClose} />}</AnimatePresence>
 
 			<Footer />
 		</>

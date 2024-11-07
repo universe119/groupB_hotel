@@ -115,7 +115,7 @@ export default function Gallery() {
 	const [Flickr, setFlickr] = useState([]);
 	const [Index, setIndex] = useState(0);
 
-	const IsModal = useZustandStore(state => state.IsModal);
+	const isModal = useZustandStore(state => state.isModal);
 	const setModalOpen = useZustandStore(state => state.setModalOpen);
 
 	const customMotion = {
@@ -139,8 +139,8 @@ export default function Gallery() {
 	}, []);
 
 	useEffect(() => {
-		document.body.style.overflow = IsModal ? "hidden" : "auto";
-	}, [IsModal]);
+		document.body.style.overflow = isModal ? "hidden" : "auto";
+	}, [isModal]);
 
 	const handleSlideChange = swiper => {
 		const newIndex = swiper.realIndex;
@@ -219,7 +219,7 @@ export default function Gallery() {
 				</Content>
 			</Layout>
 			<AnimatePresence>
-				{IsModal && Flickr[Index] && (
+				{isModal && Flickr[Index] && (
 					<Modal>
 						<Pic
 							src={`https://live.staticflickr.com/${Flickr[Index].server}/${Flickr[Index].id}_${Flickr[Index].secret}_b.jpg`}

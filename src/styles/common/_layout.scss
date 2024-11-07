@@ -2,7 +2,7 @@
 
 main {
 	width: 100%;
-	padding: 10vh 15vw;
+	padding: 10vh;
 	min-height: 120vh; // 데이터 팻칭시 하단 footer가 보임으로 70->120으로 늘림
 	background-color: rgba(var(--keyBackground), 0.97); // 페이지 배경색
 }

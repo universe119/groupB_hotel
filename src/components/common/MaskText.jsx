@@ -24,7 +24,7 @@ export default function MaskText({ children, duration = 0.5, delay = 0, color = 
 	return (
 		// 텍스트를 감싸주는 Wrapper
 		// 해당 모션 컴포넌트의 스타일을 부모컴포넌트에 호출시 편하게 변경처리 하기 위해서 전달받은 style 객체로 기존 style 객체 덮어씀
-		<div style={{ ...frameStyle, ...style }} className="maskText">
+		<div style={{ ...frameStyle, ...style }} className={"maskText"}>
 			{/* children으로 전달된 실제 텍스트를 span으로 wrapping처리 */}
 			<motion.span initial={init} animate={active} exit={end} transition={time}>
 				{children}

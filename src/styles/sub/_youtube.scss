@@ -8,6 +8,7 @@
 	margin: 30px 0px;
 	// border: 1px solid #111;
 	transition: 1s 1.5s;
+
 	.evenTit,
 	.oddTit {
 		width: 100%;
@@ -34,24 +35,22 @@
 		z-index: 5;
 		bottom: 3vh;
 		p {
-			font: 200 1.3vmax/1.2 v.$raleway;
+			font: 200 1.5vh/1.2 v.$raleway;
 			color: #efefef;
 			word-break: break-all;
 			margin-bottom: 5vh;
 		}
 		span {
-			font: 400 1vmax/1 v.$orbitron, sans-serif;
+			font: 400 1.2vh/1 v.$orbitron, sans-serif;
 			color: rgba(255, 165, 0, 0.9);
 			letter-spacing: 1px;
 		}
 	}
 	.evenTxt {
-		// left: 42vh; 	// 텍스트 안으로 이동
-		left: 50vh; // 텍스트 밖으로 이동
+		left: 50vh; // 텍스트 값이 크면 밖으로 이동
 	}
 	.oddTxt {
-		// right: 42vh; // 텍스트 안으로 이동
-		right: 50vh; // 텍스트 밖으로 이동
+		right: 50vh; // 텍스트 값이 크면 밖으로 이동
 		text-align: right;
 	}
 
@@ -100,7 +99,6 @@
 		}
 		.oddBox {
 			right: 3%;
-			text-align: right;
 		}
 	}
 }
@@ -112,10 +110,10 @@
 			font: 700 1.4rem/1.2 v.$raleway, sans-serif;
 		}
 		.evenTit {
-			left: -7vh;
+			left: -6vh;
 		}
 		.oddTit {
-			right: -7vh;
+			right: -6vh;
 		}
 
 		.evenTxt,
@@ -123,15 +121,15 @@
 			width: 30vw;
 			margin-bottom: 4vh;
 			p {
-				font: 200 1.1vmax/1.2 v.$raleway;
+				font: 200 1.2vh/1.2 v.$raleway;
 				margin-bottom: 6vh;
 			}
 		}
 		.evenTxt {
-			left: 28vh; // 텍스트 밖으로 이동
+			left: 28vh;
 		}
 		.oddTxt {
-			right: 28vh; // 텍스트 밖으로 이동
+			right: 28vh;
 		}
 
 		.evenThumb,
@@ -164,14 +162,12 @@
 				width: 135%;
 				height: 90%;
 				top: -5%;
-				transition: 0.3s linear; // 아티클에 들어갈 때 동작
 			}
 			.evenBox {
 				left: -18%;
 			}
 			.oddBox {
 				right: -18%;
-				text-align: right;
 			}
 		}
 	}
@@ -195,27 +191,27 @@
 		.evenTxt,
 		.oddTxt {
 			width: 39%;
-			margin-bottom: 0vh;
+			margin-bottom: 3vh;
 
 			p {
-				font: 100 1.6vmin/1.2 "Arial", sans-serif;
+				font: 100 0.8vmax/1.2 "Arial", sans-serif;
 				margin-bottom: 3vh;
 			}
 			span {
-				font: 400 1.5vmin/1 v.$orbitron, sans-serif;
+				font: 400 0.6vmax/1 v.$orbitron, sans-serif;
 			}
 		}
 		.evenTxt {
-			left: 23vh; // 텍스트 밖으로 이동
+			left: 18vh;
 		}
 		.oddTxt {
-			right: 23vh; // 텍스트 밖으로 이동
+			right: 18vh;
 		}
 
 		.evenThumb,
 		.oddThumb {
-			width: 25vh;
-			height: 14vh;
+			width: 20vh;
+			height: 11vh;
 		}
 		.evenThumb {
 			left: -3vh;
@@ -225,8 +221,8 @@
 		}
 		.evenBox,
 		.oddBox {
-			width: 25vh;
-			height: 14vh;
+			width: 20vh;
+			height: 11vh;
 			top: 4vh;
 		}
 		.evenBox {
@@ -239,17 +235,14 @@
 		&:hover {
 			.evenBox,
 			.oddBox {
-				width: 125%;
-				height: 100%;
-				top: -5%;
-				transition: 0.3s linear; // 아티클에 들어갈 때 동작
+				width: 140%;
+				height: 85%;
 			}
 			.evenBox {
-				left: -15%;
+				left: -20%;
 			}
 			.oddBox {
-				right: -15%;
-				text-align: right;
+				right: -20%;
 			}
 		}
 	}

@@ -31,9 +31,9 @@ export default function LocationScroll({ Sc, pos }) {
 		<section className="locationScroll">
 			<div className="locationTxt" style={locationTxtMs}>
 				<h2>Location</h2>
-				<Link to="/location" className="locationLink">
+				<Link to={"/location"} className={"locationLink"}>
 					Details
-					<FaRegArrowAltCircleRight className="detailIcon" />
+					<FaRegArrowAltCircleRight className={"detailIcon"} />
 				</Link>
 			</div>
 			<div className="mapFrame" ref={ref_mapFrame} style={mapFrameMS}></div>

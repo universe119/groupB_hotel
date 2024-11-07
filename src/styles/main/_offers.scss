@@ -6,7 +6,7 @@
 	overflow: hidden;
 
 	background-color: rgba(var(--keyBackground));
-	padding: 10vh;
+	padding: 10vh 15vw;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
@@ -42,80 +42,75 @@
 		display: flex;
 		justify-content: center;
 
-		.swipeGroup {
-			width: 100%; // 전체 너비 사용
-			margin: 0 auto;
+		.swipeCont {
+			position: relative;
+			width: 100%; // 스와이프 컨테이너 전체 너비
+			overflow: visible;
+			transition: transform 400ms ease-in-out;
+			display: flex; // 수평 레이아웃을 위해 flex 사용
+			height: 500px;
+			padding-top: 35px;
+			background: rgba(241, 238, 238, 0.8);
+			border-radius: 20px;
+			box-shadow: inset 0 0 0px rgb(0, 0, 0), 0 0 50px rgba(161, 161, 161, 0.4);
 
-			.swipeCont {
-				position: relative;
-				width: 100%; // 스와이프 컨테이너 전체 너비
-				overflow: visible;
-				transition: transform 400ms ease-in-out;
-				display: flex; // 수평 레이아웃을 위해 flex 사용
-				height: 500px;
-				padding-top: 35px;
-				background: rgba(241, 238, 238, 0.8);
-				border-radius: 20px;
-				box-shadow: inset 0 0 0px rgb(0, 0, 0), 0 0 50px rgba(161, 161, 161, 0.4);
+			.swiper-wrapper {
+				left: 3%;
+			}
 
-				.swiper-wrapper {
-					left: 3%;
-				}
+			.swipeSlide {
+				width: 300px; // 각 슬라이드 너비 조정
+				margin: 0 15px; // 슬라이드 간 간격
+				opacity: 1;
+				transition: opacity 400ms, transform 400ms;
 
-				.swipeSlide {
-					width: 300px; // 각 슬라이드 너비 조정
-					margin: 0 15px; // 슬라이드 간 간격
-					opacity: 1;
-					transition: opacity 400ms, transform 400ms;
+				.thum {
+					width: 100%;
+					height: 300px; // 썸네일 높이 조정
+					position: relative;
+					overflow: hidden;
+					border-radius: 8px; // 둥근 모서리
+					display: block;
 
-					.thum {
+					.pic {
 						width: 100%;
-						height: 300px; // 썸네일 높이 조정
+						height: 100%;
 						position: relative;
-						overflow: hidden;
-						border-radius: 8px; // 둥근 모서리
-						display: block;
-
-						.pic {
-							width: 100%;
-							height: 100%;
-							position: relative;
-						}
-						img {
-							width: 100%;
-							height: 100%;
-							object-fit: cover;
-							transition: transform 300ms;
-							&:hover {
-								transform: scale(1.05);
-							}
+					}
+					img {
+						width: 100%;
+						height: 100%;
+						object-fit: cover;
+						transition: transform 300ms;
+						&:hover {
+							transform: scale(1.05);
 						}
 					}
-					.thumTxt {
-						display: flex;
-						width: 100%;
-						flex-wrap: wrap;
-						justify-content: center;
+				}
+				.thumTxt {
+					display: flex;
+					width: 100%;
+					flex-wrap: wrap;
+					justify-content: center;
 
-						.tit {
-							margin-top: 10px;
-							font-size: 20px; // 글자 크기 증가
-							font-weight: bold;
-							color: rgba(var(--keyMorning));
-						}
+					.tit {
+						margin-top: 10px;
+						font-size: 20px; // 글자 크기 증가
+						font-weight: bold;
+						color: rgba(var(--keyMorning));
+					}
 
-						.txt,
-						.period,
-						.location {
-							margin-top: 5px;
-							font-size: 14px;
-							color: rgba(var(--keyMorning));
-							text-align: center; // 텍스트 중앙 정렬
-						}
-						.period {
-							color: orange;
-							font-weight: bold;
-						}
+					.txt,
+					.period,
+					.location {
+						margin-top: 5px;
+						font-size: 14px;
+						color: rgba(var(--keyMorning));
+						text-align: center; // 텍스트 중앙 정렬
+					}
+					.period {
+						color: orange;
+						font-weight: bold;
 					}
 				}
 			}

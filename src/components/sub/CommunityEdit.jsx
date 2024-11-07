@@ -4,9 +4,10 @@ import axios from "axios";
 import { useNavigate, useParams } from "react-router-dom";
 
 export default function CommunityEdit() {
-	const { slug } = useParams();
-	const [Data, setData] = useState(null);
 	const navigate = useNavigate();
+	const { slug } = useParams();
+
+	const [Data, setData] = useState(null);
 
 	// 수정폼요소가 담길 참조 객체
 	const ref_title = useRef(null);
@@ -15,8 +16,8 @@ export default function CommunityEdit() {
 
 	// 수정 버튼 클릭시 호출될 수정 함수
 	const handleSubmit = e => {
-		// 리액트 스럽게 스테이트값을 받아서 할 수 있다고 하심
 		e.preventDefault();
+
 		if (!ref_title.current.value.trim() || !ref_body.current.value.trim())
 			return alert("제목, 본문은 필수 입력 항목입니다!!");
 
@@ -25,7 +26,6 @@ export default function CommunityEdit() {
 			body: ref_body.current.value,
 			category: ref_category.current.value
 		};
-
 		console.log(editData);
 
 		axios
@@ -46,7 +46,7 @@ export default function CommunityEdit() {
 				setData(res.data);
 			})
 			.catch(err => console.log(err));
-	}, []);
+	}, [slug]);
 
 	// 현재 넘어온 상세페이지 전용 모델의 정보에 따라 select의 option활성화
 	useEffect(() => {
@@ -91,7 +91,7 @@ export default function CommunityEdit() {
 							</tr>
 							<tr>
 								<th>
-									<label htmlFor="body">Body</label>
+									<label htmlFor="body">Text</label>
 								</th>
 								<td>
 									<textarea

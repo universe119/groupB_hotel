@@ -13,23 +13,18 @@
 	&.main {
 		position: fixed;
 	}
-	&.youtubeH {
-		width: 100%;
-		padding: 30px 10vw;
-		backdrop-filter: blur(10px);
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		position: fixed;
-		z-index: 3;
-	}
+	// &.youtubeH { 유튜브 스크롤시 헤더 고정
+	// 	width: 100%;
+	// 	padding: 30px 10vw;
+	// 	backdrop-filter: blur(10px);
+	// 	display: flex;
+	// 	justify-content: space-between;
+	// 	align-items: center;
+	// 	position: fixed;
+	// 	z-index: 3;
+	// }
 
 	.topUtil {
-		// width: 100%;
-		// background-color: rgb(52, 8, 8);
-		// overflow: hidden;
-		// position: relative;
-
 		.btnDetailMenu {
 			cursor: pointer;
 			width: 30px;
@@ -43,7 +38,6 @@
 			flex-wrap: wrap;
 			align-content: space-between;
 			justify-content: center;
-			// opacity: 0.7;
 
 			.top,
 			.middle,
@@ -92,14 +86,6 @@
 			color: rgba(var(--keyMorning));
 			gap: 10px;
 		}
-
-		// .gnbL {
-		// 	gap: 90px;
-		// }
-
-		// .gnbR {
-		// 	gap: 60px;
-		// }
 	}
 }
 

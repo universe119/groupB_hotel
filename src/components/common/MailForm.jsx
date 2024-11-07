@@ -42,7 +42,6 @@ export default function MailForm() {
 				<Pic className={"pic"} src={"/로비전화2.jpg"} style={{ width: "100%", height: "100%" }} shadow />
 			</div>
 
-			{/* <div className="formBox"> */}
 			<form onSubmit={sendForm} ref={ref_form} className="formBox">
 				{/* 문의자이름, 메일주소 입력받는 상단 영역 */}
 				<div className="mailMark">
@@ -77,8 +76,6 @@ export default function MailForm() {
 					<input type="submit" value="Send" />
 				</nav>
 			</form>
-
-			{/* </div> */}
 		</div>
 	);
 }

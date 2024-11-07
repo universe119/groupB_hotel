@@ -18,7 +18,7 @@ export default function HomeVisual({ Sc }) {
 	const updateTime = () => {
 		const now = new Date();
 		let hr = now.getHours();
-		// let hr = 20; // 테스트
+		// let hr = 20; // 수동테스트
 
 		let min = now.getMinutes();
 		let sec = now.getSeconds();
@@ -37,7 +37,7 @@ export default function HomeVisual({ Sc }) {
 
 	const updateTheme = () => {
 		const currentHour = new Date().getHours();
-		// const currentHour = 20; // 테스트
+		// const currentHour = 20; // 수동테스트
 
 		const newTheme = timeData.find(data => {
 			if (data.className !== "night") {
@@ -54,7 +54,7 @@ export default function HomeVisual({ Sc }) {
 
 	const cMS = {
 		transform: `translateY(${Sc}px) scale(${1 + Sc / 600})`,
-		opacity: `${1 - Sc / 550}`
+		opacity: 1 - Sc / 550
 	};
 
 	const sMS = {

@@ -5,12 +5,14 @@ import { useNavigate } from "react-router-dom";
 
 export default function CommunityAdd() {
 	const navigate = useNavigate();
+
 	const ref_title = useRef(null);
 	const ref_body = useRef(null);
 	const ref_category = useRef(null);
 
 	const handleSubmit = e => {
 		e.preventDefault();
+
 		if (!ref_title.current.value.trim() || !ref_body.current.value.trim())
 			return alert("제목, 본문은 필수 입력 항목입니다!!");
 
@@ -30,6 +32,7 @@ export default function CommunityAdd() {
 			})
 			.catch(err => console.log(err));
 	};
+
 	return (
 		<Layout title={"ADD COMMUNITY"}>
 			<div className="addCommunity">

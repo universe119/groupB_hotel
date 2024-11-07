@@ -5,7 +5,7 @@
 	margin: 100px auto;
 	h2 {
 		font: 100 2rem/1;
-		color: #fff;
+		color: rgba(var(--keyMorning));
 		margin-bottom: 20px;
 	}
 	.title {
@@ -27,7 +27,7 @@
 			display: flex;
 			border-bottom: 1px solid #ccc;
 			padding: 8px 10px;
-			color: #fff;
+			color: rgba(var(--keyMorning));
 			font-weight: bold;
 			font-size: 1.1rem;
 		}

@@ -12,10 +12,10 @@ export default function Footer() {
 					className={"logo"}
 					style={{ width: "100px", height: "50px", marginRight: "10px" }}
 				/>
-				<Link to={"/"}>psyh Hotel</Link>
+				<Link to={"/"}>PSYH HOTEL</Link>
 			</h1>
 
-			{/* 커튼 사진 출력은 css로 */}
+			{/* 커튼 사진 출력은 scss로 */}
 
 			<section>
 				<ul>

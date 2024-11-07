@@ -11,6 +11,7 @@ export default function Home() {
 	const sideMenuArr = ["Home", "About us", "Offers", "Facilities", "Location"];
 	const [currentPage, setCurrentPage] = useState(0);
 	const [Scroll, setScroll] = useState(0);
+
 	const ref_wrap = useRef(null);
 	const ref_posArr = useRef([]);
 
@@ -24,39 +25,31 @@ export default function Home() {
 	// currentPage에 따른 글씨 색상 지정 (기본값 white)
 	const chColor = colorMap[currentPage] || "#ffffff"; // HOME
 
-	useEffect(() => {
-		// 휠 스크롤을 통한 페이지 이동을 비활성화
-		const handleWheel = () => {
-			// e.preventDefault(); // 휠 이벤트 발생 시 기본 스크롤 방지
-		};
-
-		window.addEventListener("wheel", handleWheel);
-
-		return () => {
-			window.removeEventListener("wheel", handleWheel);
-		};
-	}, []);
-
 	// 스크롤 위치에 따라 currentPage 설정
 	useEffect(() => {
 		const handleScroll = () => {
 			const newPage = ref_posArr.current.findIndex(pos => window.scrollY < pos + window.innerHeight / 2);
+
 			setCurrentPage(newPage >= 0 ? newPage : sideMenuArr.length - 1);
 			setScroll(window.scrollY);
 		};
+
 		window.addEventListener("scroll", handleScroll);
+
 		return () => window.removeEventListener("scroll", handleScroll);
-	}, []);
+	}, [sideMenuArr.length]);
 
 	// 리사이즈 및 섹션 위치 업데이트
 	useEffect(() => {
 		const handleResize = () => {
 			ref_posArr.current = Array.from(ref_wrap.current.children).map(el => el.offsetTop);
+			// 현재 페이지에 맞는 위치로 스크롤 이동
+			window.scrollTo({ top: ref_posArr.current[currentPage], behavior: "smooth" });
 		};
 		handleResize(); // 초기 위치 설정
 		window.addEventListener("resize", handleResize);
 		return () => window.removeEventListener("resize", handleResize);
-	}, []);
+	}, [currentPage]);
 
 	// 네비게이션 클릭 시 scrollTo가 끝난 후 currentPage 업데이트
 	const handleNavClick = index => {

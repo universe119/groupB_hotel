@@ -66,8 +66,8 @@ export default function AboutUs({ Sc, pos }) {
 							key={idx}
 							className={`modal${idx + 1}`}
 							onClick={() => {
-								setModalOpen();
 								setIndex(idx);
+								setModalOpen();
 							}}>
 							<p dangerouslySetInnerHTML={{ __html: data.tit }} />
 						</div>

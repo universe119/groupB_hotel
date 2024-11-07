@@ -13,7 +13,7 @@ export default function Content({ children, duration = 1, delay = 0.3, customMot
 
 	return (
 		<motion.div
-			className="content"
+			className={"content"}
 			initial={init}
 			animate={active}
 			exit={end}

@@ -19,7 +19,7 @@
 			margin-bottom: 30px;
 			h2 {
 				font: 100 2.2rem/1 v.$alegreya;
-				color: #fff;
+				color: rgba(var(--keyMorning));
 			}
 
 			.getImg {
@@ -31,7 +31,7 @@
 		label {
 			display: block;
 			font: 400 1.2rem/1 v.$alegreya;
-			color: #fff;
+			color: rgba(var(--keyMorning));
 			margin-bottom: 10px;
 		}
 		input[type="text"],
@@ -42,14 +42,14 @@
 			width: 100%;
 			border-bottom: 1px solid #888;
 			padding: 10px 5px;
-			background: #fff;
+			background: rgba(var(--keyMorning));
 			resize: none;
 			border-radius: 3px;
 
 			//input 요소 안쪽의 placeholder 속성 텍스트 스타일링
 			&::placeholder {
 				color: #3b3b3b;
-				font: 400 0.8rem/1.2 "raleway";
+				font: 400 0.8rem/1.2 v.$raleway;
 			}
 		}
 
@@ -85,7 +85,7 @@
 				padding: 10px 20px;
 				font: 700 0.6rem/1 "orbitron";
 				letter-spacing: 1px;
-				color: #ffffff;
+				color: rgba(var(--keyMorning));
 				cursor: pointer;
 				border: none;
 				box-shadow: 5px 5px 10px rgba(var(--keyRGB), 0.05);

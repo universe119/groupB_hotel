@@ -25,6 +25,7 @@
 				z-index: 2;
 			}
 		}
+
 		&:hover {
 			filter: none;
 		}
@@ -33,6 +34,10 @@
 		// &.on {
 		// 	display: block;
 		// }
+	}
+	.viewOn {
+		// 로드뷰만 상시로 킴
+		filter: none;
 	}
 
 	// 컨트롤 버튼 스타일
@@ -53,9 +58,8 @@
 				cursor: pointer;
 				background-color: orange;
 				font: 500 1rem/1 "orbitron";
-				color: #fff;
+				color: rgba(var(--keyMorning));
 				border-radius: 5px;
-				// transition: background-color 0.3s ease;
 				opacity: 0.5;
 				transition: 0.5s;
 
